@@ -1,0 +1,10 @@
+<nav class="mb-4 py-2 bg-gray-100 rounded-lg text-center">
+  {{ $currentPage := . }}
+  {{ $title := .Params.navActiveTitle }}
+  {{ range .Site.Menus.main }}
+    <a
+      class="{{ if eq $title .Name }}active text-main{{ end }} px-4 hover:text-main"
+      href="{{ .URL }}"
+      title="{{ .Title }}">{{ .Name }}</a>
+  {{ end }}
+</nav>

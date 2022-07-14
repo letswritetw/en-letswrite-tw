@@ -1,0 +1,8 @@
+<!--Site Title-->
+<h2 class="py-4 text-center font-bold text-4xl">
+  <a class="inline-block hover:text-main" href="{{ "" | relLangURL }}">{{ .Site.Title }}</a>
+</h2>
+
+<p class="pb-4 text-center">{{ .Site.Params.subtitle }}</p>
+
+{{ partial "navbar.html" . }}

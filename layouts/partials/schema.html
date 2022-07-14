@@ -1,0 +1,10 @@
+{{/*  https://dev.to/pdwarkanath/adding-structured-data-to-your-hugo-site-58db  */}}
+<script type="application/ld+json">
+  {
+    "@context": "https://www.schema.org",
+    "@type": "Organization",
+    "name": "{{ .Site.Title }}",
+    "url": "{{ .Site.BaseURL }}",
+    "logo": "{{ .Site.Params.favicon }}"
+  }
+</script>

@@ -1,0 +1,24 @@
+<ul class="flex flex-wrap">
+  {{ $paginator := .Paginate (where .Site.RegularPages "Type" "posts") 5 }}
+  {{ range $paginator.Pages }}
+    <li class="mb-8 sm:mb-4 sm:p-4 sm:w-1/2 rounded-lg">
+
+      {{/*  配圖  */}}
+      {{ partial "cover.html" . }}
+
+      {{/*  文章標題  */}}
+      <h2 class="mb-2 font-bold text-lg">
+        <a class="hover:text-main" href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </h2>
+
+      {{/*  日期  */}}
+      <p class="my-2 text-sm">{{ .Date.Format "2006-01-02" }}</p>
+
+      {{/*  文章簡述  */}}
+      <p class="line-clamp-3">{{ .Summary }}</p>
+
+    </li>
+  {{ end }}
+</ul>
+
+{{ template "_internal/pagination.html" . }}

@@ -1,0 +1,39 @@
+baseURL: /
+publishDir: docs
+timeZone: Asia/Taipei
+
+# sitemap
+sitemap:
+  changefreq: weekly # always, hourly, daily, weekly, monthly, yearly, never
+  filename: sitemap.xml
+  priority: 1.0
+
+# 要用 GA，請解開以下註解，並填寫 GA Id
+googleAnalytics: UA-PROPERTY_ID
+
+title: Let's Write, EN
+
+# 導覽列
+menu:
+  main:
+  - name: Index
+    title: 這邊會是 a tag 的 title
+    url: /
+    weight: 1
+  - name: Google
+    title: 這邊會是 a tag 的 title
+    url: /categories/google/
+    weight: 2
+
+# copyright
+copyright: Let's Write. All Rights Reserved.
+
+# 引言的長度
+summaryLength: 15
+
+# 客製參數
+params:
+  subtitle: Front-end engineer August's study notes — solving problems, in simple ways.
+  mainColor: '#42A6F7'
+  favicon: https://letswritetw.github.io/letswritetw/dist/img/logo_512.png
+

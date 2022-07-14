@@ -1,0 +1,13 @@
+{{ $Uri := .RelPermalink }}
+{{ $Image := .Resources.GetMatch (print .Params.cover) }}
+{{ $ImageResize := $Image.Resize "768x" }}
+{{ with $Image }}
+  <div class="mb-2">
+    <a href="{{ $Uri }}">
+      <img
+        class="block rounded-lg"
+        src="{{ $ImageResize.RelPermalink }}" alt="{{ .Title }}"
+        width="{{ $ImageResize.Width }}" height="{{ $ImageResize.Height }}">
+        </a>
+  </div>
+{{ end }}
