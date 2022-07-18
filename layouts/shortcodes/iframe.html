@@ -1,0 +1,10 @@
+{{ $src := .Get "src" }}
+{{ $width := .Get "width" }}
+{{ $height := .Get "height" }}
+
+<div class="block mt-4 mb-8 max-w-full">
+  <iframe class="w-full" frameborder="0"
+          width="{{ $width }}" height="{{ $height }}"
+          loading="lazy" marginheight="0" marginwidth="0"
+          src="{{ $src }}"></iframe>
+</div>

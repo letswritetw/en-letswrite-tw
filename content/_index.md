@@ -1,7 +1,7 @@
 ---
-title: 首頁的標題
+title: Let's Write, EN
 navActiveTitle: Index
-description: 首頁的 meta description
+description: Front-end engineer August's study notes — solving problems, in simple ways.
 cover: index_cover.png
 date: "2022-07-01"
 ---

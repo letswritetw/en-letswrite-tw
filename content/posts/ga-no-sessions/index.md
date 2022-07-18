@@ -10,25 +10,18 @@ tags:
   - traffic
 ---
 
-本篇中文版：[如果頁面有id=”ga”，用gtag埋google analytics會收不到流量](https://letswrite.tw/ga-no-sessions/)
+本篇中文版：[如果頁面有id="ga"，用 gtag 埋 Google Analytics 會收不到流量](https://letswrite.tw/ga-no-sessions/)
 
 First, let’s start with the conclusion:   
-**If the html of the page has** `<strong>id="ga"</strong>`**, and the way to set the Google Analytics code is gtag, then GA will not receive the pageview.**
+**If the html of the page has `id="ga"`, and the way to set the Google Analytics code is gtag, then GA will not receive the pageview.**
 
 This article is the process from finding a problem to finding a problem and finally solving the problem.
 
-Because I haven’t found an article on the Internet: “because the page has id=”ga”, I can’t receive sessions”, so I wrote this, hope that the webpage that can be avoided, or the same problem can solve this problem.
+Because I haven’t found an article on the Internet: "because the page has id="ga", I can’t receive sessions", so I wrote this, hope that the webpage that can be avoided, or the same problem can solve this problem.
 
-- - - - - -
+---
 
-<div class="ez-toc-v2_0_27 counter-hierarchy counter-numeric" id="ez-toc-container"><div class="ez-toc-title-container">Outline of this article
-
-<span class="ez-toc-title-toggle">[<label aria-label="Table of Content" for="item"></label><input id="item" type="checkbox"></input>](#)</span></div><nav>- [The Problem Found](https://en.letswrite.tw/ga-no-sessions/#the-problem-found "The Problem Found")
-- [Find The Problem](https://en.letswrite.tw/ga-no-sessions/#find-the-problem "Find The Problem")
-- [Solve The Problem](https://en.letswrite.tw/ga-no-sessions/#solve-the-problem "Solve The Problem")
-- [Say again why the GA traffic is zero？](https://en.letswrite.tw/ga-no-sessions/#say-again-why-the-ga-traffic-is-zero%ef%bc%9f "Say again why the GA traffic is zero？")
-
-</nav></div>## <span class="ez-toc-section" id="the-problem-found"></span>The Problem Found<span class="ez-toc-section-end"></span>
+## The Problem Found
 
 This is a bitter experience in the past few days. After writing the following two articles:
 
@@ -45,9 +38,9 @@ Then I opened the [GA Debugger](https://letswrite.tw/google-analytics-debugger/)
 
 - - - - - -
 
-## <span class="ez-toc-section" id="find-the-problem"></span>Find The Problem<span class="ez-toc-section-end"></span>
+## Find The Problem
 
-In the beginning, I suspected that I didn’t receive sessions because I installed the Chrome extension that prohibits ga tracking. “[Google Analytics Opt-out Add-on](https://chrome.google.com/webstore/detail/google-analytics-opt-out/fllaojicojecljbmefodhfapmkghcbnh?hl=en)“. After the removal, the Realtime report still did not see the pageviews.
+In the beginning, I suspected that I didn’t receive sessions because I installed the Chrome extension that prohibits ga tracking. [Google Analytics Opt-out Add-on](https://chrome.google.com/webstore/detail/google-analytics-opt-out/fllaojicojecljbmefodhfapmkghcbnh?hl=en). After the removal, the Realtime report still did not see the pageviews.
 
 Then I thought that the day before I write the article, I wanted to try AB/test. When I setting the GA tracking code, I added the config of google optimize, and went to optimize to end the A/B test, but the same, the GA page view did not send out.
 
@@ -59,33 +52,31 @@ Then I tried to delete the GA event tracking, service-worker.js, and Mixpanel, a
 
 Finally, I had to take the most stupid way to download the page into a static html file, delete it line by line, and see which line to delete the GA.
 
-- - - - - -
+---
 
 Generally looking for front-end bugs, the first one to find is javascript, because js is most likely to block ajax.
 
-First delete the js referenced on the page and the &lt;script&gt; written directly. If you find that the traffic comes in, find out which file is causing it.
+First delete the js referenced on the page and the `<script>` written directly. If you find that the traffic comes in, find out which file is causing it.
 
 Result: After the deletion, the traffic is still not received.
 
-Does css affect? Under the doubt, it is deleted, and the referenced &lt;style&gt; on the page is deleted.
+Does css affect? Under the doubt, it is deleted, and the referenced `<style>` on the page is deleted.
 
 Result: sessions were not received
 
-I have to look at the other html parts, first delete the &lt;head&gt;, it does not work.
+I have to look at the other html parts, first delete the `<head>`, it does not work.
 
-Then delete the entire &lt;body&gt;, well, Ga received traffic!
+Then delete the entire `<body>`, well, Ga received traffic!
 
 That’s for sure, it’s a problem with the front-end page, not a GA setting or a server problem.
 
 Html line by line, delete this line:
 
-```
-<pre class="wp-block-code">```
+{{< highlight html "linenos=table,anchorlinenos=true,hl_inline=true" >}}
 <h3>
   <span class="ez-toc-section" id="ga" tabindex="-1">ga</span>
 </h3>
-```
-```
+{{< / highlight >}}
 
 GA can receive traffic and finally find the problem. This line of questions will be related to GA is `id="ga"`.
 
@@ -95,7 +86,7 @@ After reading the page, I found out that in order to make the page add internal 
 
 - - - - - -
 
-## <span class="ez-toc-section" id="solve-the-problem"></span>Solve The Problem<span class="ez-toc-section-end"></span>
+## Solve The Problem
 
 In the beginning, the text of the title is first falsified. If the original title is “ga”, it will be changed to “ga code”, so that the id generated by the plugin becomes ga-code.
 
@@ -103,10 +94,10 @@ This is fine in English, but there is a problem in Chinese, that is, Easy Table 
 
 - - - - - -
 
-## <span class="ez-toc-section" id="say-again-why-the-ga-traffic-is-zero%ef%bc%9f"></span>Say again why the GA traffic is zero？<span class="ez-toc-section-end"></span>
+## Say again why the GA traffic is zero？
 
 This is very important. This is the experience of real people and non-adapted tragedies, so I will explain them at the end:
 
-> **If the webpage’s html,** `<strong>id="ga"</strong>` **appears, and the way to setting Google Analytics is gtag, then GA will not receive the pageviews.**
+> **If the webpage’s html, id="ga" appears, and the way to setting Google Analytics is gtag, then GA will not receive the pageviews.**
 
 If you find this article helpful, please click on the helpful button made by myself. If you are willing to share on the social, that’s even better.

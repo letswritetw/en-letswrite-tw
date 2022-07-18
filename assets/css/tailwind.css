@@ -19,3 +19,66 @@ body {
 .pagination .disabled a {
   @apply text-gray-200 pointer-events-none
 }
+
+/* 單文頁 */
+.single-article h1,
+.single-article h2,
+.single-article h3,
+.single-article h4 {
+  @apply mt-8 mb-4 font-bold
+}
+.single-article h1 {
+  @apply text-3xl
+}
+.single-article h2 {
+  @apply text-2xl
+}
+.single-article h3 {
+  @apply text-xl
+}
+.single-article h4 {
+  @apply text-lg
+}
+.single-article figcaption h4 {
+  @apply mt-2 mb-4 font-normal text-center text-sm
+}
+.single-article p,
+.single-article figure,
+.single-article .highlight {
+  @apply mb-4 leading-relaxed break-all
+}
+
+.single-article a {
+  @apply text-main hover:text-mainHover
+}
+.single-toc a {
+  @apply text-gray-500 hover:text-mainHover visited:text-gray-800
+}
+
+hr {
+  @apply mx-auto my-8 w-1/3 border-0 border-t border-gray-300;
+}
+
+.single-article img {
+  @apply mx-auto rounded-lg
+}
+
+.single-article ul, .single-article ol {
+  @apply pl-6 pr-2 py-2
+}
+.single-article li {
+  @apply pb-2 break-all
+}
+.single-article ul {
+  @apply list-disc
+}
+.single-article ol {
+  @apply list-decimal
+}
+
+.single-article .highlight table {
+  @apply p-2 max-w-full rounded-lg
+}
+.single-article .highlight table pre {
+  @apply p-2 max-w-full whitespace-normal
+}

@@ -13,16 +13,7 @@ tags:
 
 本篇中文版：[像Medium的漸近式圖片加載](https://letswrite.tw/medium-lazyload/)
 
-<div class="ez-toc-v2_0_27 counter-hierarchy counter-numeric" id="ez-toc-container"><div class="ez-toc-title-container">Outline of this article
-
-<span class="ez-toc-title-toggle">[<label aria-label="Table of Content" for="item"></label><input id="item" type="checkbox"></input>](#)</span></div><nav>- [Three ways to progressive images loading](https://en.letswrite.tw/medium-lazyload/#three-ways-to-progressive-images-loading "Three ways to progressive images loading")
-- [Three steps of Medium Progressive Images Loading](https://en.letswrite.tw/medium-lazyload/#three-steps-of-medium-progressive-images-loading "Three steps of Medium Progressive Images Loading")
-- [Code Part](https://en.letswrite.tw/medium-lazyload/#code-part "Code Part")
-    - [HTML / CSS](https://en.letswrite.tw/medium-lazyload/#html-css "HTML / CSS")
-    - [JavaScript](https://en.letswrite.tw/medium-lazyload/#javascript "JavaScript")
-- [Test page loading time](https://en.letswrite.tw/medium-lazyload/#test-page-loading-time "Test page loading time")
-
-</nav></div>## <span class="ez-toc-section" id="three-ways-to-progressive-images-loading"></span>Three ways to progressive images loading<span class="ez-toc-section-end"></span>
+## Three ways to progressive images loading
 
 The first time I knew the Medium was three years ago. I was amazed when I saw their progressive loading effect.
 
@@ -44,7 +35,7 @@ What’s even more amazing is that the article tested the two methods of lazy lo
 
 - - - - - -
 
-## <span class="ez-toc-section" id="three-steps-of-medium-progressive-images-loading"></span>Three steps of Medium Progressive Images Loading<span class="ez-toc-section-end"></span>
+## Three steps of Medium Progressive Images Loading
 
 Medium Progressive Images Loading looks complicated, but if we think a while, it’s simple, just three steps:
 
@@ -56,9 +47,9 @@ This is the three steps I thought of, and we’ll move on to the code part.
 
 - - - - - -
 
-## <span class="ez-toc-section" id="code-part"></span>Code Part<span class="ez-toc-section-end"></span>
+## Code Part
 
-### <span class="ez-toc-section" id="html-css"></span>HTML / CSS<span class="ez-toc-section-end"></span>
+### HTML / CSS
 
 Low-quality image, I use photoshop to deal with it.
 
@@ -72,19 +63,25 @@ For example, the [Bootstrap Responsive Embed](https://getbootstrap.com/docs/3.3/
 
 The following is the html of image block div:
 
-<script src="https://gist.github.com/auguston/4e839fabcaf7b39383498cf73dc8afb2.js"></script>Here is the SASS that I let the background-image fill the div:
+{{< gist letswritetw 4e839fabcaf7b39383498cf73dc8afb2 >}}
 
-<script src="https://gist.github.com/auguston/1fc830f2d3537ebe048eb4165f785b70.js"></script>Because the background-image is directly inline html, so I only deal with size and postion.
+Here is the SASS that I let the background-image fill the div:
+
+{{< gist letswritetw 1fc830f2d3537ebe048eb4165f785b70 >}}
+
+Because the background-image is directly inline html, so I only deal with size and postion.
 
 It is important to note that height should be set to 0.
 
 16:9, 4:3, both them are computed by (9/16) \* 100, (3/4) \* 100. If your image out of those sizes, use js to get the width and height of the div and mathematically calculate: (height/width) \* 100.
 
-### <span class="ez-toc-section" id="javascript"></span>JavaScript<span class="ez-toc-section-end"></span>
+### JavaScript
 
 I use jQuery and ES6 to code JavaScript:
 
-<script src="https://gist.github.com/auguston/084f07341d6bae554ba9b90c413f1bbc.js"></script>First, I deal width free size images which means it doesn’t belong to 16:9 || 4:3. But we need back-end IT to render the width and height of image to data-width and data-height.
+{{< gist letswritetw 084f07341d6bae554ba9b90c413f1bbc >}}
+
+First, I deal width free size images which means it doesn’t belong to 16:9 || 4:3. But we need back-end IT to render the width and height of image to data-width and data-height.
 
 Second, I use [waypoint](http://imakewebthings.com/waypoints/) to listen to each image scrolled to the window.
 
@@ -94,23 +91,27 @@ Third, I create a image object, and then apped it to div.
 
 The source code I published on Github:
 
-[auguston/medium-lazy-load](https://github.com/auguston/letswrite-medium-lazyload)
+[letswritetw/medium-lazy-load](https://github.com/letswritetw/letswrite-medium-lazyload)
 
 Demo page is here:
 
-[Progressive image loading like Medium demo](https://auguston.github.io/letswrite-medium-lazyload/)
+[Progressive image loading like Medium demo](https://letswritetw.github.io/letswrite-medium-lazyload/)
 
 - - - - - -
 
-## <span class="ez-toc-section" id="test-page-loading-time"></span>Test page loading time<span class="ez-toc-section-end"></span>
+## Test page loading time
 
 I tested the page load time with **[pindom](https://www.pingdom.com/)**  and found it to be really fast.
 
 This result is not use any lazy load speed, 4.57s:
 
-<div class="wp-block-image"><figure class="aligncenter">![not use any lazy load speed](https://i0.wp.com/miro.medium.com/max/978/1*LAemH0TlNiv1VkBqPivQeg.png?ssl=1)<figcaption>not use any lazy load speed</figcaption></figure></div>This result is using progressive image loading, down to 2.02s:
+{{< figure src="https://i0.wp.com/miro.medium.com/max/978/1*LAemH0TlNiv1VkBqPivQeg.png?ssl=1" title="not use any lazy load speed" alt="not use any lazy load speed" >}}
 
-<div class="wp-block-image"><figure class="aligncenter">![using progressive image loading](https://i0.wp.com/miro.medium.com/max/987/1*5pP5v3uHblxKA9aqhzZarQ.png?ssl=1)<figcaption>using progressive image loading</figcaption></figure></div>Finally, we know that progressive image loading helps speed up page loading and further improve SEO.
+This result is using progressive image loading, down to 2.02s:
+
+{{< figure src="https://i0.wp.com/miro.medium.com/max/987/1*5pP5v3uHblxKA9aqhzZarQ.png?ssl=1" title="using progressive image loading" alt="using progressive image loading" >}}
+
+Finally, we know that progressive image loading helps speed up page loading and further improve SEO.
 
 - - - - - -
 

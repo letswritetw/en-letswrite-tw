@@ -1,6 +1,6 @@
 {{ $Uri := .RelPermalink }}
 {{ $Image := .Resources.GetMatch (print .Params.cover) }}
-{{ $ImageResize := $Image.Resize "1200x" }}
+{{ $ImageResize := $Image.Resize "768x" }}
 {{ with $Image }}
   <div class="mb-2">
     <a href="{{ $Uri }}">
