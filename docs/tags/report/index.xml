@@ -9,10 +9,10 @@
     <lastBuildDate>Thu, 15 Aug 2019 16:34:47 +0000</lastBuildDate><atom:link href="https://en-test.letswrite.tw/tags/report/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Google Analytics Event tracking setting up</title>
-      <link>https://en-test.letswrite.tw/posts/ga-event/</link>
+      <link>https://en-test.letswrite.tw/ga-event/</link>
       <pubDate>Thu, 15 Aug 2019 16:34:47 +0000</pubDate>
       
-      <guid>https://en-test.letswrite.tw/posts/ga-event/</guid>
+      <guid>https://en-test.letswrite.tw/ga-event/</guid>
       <description>Outline of this article：What is Google Analytic Event Tracking、3+1 elements of the GA event、GA Event can affect bounce rate、Write GA Event tracking code</description>
     </item>
     

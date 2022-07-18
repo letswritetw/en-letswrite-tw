@@ -9,10 +9,10 @@
     <lastBuildDate>Mon, 07 Oct 2019 13:53:50 +0000</lastBuildDate><atom:link href="https://en-test.letswrite.tw/tags/progressive/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Progressive Image Loading like Medium</title>
-      <link>https://en-test.letswrite.tw/posts/medium-lazyload/</link>
+      <link>https://en-test.letswrite.tw/medium-lazyload/</link>
       <pubDate>Mon, 07 Oct 2019 13:53:50 +0000</pubDate>
       
-      <guid>https://en-test.letswrite.tw/posts/medium-lazyload/</guid>
+      <guid>https://en-test.letswrite.tw/medium-lazyload/</guid>
       <description>Outline of this article: Three ways to progressive images loading, Three steps of Medium Progressive Images Loading, Code Part, Test page loading time</description>
     </item>
     

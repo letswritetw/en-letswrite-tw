@@ -1,5 +1,5 @@
 <ul class="flex flex-wrap">
-  {{ $paginator := .Paginate (where .Site.RegularPages "Type" "posts") 5 }}
+  {{ $paginator := .Paginate .RegularPagesRecursive 5 }}
   {{ range $paginator.Pages }}
     <li class="mb-8 sm:mb-4 sm:p-4 sm:w-1/2 rounded-lg">
 

@@ -17,13 +17,17 @@ title: Let's Write, EN
 menu:
   main:
   - name: Index
-    title: 這邊會是 a tag 的 title
+    title: Index
     url: /
     weight: 1
-  - name: Google
-    title: 這邊會是 a tag 的 title
-    url: /categories/google/
+  - name: Front-End
+    title: Front-End
+    url: /categories/front-end/
     weight: 2
+  - name: Google
+    title: Google
+    url: /categories/google/
+    weight: 3
 
 # copyright
 copyright: Let's Write. All Rights Reserved.
