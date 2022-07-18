@@ -9,6 +9,7 @@ tags:
   - event
   - 'Google Analytics'
   - report
+draft: true
 ---
 
 本篇中文版：[Google Analytics 事件追蹤設定](https://letswrite.tw/ga-event/)

@@ -9,6 +9,7 @@ tags:
     - image
     - medium
     - progressive
+draft: true
 ---
 
 本篇中文版：[像Medium的漸近式圖片加載](https://letswrite.tw/medium-lazyload/)

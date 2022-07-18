@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>click on Let&#39;s Write, EN</title>
+    <link>https://en-test.letswrite.tw/tags/click/</link>
+    <description>Recent content in click on Let&#39;s Write, EN</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Let&#39;s Write. All Rights Reserved.</copyright>
+    <lastBuildDate>Wed, 21 Aug 2019 21:02:42 +0000</lastBuildDate><atom:link href="https://en-test.letswrite.tw/tags/click/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fully customizable Google Forms</title>
+      <link>https://en-test.letswrite.tw/posts/custom-google-form/</link>
+      <pubDate>Wed, 21 Aug 2019 21:02:42 +0000</pubDate>
+      
+      <guid>https://en-test.letswrite.tw/posts/custom-google-form/</guid>
+      <description>Before writing an article on how to use google excel as a database, this first writes how to use google forms as a form on the web page.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -2,16 +2,143 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://en-test.letswrite.tw/posts/</loc>
+    <lastmod>2022-07-02T11:49:15+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url><url>
     <loc>https://en-test.letswrite.tw/</loc>
     <lastmod>2022-07-01T00:00:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url><url>
     <loc>https://en-test.letswrite.tw/categories/</loc>
+    <lastmod>2019-10-23T14:11:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url><url>
+    <loc>https://en-test.letswrite.tw/tags/gcp/</loc>
+    <lastmod>2019-10-23T14:11:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url><url>
+    <loc>https://en-test.letswrite.tw/categories/google/</loc>
+    <lastmod>2019-10-23T14:11:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url><url>
+    <loc>https://en-test.letswrite.tw/posts/gcp-node/</loc>
+    <lastmod>2019-10-23T14:11:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url><url>
+    <loc>https://en-test.letswrite.tw/tags/javascript/</loc>
+    <lastmod>2019-10-23T14:11:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url><url>
+    <loc>https://en-test.letswrite.tw/tags/node/</loc>
+    <lastmod>2019-10-23T14:11:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url><url>
     <loc>https://en-test.letswrite.tw/tags/</loc>
+    <lastmod>2019-10-23T14:11:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url><url>
+    <loc>https://en-test.letswrite.tw/categories/front-end/</loc>
+    <lastmod>2019-10-07T13:53:50+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url><url>
+    <loc>https://en-test.letswrite.tw/tags/image/</loc>
+    <lastmod>2019-10-07T13:53:50+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url><url>
+    <loc>https://en-test.letswrite.tw/tags/medium/</loc>
+    <lastmod>2019-10-07T13:53:50+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url><url>
+    <loc>https://en-test.letswrite.tw/tags/progressive/</loc>
+    <lastmod>2019-10-07T13:53:50+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url><url>
+    <loc>https://en-test.letswrite.tw/posts/medium-lazyload/</loc>
+    <lastmod>2019-10-07T13:53:50+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url><url>
+    <loc>https://en-test.letswrite.tw/tags/data/</loc>
+    <lastmod>2019-08-22T20:26:54+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url><url>
+    <loc>https://en-test.letswrite.tw/tags/excel/</loc>
+    <lastmod>2019-08-22T20:26:54+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url><url>
+    <loc>https://en-test.letswrite.tw/posts/google-excel-db/</loc>
+    <lastmod>2019-08-22T20:26:54+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url><url>
+    <loc>https://en-test.letswrite.tw/tags/sheet/</loc>
+    <lastmod>2019-08-22T20:26:54+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url><url>
+    <loc>https://en-test.letswrite.tw/tags/click/</loc>
+    <lastmod>2019-08-21T21:02:42+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url><url>
+    <loc>https://en-test.letswrite.tw/tags/form/</loc>
+    <lastmod>2019-08-21T21:02:42+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url><url>
+    <loc>https://en-test.letswrite.tw/posts/custom-google-form/</loc>
+    <lastmod>2019-08-21T21:02:42+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url><url>
+    <loc>https://en-test.letswrite.tw/tags/input/</loc>
+    <lastmod>2019-08-21T21:02:42+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url><url>
+    <loc>https://en-test.letswrite.tw/tags/google-analytics/</loc>
+    <lastmod>2019-08-18T11:43:03+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url><url>
+    <loc>https://en-test.letswrite.tw/posts/ga-no-sessions/</loc>
+    <lastmod>2019-08-18T11:43:03+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url><url>
+    <loc>https://en-test.letswrite.tw/tags/traffic/</loc>
+    <lastmod>2019-08-18T11:43:03+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url><url>
+    <loc>https://en-test.letswrite.tw/tags/event/</loc>
+    <lastmod>2019-08-15T16:34:47+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url><url>
+    <loc>https://en-test.letswrite.tw/posts/ga-event/</loc>
+    <lastmod>2019-08-15T16:34:47+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url><url>
+    <loc>https://en-test.letswrite.tw/tags/report/</loc>
+    <lastmod>2019-08-15T16:34:47+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>

@@ -5,6 +5,25 @@
     <link>https://en-test.letswrite.tw/categories/</link>
     <description>Recent content in Categories on Let&#39;s Write, EN</description>
     <generator>Hugo -- gohugo.io</generator>
-    <copyright>Let&#39;s Write. All Rights Reserved.</copyright><atom:link href="https://en-test.letswrite.tw/categories/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Let&#39;s Write. All Rights Reserved.</copyright>
+    <lastBuildDate>Wed, 23 Oct 2019 14:11:00 +0000</lastBuildDate><atom:link href="https://en-test.letswrite.tw/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>google</title>
+      <link>https://en-test.letswrite.tw/categories/google/</link>
+      <pubDate>Wed, 23 Oct 2019 14:11:00 +0000</pubDate>
+      
+      <guid>https://en-test.letswrite.tw/categories/google/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>front-end</title>
+      <link>https://en-test.letswrite.tw/categories/front-end/</link>
+      <pubDate>Mon, 07 Oct 2019 13:53:50 +0000</pubDate>
+      
+      <guid>https://en-test.letswrite.tw/categories/front-end/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

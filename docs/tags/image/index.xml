@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>image on Let&#39;s Write, EN</title>
+    <link>https://en-test.letswrite.tw/tags/image/</link>
+    <description>Recent content in image on Let&#39;s Write, EN</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Let&#39;s Write. All Rights Reserved.</copyright>
+    <lastBuildDate>Mon, 07 Oct 2019 13:53:50 +0000</lastBuildDate><atom:link href="https://en-test.letswrite.tw/tags/image/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Progressive Image Loading like Medium</title>
+      <link>https://en-test.letswrite.tw/posts/medium-lazyload/</link>
+      <pubDate>Mon, 07 Oct 2019 13:53:50 +0000</pubDate>
+      
+      <guid>https://en-test.letswrite.tw/posts/medium-lazyload/</guid>
+      <description>Outline of this article: Three ways to progressive images loading, Three steps of Medium Progressive Images Loading, Code Part, Test page loading time</description>
+    </item>
+    
+  </channel>
+</rss>

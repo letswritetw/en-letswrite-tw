@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>report on Let&#39;s Write, EN</title>
+    <link>https://en-test.letswrite.tw/tags/report/</link>
+    <description>Recent content in report on Let&#39;s Write, EN</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Let&#39;s Write. All Rights Reserved.</copyright>
+    <lastBuildDate>Thu, 15 Aug 2019 16:34:47 +0000</lastBuildDate><atom:link href="https://en-test.letswrite.tw/tags/report/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Google Analytics Event tracking setting up</title>
+      <link>https://en-test.letswrite.tw/posts/ga-event/</link>
+      <pubDate>Thu, 15 Aug 2019 16:34:47 +0000</pubDate>
+      
+      <guid>https://en-test.letswrite.tw/posts/ga-event/</guid>
+      <description>Outline of this article：What is Google Analytic Event Tracking、3+1 elements of the GA event、GA Event can affect bounce rate、Write GA Event tracking code</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>traffic on Let&#39;s Write, EN</title>
+    <link>https://en-test.letswrite.tw/tags/traffic/</link>
+    <description>Recent content in traffic on Let&#39;s Write, EN</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Let&#39;s Write. All Rights Reserved.</copyright>
+    <lastBuildDate>Sun, 18 Aug 2019 11:43:03 +0000</lastBuildDate><atom:link href="https://en-test.letswrite.tw/tags/traffic/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>If the page has id=&#34;ga&#34;, google analytics with gtag will not receive sessions.</title>
+      <link>https://en-test.letswrite.tw/posts/ga-no-sessions/</link>
+      <pubDate>Sun, 18 Aug 2019 11:43:03 +0000</pubDate>
+      
+      <guid>https://en-test.letswrite.tw/posts/ga-no-sessions/</guid>
+      <description>If the html of the page has id=&amp;ldquo;ga&amp;rdquo;, and the way to set the Google Analytics code is gtag, then GA will not receive the pageview.</description>
+    </item>
+    
+  </channel>
+</rss>

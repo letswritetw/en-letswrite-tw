@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+	
+<meta charset="utf-8">
+
+<title>Fully customizable Google Forms</title>
+<meta name="description" content="">
+
+<link rel="canonical" href="https://en-test.letswrite.tw/posts/custom-google-form/">
+
+<meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1">
+<meta name="MobileOptimized" content="320">
+<meta name="HandheldFriendly" content="True">
+<meta name="format-detection" content="telephone=no">
+<meta name="theme-color" content="#42A6F7">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="application-name" content="Let&#39;s Write, EN">
+<meta name="msapplication-TileColor" content="#42A6F7">
+
+
+<link rel="shortcut icon" href="https://letswritetw.github.io/letswritetw/dist/img/logo_512.png">
+<link rel="apple-touch-icon" href="https://letswritetw.github.io/letswritetw/dist/img/logo_512.png">
+<link rel="icon" type="image/png" href="https://letswritetw.github.io/letswritetw/dist/img/logo_512.png">
+
+
+
+<link rel="stylesheet" href="https://en-test.letswrite.tw/css/tailwind.min.906dfea8f1dd68c73d3af8bd7abe66f8c6848530dab1c5ad220f4b62725dcd50.css">
+
+
+<meta property="og:title" content="Fully customizable Google Forms" />
+<meta property="og:description" content="Before writing an article on how to use google excel as a database, this first writes how to use google forms as a form on the web page." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://en-test.letswrite.tw/posts/custom-google-form/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2019-08-21T21:02:42+00:00" />
+<meta property="article:modified_time" content="2019-08-21T21:02:42+00:00" />
+
+
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-PROPERTY_ID', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+	<body class="bg-gray-100">
+
+		
+<script type="application/ld+json">
+  {
+    "@context": "https://www.schema.org",
+    "@type": "Organization",
+    "name": "Let\u0027s Write, EN",
+    "url": "https:\/\/en-test.letswrite.tw\/",
+    "logo": "https:\/\/letswritetw.github.io\/letswritetw\/dist\/img\/logo_512.png"
+  }
+</script>
+
+		<div class="p-4 sm:p-8 bg-gray-100">
+
+			<div class="mx-auto p-4 sm:p-8 max-w-3xl bg-white rounded-lg shadow-xl">
+
+				<ul class="flex justify-end">
+					
+  
+  <li>
+    <a class="inline-block mx-1" href="https://www.facebook.com/letswrite.tw/">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z" fill="rgba(102,102,102,1)"/></svg>
+    </a>
+  </li>
+
+  
+  <li>
+    <a class="inline-block mx-1" href="https://t.me/letswritetw">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-3.11-8.83l.013-.007.87 2.87c.112.311.266.367.453.341.188-.025.287-.126.41-.244l1.188-1.148 2.55 1.888c.466.257.801.124.917-.432l1.657-7.822c.183-.728-.137-1.02-.702-.788l-9.733 3.76c-.664.266-.66.638-.12.803l2.497.78z" fill="rgba(102,102,102,1)"/></svg>
+    </a>
+  </li>
+
+  
+  <li>
+    <a class="inline-block mx-1" href="https://github.com/letswritetw">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 2C6.475 2 2 6.475 2 12a9.994 9.994 0 0 0 6.838 9.488c.5.087.687-.213.687-.476 0-.237-.013-1.024-.013-1.862-2.512.463-3.162-.612-3.362-1.175-.113-.288-.6-1.175-1.025-1.413-.35-.187-.85-.65-.013-.662.788-.013 1.35.725 1.538 1.025.9 1.512 2.338 1.087 2.912.825.088-.65.35-1.087.638-1.337-2.225-.25-4.55-1.113-4.55-4.938 0-1.088.387-1.987 1.025-2.688-.1-.25-.45-1.275.1-2.65 0 0 .837-.262 2.75 1.026a9.28 9.28 0 0 1 2.5-.338c.85 0 1.7.112 2.5.337 1.912-1.3 2.75-1.024 2.75-1.024.55 1.375.2 2.4.1 2.65.637.7 1.025 1.587 1.025 2.687 0 3.838-2.337 4.688-4.562 4.938.362.312.675.912.675 1.85 0 1.337-.013 2.412-.013 2.75 0 .262.188.574.688.474A10.016 10.016 0 0 0 22 12c0-5.525-4.475-10-10-10z" fill="rgba(102,102,102,1)"/></svg>
+    </a>
+  </li>
+
+  
+  <li>
+    <a class="inline-block mx-1" href="https://www.instagram.com/letswrite.tw/">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153a4.908 4.908 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 0 1-1.153 1.772 4.915 4.915 0 0 1-1.772 1.153c-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 0 1-1.772-1.153 4.904 4.904 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 0 1 1.153-1.772A4.897 4.897 0 0 1 5.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6.5-.25a1.25 1.25 0 0 0-2.5 0 1.25 1.25 0 0 0 2.5 0zM12 9a3 3 0 1 1 0 6 3 3 0 0 1 0-6z" fill="rgba(102,102,102,1)"/></svg>
+    </a>
+  </li>
+
+  
+  <li>
+    <a class="inline-block mx-1" href="https://twitter.com/letswrite_tw">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M22.162 5.656a8.384 8.384 0 0 1-2.402.658A4.196 4.196 0 0 0 21.6 4c-.82.488-1.719.83-2.656 1.015a4.182 4.182 0 0 0-7.126 3.814 11.874 11.874 0 0 1-8.62-4.37 4.168 4.168 0 0 0-.566 2.103c0 1.45.738 2.731 1.86 3.481a4.168 4.168 0 0 1-1.894-.523v.052a4.185 4.185 0 0 0 3.355 4.101 4.21 4.21 0 0 1-1.89.072A4.185 4.185 0 0 0 7.97 16.65a8.394 8.394 0 0 1-6.191 1.732 11.83 11.83 0 0 0 6.41 1.88c7.693 0 11.9-6.373 11.9-11.9 0-.18-.005-.362-.013-.54a8.496 8.496 0 0 0 2.087-2.165z" fill="rgba(102,102,102,1)"/></svg>
+    </a>
+  </li>
+				</ul>
+
+				
+<h2 class="py-4 text-center font-bold text-4xl">
+  <a class="inline-block hover:text-main" href="/">Let&#39;s Write, EN</a>
+</h2>
+
+<p class="pb-4 text-center">Front-end engineer August&#39;s study notes — solving problems, in simple ways.</p>
+
+<nav class="mb-4 py-2 bg-gray-100 rounded-lg text-center">
+  
+  
+  
+    <a
+      class=" px-4 hover:text-main"
+      href="/"
+      title="這邊會是 a tag 的 title">Index</a>
+  
+    <a
+      class=" px-4 hover:text-main"
+      href="/categories/google/"
+      title="這邊會是 a tag 的 title">Google</a>
+  
+</nav>
+
+				<div>
+					
+
+	<article class="single-article">
+
+		
+		
+
+
+
+  <div class="mb-2">
+    <a href="/posts/custom-google-form/">
+      <img
+        class="block mx-auto rounded-lg"
+        src="/posts/custom-google-form/custom-google-form_hucd97753ac30a1e0041360e5faf160e7f_99504_1200x0_resize_q75_box.jpg" alt="custom-google-form.jpg"
+        width="1200" height="630">
+        </a>
+  </div>
+
+
+		
+		<h1>Fully customizable Google Forms</h1>
+
+		
+		<p class="text-sm">2019-08-21 21:02</p>
+
+		<hr>
+
+		
+		<div class="single-toc">
+			<h2>TOC</h2>
+			<nav id="TableOfContents">
+  <ul>
+    <li><a href="#google-forms-is-very-convenient-but-it-can-be-used-better">Google Forms is very convenient, but it can be used better</a></li>
+    <li><a href="#design-the-required-fields-and-create-them-with-google-forms">Design the required fields and create them with Google Forms</a></li>
+    <li><a href="#take-the-necessary-information-from-google-forms">Take the necessary information from google forms</a>
+      <ul>
+        <li><a href="#find-post-url">find POST url</a></li>
+        <li><a href="#find-fields-name">find fields name</a></li>
+      </ul>
+    </li>
+    <li><a href="#build-a-web-page-form">Build a web page form</a></li>
+    <li><a href="#custom-form--google-forms-value">Custom form + Google Forms value</a></li>
+    <li><a href="#post-to-google-forms">POST to Google Forms</a>
+      <ul>
+        <li><a href="#html">HTML</a></li>
+        <li><a href="#js">JS</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+		</div>
+
+		<hr>
+
+		
+		<p>本篇中文版：<a href="https://letswrite.tw/custom-google-form/">完全客製 Google 表單，美化表單樣式</a></p>
+<h2 id="google-forms-is-very-convenient-but-it-can-be-used-better">Google Forms is very convenient, but it can be used better</h2>
+<p>We usually use the google form: enter the google drive, add a google form, and then use its WYSIWYG UI to create a form and use.</p>
+<p>Of course, this is the quickest way, but it is less design.</p>
+<p>Even if google forms uses the material design in the UI, you can upload the key vision of the by yourself, which is not comparable to the designer’s design.</p>
+<p>I often have problems with data storage recently. Free database in addition to firebase, if you just want to save simple fields, google excel is a good choice.</p>
+<p>Before writing an article on how to use google excel as a database, this first writes how to use google forms as a form on the web page.</p>
+<p>This article will use the “Contact Us” form as an example.</p>
+<p>Tools used in this article:</p>
+<ul>
+<li>form contents：<a href="https://www.google.com/forms/about/">Google Forms</a></li>
+<li>form style：<a href="http://getskeleton.com/">Skeleton</a></li>
+</ul>
+<hr>
+<h2 id="design-the-required-fields-and-create-them-with-google-forms">Design the required fields and create them with Google Forms</h2>
+<p>In web page, we often use these material in form:</p>
+<ul>
+<li>input</li>
+<li>radio</li>
+<li>select</li>
+<li>textarea</li>
+</ul>
+<p>So, the demo form use those fields:</p>
+<ul>
+<li>name (input)</li>
+<li>gender (radio)</li>
+<li>category (select)</li>
+<li>question (textarea)</li>
+</ul>
+<p>Google forms basically don’t need teaching, but pay attention to:</p>
+<p><strong>Regardless of whether the field is input or radio, select, or textarea, you should select the format of “short answer” when creating the form.</strong></p>
+<p>Because in the end, values are passed to google excel, so the value of each field is actually obtain by the form of the web page, instead of being obtained through google forms.</p>
+<p>What we get from google forms is the url of the action and the name of each input.</p>
+<p>This is the demo form：</p>
+
+
+
+
+<div class="block mt-4 mb-8 max-w-full">
+  <iframe class="w-full" frameborder="0"
+          width="640" height="800"
+          loading="lazy" marginheight="0" marginwidth="0"
+          src="https://docs.google.com/forms/d/e/1FAIpQLScxpBiexGfPha5_vq1fos2r_9dl1QfkCJBvHWHRIbgwudOHaQ/viewform?embedded=true"></iframe>
+</div>
+<p>After the form is finished, remember to go to the <strong>responses</strong> and click <strong>create spreadsheet</strong> to create a google excel to see if the data is actually coming in.</p>
+<hr>
+<h2 id="take-the-necessary-information-from-google-forms">Take the necessary information from google forms</h2>
+<p>The form on the web page, if you want to be able to pass data to the back-end, you need 2 things:</p>
+<ul>
+<li>POST url</li>
+<li>field name</li>
+</ul>
+<p>Google forms will have these two things after the form is created. You can find them on the form with the DevTools.</p>
+<h3 id="find-post-url">find POST url</h3>
+<p>You right-click an element on the form page and select <strong>Inspect</strong> to jump into the <strong>Elements</strong> panel. If you use Windows system, you can press <strong>F12</strong> directly.</p>
+<figure><img src="https://i0.wp.com/i.imgur.com/8ypIQ8o.png?ssl=1"
+         alt="elements panel"/><figcaption>
+            <h4>elements panel</h4>
+        </figcaption>
+</figure>
+
+<p>On the left is the page of the original form, and on the right is the code.</p>
+<p>Randomly click on the code, you will see the number of selected lines become blue background:</p>
+<figure><img src="https://i0.wp.com/i.imgur.com/j6WzGXN.png?ssl=1"
+         alt="blue background block is the code of your select"/><figcaption>
+            <h4>blue background block is the code of your select</h4>
+        </figcaption>
+</figure>
+
+<p>Then, if you are using a Windows system, press <strong>ctrl + F</strong>, if it is Mac, <strong>cmd + F</strong>, and you will see the search input:</p>
+<figure><img src="https://i0.wp.com/i.imgur.com/yF0jBxI.jpg?ssl=1"
+         alt="open search input"/><figcaption>
+            <h4>open search input</h4>
+        </figcaption>
+</figure>
+
+<p>Type <strong>&lt;form</strong> in the search input and in the search results you will see some code with a yellow background.</p>
+<figure><img src="https://i0.wp.com/i.imgur.com/MoavM2u.jpg?ssl=1"
+         alt="art of search “&amp;lt;form”"/><figcaption>
+            <h4>art of search “&amp;lt;form”</h4>
+        </figcaption>
+</figure>
+
+<p>From the code starting with <strong>&lt;form</strong> , you can see the <strong>action</strong> tag, which has a url value. It is the POST URL and we need to copy it.</p>
+<p>The POST url like this:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="1"><a style="outline: none; text-decoration:none; color:inherit" href="#1">1</a>
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>https://docs.google.com/forms/d/e/1FAIpQLScxpBiexGfPha5_vq1fos2r_9dl1QfkCJBvHWHRIbgwudOHaQ/formResponse</span></span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="find-fields-name">find fields name</h3>
+<p>First, click the button labeled &ldquo;1&rdquo; in the image below, then move the mouse to the name of the form until the position at the beginning of “input” is displayed, left-click.</p>
+<figure><img src="https://i0.wp.com/i.imgur.com/ebA1eko.jpg?ssl=1"
+         alt="find input code"/><figcaption>
+            <h4>find input code</h4>
+        </figcaption>
+</figure>
+
+<p>After left-click, you will see the part of the code on the element panel, and there is a code width light blue background:</p>
+<figure><img src="https://i0.wp.com/i.imgur.com/6xBCLcK.jpg?ssl=1"
+         alt="The selected input is highlighted"/><figcaption>
+            <h4>The selected input is highlighted</h4>
+        </figcaption>
+</figure>
+
+<p>The input code is：</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="1"><a style="outline: none; text-decoration:none; color:inherit" href="#1">1</a>
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;quantumWizTextinputPaperinputInput exportInput&#34;</span> <span style="color:#a6e22e">jsname</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;YPqjbf&#34;</span> <span style="color:#a6e22e">autocomplete</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;off&#34;</span> <span style="color:#a6e22e">tabindex</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0&#34;</span> <span style="color:#a6e22e">aria-label</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;name&#34;</span> <span style="color:#a6e22e">aria-describedby</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;i.desc.2087285872 i.err.2087285872&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;entry.2065974955&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span> <span style="color:#a6e22e">dir</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;auto&#34;</span> <span style="color:#a6e22e">data-initial-dir</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;auto&#34;</span> <span style="color:#a6e22e">data-initial-value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span> <span style="color:#a6e22e">aria-invalid</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;false&#34;</span>&gt;</span></span></code></pre></td></tr></table>
+</div>
+</div>
+<p>The <strong>name</strong> is our need tag:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="1"><a style="outline: none; text-decoration:none; color:inherit" href="#1">1</a>
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>name=&#34;entry.2065974955&#34;</span></span></code></pre></td></tr></table>
+</div>
+</div>
+<p>The other three items are handled in the same way, all we need <strong>name</strong> are as follow：</p>
+<ul>
+<li>name：entry.2065974955</li>
+<li>gender：entry.1310259066</li>
+<li>category：entry.896842914</li>
+<li>question：entry.1857722787</li>
+</ul>
+<p>Now we have POST url, fields name, and we can totally custom our form.</p>
+<hr>
+<h2 id="build-a-web-page-form">Build a web page form</h2>
+<p>This post use Skeleton to build a simple form, and the demo is as follow:</p>
+<figure><img src="https://i0.wp.com/i.imgur.com/3UCsaft.png?ssl=1"
+         alt="custom form demo"/><figcaption>
+            <h4>custom form demo</h4>
+        </figcaption>
+</figure>
+
+<p>Although in the stage of making google forms, each question is a short answer type, but in the custom form, you can distinguish between input, radio, select, and textarea. As long as you can catch the value and post it, you can be sure that the data is received.</p>
+<hr>
+<h2 id="custom-form--google-forms-value">Custom form + Google Forms value</h2>
+<p>We have POST url、google form fields name、custom form, the next step is set google form fields name to our custom form’s name.</p>
+<p>The google form fields name are correspond to the fields in google excel. There are two ways to set name fields:</p>
+<p>The first way: we use the normal form method, we set the action URL and each input name, when we click the submit button, the browser will handle the submit function.</p>
+<p>This is an example of the first way, remember to replace the url and each input name:</p>
+<script type="application/javascript" src="https://gist.github.com/letswritetw/70c2531bfe0f8fb8ffddff8026909787.js"></script>
+
+<p>The second way is use AJAX, we POST google forms url dirctly, and the data’s key is input name.</p>
+<p>This article is mainly about writing the second way.</p>
+<hr>
+<h2 id="post-to-google-forms">POST to Google Forms</h2>
+<p>These information are get from google form:</p>
+<ul>
+<li>url：https://docs.google.com/forms/d/e/1FAIpQLScxpBiexGfPha5_vq1fos2r_9dl1QfkCJBvHWHRIbgwudOHaQ/formResponse</li>
+<li>Name name：entry.2065974955</li>
+<li>Gender name：entry.1310259066</li>
+<li>Category name：entry.896842914</li>
+<li>Question name：entry.1857722787</li>
+</ul>
+<p>We can use them to code html and js.</p>
+<h3 id="html">HTML</h3>
+<script type="application/javascript" src="https://gist.github.com/letswritetw/4485ed7f7f6c112008fc8c0be1d2bfc0.js"></script>
+
+<h3 id="js">JS</h3>
+<p>The part of js, we get each input value and AJAX to google form.</p>
+<p>Usually for the form, it will verify whether the columns are empty or verify that the format is correct. But this article is mainly about how to customize the form, so I gave up the verification part. If input value is empty, I will send “no set”.</p>
+<script type="application/javascript" src="https://gist.github.com/letswritetw/59983a6a406f97f1de52143fa14d6db6.js"></script>
+
+<p>The data’s key is the name which we get from google form’s name.</p>
+<p>The POST url is the action value which we get from google form’s action.</p>
+<p>Finally, we can test whether the data is successfully entered into the google excel.</p>
+<p>We fill the form and click confirm button:</p>
+<figure><img src="https://i0.wp.com/i.imgur.com/FWAK3ac.png?ssl=1"
+         alt="fill the form"/><figcaption>
+            <h4>fill the form</h4>
+        </figcaption>
+</figure>
+
+<p>Then we open response google excel and we can see that the data came in successfully !</p>
+<figure><img src="https://i0.wp.com/i.imgur.com/H1SooVm.png?ssl=1"
+         alt="google excel save data successfully"/><figcaption>
+            <h4>google excel save data successfully</h4>
+        </figcaption>
+</figure>
+
+<p>The source code used in this article is here, welcome to download and use:</p>
+<p><a href="https://github.com/letswritetw/letswrite-customize-google-form-en">https://github.com/letswritetw/letswrite-customize-google-form-en</a></p>
+<p>And the test web page is here: <a href="https://letswritetw.github.io/letswrite-customize-google-form-en/">Customize google form demo</a></p>
+<p>Here you can see if the data has been sent：<a href="https://docs.google.com/spreadsheets/d/1HYd0OwuDYZKsRptbsgQrkJ3SMKJyV26SYZn49cuEa-Q/edit?usp=sharing">response google excel</a></p>
+<hr>
+<p>If you find this article helpful, please click on the LIKE button made by myself. If you are willing to share on the social, that’s even better.</p>
+
+
+		<hr>
+
+		
+		<p>Categories</p>
+		<ul>
+			
+				<li>
+					<a href="/categories/google">google</a>
+				</li>
+			
+		</ul>
+
+		<hr>
+
+		
+		<p>Tags</p>
+		<ul>
+			
+				<li><a href="/tags/click/">click</a></li>
+			
+				<li><a href="/tags/data/">data</a></li>
+			
+				<li><a href="/tags/form/">form</a></li>
+			
+				<li><a href="/tags/input/">input</a></li>
+			
+		</ul>
+
+		<hr>
+
+		
+		
+			上一篇 <a href="/posts/ga-no-sessions/">If the page has id=&#34;ga&#34;, google analytics with gtag will not receive sessions.</a>
+		
+		
+			下一篇 <a href="/posts/google-excel-db/">How to use Google Sheets as a database</a>
+		
+
+		<hr>
+
+		
+		
+		
+
+	</article>
+
+
+				</div>
+				
+				<ul class="flex justify-center">
+					
+  
+  <li>
+    <a class="inline-block mx-1" href="https://www.facebook.com/letswrite.tw/">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z" fill="rgba(102,102,102,1)"/></svg>
+    </a>
+  </li>
+
+  
+  <li>
+    <a class="inline-block mx-1" href="https://t.me/letswritetw">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-3.11-8.83l.013-.007.87 2.87c.112.311.266.367.453.341.188-.025.287-.126.41-.244l1.188-1.148 2.55 1.888c.466.257.801.124.917-.432l1.657-7.822c.183-.728-.137-1.02-.702-.788l-9.733 3.76c-.664.266-.66.638-.12.803l2.497.78z" fill="rgba(102,102,102,1)"/></svg>
+    </a>
+  </li>
+
+  
+  <li>
+    <a class="inline-block mx-1" href="https://github.com/letswritetw">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 2C6.475 2 2 6.475 2 12a9.994 9.994 0 0 0 6.838 9.488c.5.087.687-.213.687-.476 0-.237-.013-1.024-.013-1.862-2.512.463-3.162-.612-3.362-1.175-.113-.288-.6-1.175-1.025-1.413-.35-.187-.85-.65-.013-.662.788-.013 1.35.725 1.538 1.025.9 1.512 2.338 1.087 2.912.825.088-.65.35-1.087.638-1.337-2.225-.25-4.55-1.113-4.55-4.938 0-1.088.387-1.987 1.025-2.688-.1-.25-.45-1.275.1-2.65 0 0 .837-.262 2.75 1.026a9.28 9.28 0 0 1 2.5-.338c.85 0 1.7.112 2.5.337 1.912-1.3 2.75-1.024 2.75-1.024.55 1.375.2 2.4.1 2.65.637.7 1.025 1.587 1.025 2.687 0 3.838-2.337 4.688-4.562 4.938.362.312.675.912.675 1.85 0 1.337-.013 2.412-.013 2.75 0 .262.188.574.688.474A10.016 10.016 0 0 0 22 12c0-5.525-4.475-10-10-10z" fill="rgba(102,102,102,1)"/></svg>
+    </a>
+  </li>
+
+  
+  <li>
+    <a class="inline-block mx-1" href="https://www.instagram.com/letswrite.tw/">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153a4.908 4.908 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 0 1-1.153 1.772 4.915 4.915 0 0 1-1.772 1.153c-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 0 1-1.772-1.153 4.904 4.904 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 0 1 1.153-1.772A4.897 4.897 0 0 1 5.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6.5-.25a1.25 1.25 0 0 0-2.5 0 1.25 1.25 0 0 0 2.5 0zM12 9a3 3 0 1 1 0 6 3 3 0 0 1 0-6z" fill="rgba(102,102,102,1)"/></svg>
+    </a>
+  </li>
+
+  
+  <li>
+    <a class="inline-block mx-1" href="https://twitter.com/letswrite_tw">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M22.162 5.656a8.384 8.384 0 0 1-2.402.658A4.196 4.196 0 0 0 21.6 4c-.82.488-1.719.83-2.656 1.015a4.182 4.182 0 0 0-7.126 3.814 11.874 11.874 0 0 1-8.62-4.37 4.168 4.168 0 0 0-.566 2.103c0 1.45.738 2.731 1.86 3.481a4.168 4.168 0 0 1-1.894-.523v.052a4.185 4.185 0 0 0 3.355 4.101 4.21 4.21 0 0 1-1.89.072A4.185 4.185 0 0 0 7.97 16.65a8.394 8.394 0 0 1-6.191 1.732 11.83 11.83 0 0 0 6.41 1.88c7.693 0 11.9-6.373 11.9-11.9 0-.18-.005-.362-.013-.54a8.496 8.496 0 0 0 2.087-2.165z" fill="rgba(102,102,102,1)"/></svg>
+    </a>
+  </li>
+				</ul>
+
+				<p class="p-4 text-center text-xs">&copy; 2022 Let&#39;s Write. All Rights Reserved.</p>
+
+			</div>
+
+		</div>
+
+		
+
+<script src="https://en-test.letswrite.tw/main.min.f8952214762921b4f64b73e2957b35e4d15f86bd8df6dba030b5f9d531681c67.js"></script>
+
+	</body>
+
+</html>

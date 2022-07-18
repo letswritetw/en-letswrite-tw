@@ -8,6 +8,7 @@ categories:
 tags:
   - 'Google Analytics'
   - traffic
+draft: true
 ---
 
 本篇中文版：[如果頁面有id="ga"，用 gtag 埋 Google Analytics 會收不到流量](https://letswrite.tw/ga-no-sessions/)

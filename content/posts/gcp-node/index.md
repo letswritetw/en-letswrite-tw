@@ -9,6 +9,7 @@ tags:
     - GCP
     - javascript
     - node
+draft: true
 ---
 
 本篇中文版：[用 Google Cloud Platform (GCP) 建 Node.js 網站](https://letswrite.tw/gcp-node/)

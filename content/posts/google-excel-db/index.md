@@ -9,6 +9,7 @@ tags:
   - data
   - excel
   - sheet
+draft: true
 ---
 
 本篇中文版：[如何用Google Excel當作資料庫](https://letswrite.tw/google-excel-db/)
