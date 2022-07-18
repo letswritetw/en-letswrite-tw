@@ -2,8 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body {
+  overflow: auto;
+  height: -webkit-fill-available;
+}
+html {
+  -webkit-overflow-scrolling: touch
+}
 body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   color: #666;
+}
+img {
+  content-visibility: auto;
 }
 
 /* 分頁按鈕 */
