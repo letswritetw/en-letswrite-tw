@@ -1,4 +1,4 @@
-baseURL: /
+baseURL: https://en-test.letswrite.tw/
 publishDir: docs
 timeZone: Asia/Taipei
 
