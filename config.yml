@@ -8,9 +8,6 @@ sitemap:
   filename: sitemap.xml
   priority: 1.0
 
-# 要用 GA，請解開以下註解，並填寫 GA Id
-googleAnalytics: UA-PROPERTY_ID
-
 title: Let's Write, EN
 
 # 導覽列
