@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       toTopBtn.addEventListener('click', e => {
         e.preventDefault();
-        document.body.scrollIntoView({ behavior: 'smooth' })
+        toTopTrigger.scrollIntoView({ behavior: 'smooth' })
       })
 
     }
