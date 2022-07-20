@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>data on Let&#39;s Write, EN</title>
-    <link>https://en-test.letswrite.tw/tags/data/</link>
+    <link>https://en.letswrite.tw/tags/data/</link>
     <description>Recent content in data on Let&#39;s Write, EN</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Let&#39;s Write. All Rights Reserved.</copyright>
-    <lastBuildDate>Thu, 22 Aug 2019 20:26:54 +0000</lastBuildDate><atom:link href="https://en-test.letswrite.tw/tags/data/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 22 Aug 2019 20:26:54 +0000</lastBuildDate><atom:link href="https://en.letswrite.tw/tags/data/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to use Google Sheets as a database</title>
-      <link>https://en-test.letswrite.tw/google-excel-db/</link>
+      <link>https://en.letswrite.tw/google-excel-db/</link>
       <pubDate>Thu, 22 Aug 2019 20:26:54 +0000</pubDate>
       
-      <guid>https://en-test.letswrite.tw/google-excel-db/</guid>
+      <guid>https://en.letswrite.tw/google-excel-db/</guid>
       <description>In this article, I will write how to use Google Sheets as a database, and I will create a simple member list page to demonstrate.</description>
     </item>
     
     <item>
       <title>Fully customizable Google Forms</title>
-      <link>https://en-test.letswrite.tw/custom-google-form/</link>
+      <link>https://en.letswrite.tw/custom-google-form/</link>
       <pubDate>Wed, 21 Aug 2019 21:02:42 +0000</pubDate>
       
-      <guid>https://en-test.letswrite.tw/custom-google-form/</guid>
+      <guid>https://en.letswrite.tw/custom-google-form/</guid>
       <description>Before writing an article on how to use google excel as a database, this first writes how to use google forms as a form on the web page.</description>
     </item>
     

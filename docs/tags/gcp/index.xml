@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>GCP on Let&#39;s Write, EN</title>
-    <link>https://en-test.letswrite.tw/tags/gcp/</link>
+    <link>https://en.letswrite.tw/tags/gcp/</link>
     <description>Recent content in GCP on Let&#39;s Write, EN</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Let&#39;s Write. All Rights Reserved.</copyright>
-    <lastBuildDate>Wed, 23 Oct 2019 14:11:00 +0000</lastBuildDate><atom:link href="https://en-test.letswrite.tw/tags/gcp/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 23 Oct 2019 14:11:00 +0000</lastBuildDate><atom:link href="https://en.letswrite.tw/tags/gcp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>If I already have node.js files, how do I deploy them to Google Cloud Platform(GCP)</title>
-      <link>https://en-test.letswrite.tw/gcp-node/</link>
+      <link>https://en.letswrite.tw/gcp-node/</link>
       <pubDate>Wed, 23 Oct 2019 14:11:00 +0000</pubDate>
       
-      <guid>https://en-test.letswrite.tw/gcp-node/</guid>
+      <guid>https://en.letswrite.tw/gcp-node/</guid>
       <description>Outline of this article：What problem is this article to solve?Introducing GCP and the UI. 5 steps to using GCP App Engine. 3 considerations.</description>
     </item>
     
