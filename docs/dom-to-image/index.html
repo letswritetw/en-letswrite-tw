@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+	
+<meta charset="utf-8">
+
+<title>Simple Webpage Screenshot Functionality - DOM to Image</title>
+<meta name="description" content="">
+<link rel="canonical" href="https://en.letswrite.tw/dom-to-image/">
+
+<meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1">
+<meta name="MobileOptimized" content="320">
+<meta name="HandheldFriendly" content="True">
+<meta name="format-detection" content="telephone=no">
+<meta name="theme-color" content="#42A6F7">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="application-name" content="Let&#39;s Write, EN">
+<meta name="msapplication-TileColor" content="#42A6F7">
+
+
+<link rel="shortcut icon" href="https://letswritetw.github.io/letswritetw/dist/img/logo_512.png">
+<link rel="apple-touch-icon" href="https://letswritetw.github.io/letswritetw/dist/img/logo_512.png">
+<link rel="icon" type="image/png" href="https://letswritetw.github.io/letswritetw/dist/img/logo_512.png">
+
+
+
+<link rel="stylesheet" href="https://en.letswrite.tw/css/tailwind.min.29f98f76a7f4ee6cb8a4036629b0d7d2f25ca5d0cca2e8f87a90ccadb71be487.css">
+
+
+<meta property="og:title" content="Simple Webpage Screenshot Functionality - DOM to Image" />
+<meta property="og:description" content="This article explores the DOM to Image package, which can be used by frontend developers to capture webpage screenshots. It provides a step-by-step guide to using the package, including tips on configuring the parameters for the captured image. Additionally, the author shares an Easter egg about generative AI." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://en.letswrite.tw/dom-to-image/" /><meta property="article:section" content="" />
+<meta property="article:published_time" content="2023-02-25T10:16:28+08:00" />
+<meta property="article:modified_time" content="2023-02-25T10:16:28+08:00" />
+
+
+
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NDGP84X');</script>
+
+	<body class="bg-gray-100">
+
+		
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NDGP84X"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+		
+<script type="application/ld+json">
+  {
+    "@context": "https://www.schema.org",
+    "@type": "Organization",
+    "name": "Let\u0027s Write, EN",
+    "url": "https:\/\/en.letswrite.tw\/",
+    "logo": "https:\/\/letswritetw.github.io\/letswritetw\/dist\/img\/logo_512.png"
+  }
+</script>
+
+		<div class="p-4 sm:p-8 bg-gray-100">
+
+			<div class="mx-auto p-4 sm:p-8 max-w-3xl bg-white rounded-lg shadow-xl">
+
+				<ul class="flex justify-end">
+					
+  
+  <li>
+    <a class="inline-block mx-1" href="https://www.facebook.com/letswrite.tw/">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z" fill="rgba(102,102,102,1)"/></svg>
+    </a>
+  </li>
+
+  
+  <li>
+    <a class="inline-block mx-1" href="https://t.me/letswritetw">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-3.11-8.83l.013-.007.87 2.87c.112.311.266.367.453.341.188-.025.287-.126.41-.244l1.188-1.148 2.55 1.888c.466.257.801.124.917-.432l1.657-7.822c.183-.728-.137-1.02-.702-.788l-9.733 3.76c-.664.266-.66.638-.12.803l2.497.78z" fill="rgba(102,102,102,1)"/></svg>
+    </a>
+  </li>
+
+  
+  <li>
+    <a class="inline-block mx-1" href="https://github.com/letswritetw">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 2C6.475 2 2 6.475 2 12a9.994 9.994 0 0 0 6.838 9.488c.5.087.687-.213.687-.476 0-.237-.013-1.024-.013-1.862-2.512.463-3.162-.612-3.362-1.175-.113-.288-.6-1.175-1.025-1.413-.35-.187-.85-.65-.013-.662.788-.013 1.35.725 1.538 1.025.9 1.512 2.338 1.087 2.912.825.088-.65.35-1.087.638-1.337-2.225-.25-4.55-1.113-4.55-4.938 0-1.088.387-1.987 1.025-2.688-.1-.25-.45-1.275.1-2.65 0 0 .837-.262 2.75 1.026a9.28 9.28 0 0 1 2.5-.338c.85 0 1.7.112 2.5.337 1.912-1.3 2.75-1.024 2.75-1.024.55 1.375.2 2.4.1 2.65.637.7 1.025 1.587 1.025 2.687 0 3.838-2.337 4.688-4.562 4.938.362.312.675.912.675 1.85 0 1.337-.013 2.412-.013 2.75 0 .262.188.574.688.474A10.016 10.016 0 0 0 22 12c0-5.525-4.475-10-10-10z" fill="rgba(102,102,102,1)"/></svg>
+    </a>
+  </li>
+
+  
+  <li>
+    <a class="inline-block mx-1" href="https://www.instagram.com/letswrite.tw/">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153a4.908 4.908 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 0 1-1.153 1.772 4.915 4.915 0 0 1-1.772 1.153c-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 0 1-1.772-1.153 4.904 4.904 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 0 1 1.153-1.772A4.897 4.897 0 0 1 5.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6.5-.25a1.25 1.25 0 0 0-2.5 0 1.25 1.25 0 0 0 2.5 0zM12 9a3 3 0 1 1 0 6 3 3 0 0 1 0-6z" fill="rgba(102,102,102,1)"/></svg>
+    </a>
+  </li>
+
+  
+  <li>
+    <a class="inline-block mx-1" href="https://twitter.com/letswrite_tw">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M22.162 5.656a8.384 8.384 0 0 1-2.402.658A4.196 4.196 0 0 0 21.6 4c-.82.488-1.719.83-2.656 1.015a4.182 4.182 0 0 0-7.126 3.814 11.874 11.874 0 0 1-8.62-4.37 4.168 4.168 0 0 0-.566 2.103c0 1.45.738 2.731 1.86 3.481a4.168 4.168 0 0 1-1.894-.523v.052a4.185 4.185 0 0 0 3.355 4.101 4.21 4.21 0 0 1-1.89.072A4.185 4.185 0 0 0 7.97 16.65a8.394 8.394 0 0 1-6.191 1.732 11.83 11.83 0 0 0 6.41 1.88c7.693 0 11.9-6.373 11.9-11.9 0-.18-.005-.362-.013-.54a8.496 8.496 0 0 0 2.087-2.165z" fill="rgba(102,102,102,1)"/></svg>
+    </a>
+  </li>
+				</ul>
+
+				
+<h2 class="py-4 text-center font-bold text-4xl">
+  <a class="inline-block hover:text-main" href="/">Let&#39;s Write, EN</a>
+</h2>
+
+<p class="pb-4 text-center">Front-end engineer August&#39;s study notes — solving problems, in simple ways.</p>
+
+<nav class="mb-4 py-2 bg-gray-100 rounded-lg text-center">
+  
+  
+  
+    <a
+      class=" px-4 hover:text-main"
+      href="/"
+      title="Index">Index</a>
+  
+    <a
+      class=" px-4 hover:text-main"
+      href="/categories/front-end/"
+      title="Front-End">Front-End</a>
+  
+    <a
+      class=" px-4 hover:text-main"
+      href="/categories/google/"
+      title="Google">Google</a>
+  
+</nav>
+
+				<div>
+					
+
+	<aside id="trigger-to-top"></aside>
+
+	<a id="js-to-top" class="fixed right-6 sm:right-10 bottom-6 sm:bottom-10 flex justify-center items-center w-10 h-10 bg-gray-300 rounded-lg transition-opacity" href="#">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 8l6 6H6z" fill="rgba(255,255,255,1)"/></svg>
+	</a>
+
+	<article class="single-article">
+
+		
+		
+
+
+
+  <div class="mb-2">
+    <a href="/dom-to-image/">
+      <img
+        class="block mx-auto rounded-lg"
+        src="/dom-to-image/dom-to-image_hu28d474e3de98e529067702bc4e707eb2_208716_1200x0_resize_q75_box.jpeg" alt="dom-to-image.jpeg"
+        width="1200" height="630">
+        </a>
+  </div>
+
+
+		
+		<h1>Simple Webpage Screenshot Functionality - DOM to Image</h1>
+
+		
+		<p class="text-sm">2023-02-25 10:16</p>
+
+		<hr>
+
+		
+		<div class="single-toc">
+			<h2>TOC</h2>
+			<nav id="TableOfContents">
+  <ul>
+    <li><a href="#problem-to-be-solved">Problem to be solved</a></li>
+    <li><a href="#installing-dom-to-image">Installing DOM to Image</a></li>
+    <li><a href="#using-dom-to-image">Using Dom to Image</a></li>
+    <li><a href="#notes">Notes</a></li>
+    <li><a href="#demo-and-source-code">Demo and Source Code</a></li>
+    <li><a href="#article-generated-by-notion-ai">Article Generated by Notion AI</a></li>
+  </ul>
+</nav>
+		</div>
+
+		<hr>
+
+		
+		<h2 id="problem-to-be-solved">Problem to be solved</h2>
+<p>This article was translated by Notion AI. Here is the link to the original Chinese version:</p>
+<p><a href="https://www.letswrite.tw/dom-to-image/">https://www.letswrite.tw/dom-to-image/</a></p>
+<p>Last September, August wrote an article titled &ldquo;Simple Webpage Screenshot Function - html2canvas, Canvas2image&rdquo;. At that time, I thought that this was the ultimate package for frontend developers in the area of webpage screenshot (Really?). However, lately, when I need to use this screenshot and download function in his work, I realized that the actual situation was different as the webpage was more complex than the demo. As a result, some parts of the webpage in the saved image were misaligned.</p>
+<p><a href="https://www.letswrite.tw/web-to-image/">https://www.letswrite.tw/web-to-image/</a></p>
+<p>I was at a loss because I had to create another version of CSS for the screenshot state of the webpage, which took some extra time.</p>
+<p>Recently, I had another project that required the use of screenshot and download function. I found that there was also a case of running out of space. I frowned and thought that the situation was not simple, so he asked ChatGPT if there were any alternative tools. The conversation is shown in the image below:</p>
+<figure><img src="https://i0.wp.com/dev-to-uploads.s3.amazonaws.com/uploads/articles/7hols67fmvh9czy8ut7e.png?w=840&amp;ssl=1"
+         alt="with ChatGPT"/><figcaption>
+            <h4>with ChatGPT</h4>
+        </figcaption>
+</figure>
+
+<p>Just tried the dom-to-image mentioned in the article and found out that it doesn&rsquo;t cause any layout issues and the downloaded image file size is significantly smaller.</p>
+<p>However, I still encountered some problems during the process, so I decided to write a screenshot function for this package to serve as a quick guide for those who want to use it without encountering any pitfalls.</p>
+<p>At the end of this article, there is also an Easter egg about the impact of generative AI that I recently discovered. Be sure to check it out!</p>
+<p>Here&rsquo;s the final demo at the end of this article:</p>
+<p><a href="https://letswritetw.github.io/letswrite-dom-to-image/">https://letswritetw.github.io/letswrite-dom-to-image/</a></p>
+<hr>
+<h2 id="installing-dom-to-image">Installing DOM to Image</h2>
+<p>DOM to Image: <a href="https://github.com/tsayen/dom-to-image">https://github.com/tsayen/dom-to-image</a></p>
+<p>The installation process is the same as for any JavaScript package. You can either directly reference the CDN or use the npm package.</p>
+<p><strong>CDN</strong></p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="1"><a style="outline: none; text-decoration:none; color:inherit" href="#1">1</a>
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;</span></span></code></pre></td></tr></table>
+</div>
+</div>
+<p><strong>npm package</strong></p>
+<p>Install package first:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="1"><a style="outline: none; text-decoration:none; color:inherit" href="#1">1</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="2"><a style="outline: none; text-decoration:none; color:inherit" href="#2">2</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="3"><a style="outline: none; text-decoration:none; color:inherit" href="#3">3</a>
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ npm install dom-to-image
+</span></span><span style="display:flex;"><span>或
+</span></span><span style="display:flex;"><span>$ yarn add dom-to-image</span></span></code></pre></td></tr></table>
+</div>
+</div>
+<p>JS import：</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="1"><a style="outline: none; text-decoration:none; color:inherit" href="#1">1</a>
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">domtoimage</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;dom-to-image&#39;</span>;</span></span></code></pre></td></tr></table>
+</div>
+</div>
+<hr>
+<h2 id="using-dom-to-image">Using Dom to Image</h2>
+<p>Dom to Image can be used to save images in JPEG, PNG, and SVG formats.</p>
+<p>Since I did not actually use SVG, we will not be using it here.</p>
+<p>The following demonstrates how to save an image as a PNG file.</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="1"><a style="outline: none; text-decoration:none; color:inherit" href="#1"> 1</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="2"><a style="outline: none; text-decoration:none; color:inherit" href="#2"> 2</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="3"><a style="outline: none; text-decoration:none; color:inherit" href="#3"> 3</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="4"><a style="outline: none; text-decoration:none; color:inherit" href="#4"> 4</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="5"><a style="outline: none; text-decoration:none; color:inherit" href="#5"> 5</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="6"><a style="outline: none; text-decoration:none; color:inherit" href="#6"> 6</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="7"><a style="outline: none; text-decoration:none; color:inherit" href="#7"> 7</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="8"><a style="outline: none; text-decoration:none; color:inherit" href="#8"> 8</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="9"><a style="outline: none; text-decoration:none; color:inherit" href="#9"> 9</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="10"><a style="outline: none; text-decoration:none; color:inherit" href="#10">10</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="11"><a style="outline: none; text-decoration:none; color:inherit" href="#11">11</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="12"><a style="outline: none; text-decoration:none; color:inherit" href="#12">12</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="13"><a style="outline: none; text-decoration:none; color:inherit" href="#13">13</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="14"><a style="outline: none; text-decoration:none; color:inherit" href="#14">14</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="15"><a style="outline: none; text-decoration:none; color:inherit" href="#15">15</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="16"><a style="outline: none; text-decoration:none; color:inherit" href="#16">16</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="17"><a style="outline: none; text-decoration:none; color:inherit" href="#17">17</a>
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// Fetch a specified div and generate a base64 format image.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// The reason for repeating twice will be explained in the following paragraph of notes.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">el</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;xxx&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">config</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">quality</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">style</span><span style="color:#f92672">:</span> { <span style="color:#e6db74">&#34;filter&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;grayscale(100%)&#34;</span> }
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">dataUriTemp</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">domtoimage</span>.<span style="color:#a6e22e">toPng</span>(<span style="color:#a6e22e">el</span>, <span style="color:#a6e22e">captureConfig</span>).<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">dataUrl</span> =&gt; <span style="color:#a6e22e">dataUrl</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">dataUri</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">domtoimage</span>.<span style="color:#a6e22e">toPng</span>(<span style="color:#a6e22e">el</span>, <span style="color:#a6e22e">captureConfig</span>).<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">dataUrl</span> =&gt; <span style="color:#a6e22e">dataUrl</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// download image
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">link</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#39;a&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">filename</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Demo.png&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">link</span>.<span style="color:#a6e22e">download</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">filename</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">link</span>.<span style="color:#a6e22e">href</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">dataUri</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">link</span>.<span style="color:#a6e22e">click</span>();</span></span></code></pre></td></tr></table>
+</div>
+</div>
+<p>If you want to save it as JPEG, change <code>toPng</code> to <code>toJpeg</code> in the code, and also remember to change the file extension to <code>*.jpeg</code>.</p>
+<p>The <code>config</code> in the code is a parameter that can be passed in. Here, we demonstrate changing the <code>quality</code> and <code>style</code>.</p>
+<p>Since <code>style</code> is set to <code>filter: grayscale(100%)</code>, the downloaded image will be in grayscale.</p>
+<p>If it&rsquo;s a page for an event, adding a <code>style</code> before taking a screenshot can be a fun way to do it.</p>
+<p>Available parameters are as follows:</p>
+<ul>
+<li>filter: can filter out specified tags. The official documentation uses it to filter out SVG tags.</li>
+<li>bgcolor: specify the background color.</li>
+<li>width, height: specify the width and height.</li>
+<li>style: can add additional style.</li>
+<li>quality: image quality, with a value of 0-1, 1 being the highest, default is 1.</li>
+<li>cacheBust: whether to clear cache, true is yes, false is no, default is false.</li>
+<li>imagePlaceholder: if the image in the div cannot be obtained, what placeholder image to use. According to the documentation, it should be filled with Base64.</li>
+</ul>
+<hr>
+<h2 id="notes">Notes</h2>
+<p>After spending a morning troubleshooting, August has finally discovered 2 things to be aware of when operating on a mobile device, otherwise the images generated by Dom-to-Image will result in blank spaces in the div where the images are:</p>
+<ul>
+<li>Images have <code>position: relative</code>.</li>
+<li>When executing <code>domtoimage.toJpeg(targetId, [config])</code>, the first image will be blank, but starting from the second time it will be normal, so&hellip;although it&rsquo;s very stupid, in order to maintain peace in the mobile world, please execute it twice. That&rsquo;s why the sample code writes <code>dataUriTemp</code> first, and then another <code>dataUri</code>.</li>
+</ul>
+<p>In addition, there is another situation that will cause the downloaded image to be incomplete, which is when the <code>div</code> that is captured itself has <code>max-width: xxx; margin: 0 auto;</code> written in it. Writing <code>max-width</code> will cause DOM to Image to write a limited width when capturing the image, but because the image capture does not center the image, the captured image will start from the far left, causing the right side to be cropped.</p>
+<hr>
+<h2 id="demo-and-source-code">Demo and Source Code</h2>
+<p>The source code for this post is available on GitHub, and a demo has been generated using GitHub Pages. Please feel free to use it, but we hope that you will share this post or give it a star on GitHub before doing so. Your small action is a great encouragement to our site.</p>
+<p>Source Code: <a href="https://github.com/letswritetw/letswrite-dom-to-image">https://github.com/letswritetw/letswrite-dom-to-image</a></p>
+<p>Demo: <a href="https://letswritetw.github.io/letswrite-dom-to-image/">https://letswritetw.github.io/letswrite-dom-to-image/</a></p>
+<hr>
+<h2 id="article-generated-by-notion-ai">Article Generated by Notion AI</h2>
+<p>Actually, when August started writing this article, he was amazed by the generative AI.</p>
+<p>Just a few days ago, August had applied for the AI feature on Notion, so when he opened Notion today, after typing the title of this article, an option &ldquo;Ask AI to write&rdquo; popped up. Out of curiosity, he clicked it&hellip; and the AI wrote this several hundred-word article on DOM to Image introduction and application, although in English.</p>
+<p>Well, since AI can do the writing, why not let it do all the writing ~~~</p>
+<p>After using ChatGPT, August wondered if he should still insist on writing learning notes?</p>
+<p>Because in the future, people will increasingly ask AI first, and then Google if they can&rsquo;t get the answer.</p>
+<p>So, even if he insists on writing, it is only for AI to learn, right? There will be fewer and fewer real human beings visiting the website.</p>
+<p>Is it still necessary to manage it? Apart from the reason of &ldquo;it can be used as a portfolio for future job interviews,&rdquo; August can&rsquo;t think of any other reasons to continue writing.</p>
+<p>Anyway, below is the article written by Notion AI, which has been modified by August to translate it from English to Chinese and adjust the wording.</p>
+<p>You can compare the above few paragraphs of August&rsquo;s real text with the following paragraphs generated by AI. In the future, to save time and energy, August will gradually use the text provided by AI to write articles.</p>
+<hr>
+<p>DOM to Image is a very useful tool for creating screen captures of web pages. It allows users to quickly and easily capture a snapshot of a web page by clicking a button and then save and share the results with friends or colleagues.</p>
+<p>This note provides a simple tutorial on how to use DOM to Image to create a basic web page screenshot feature.</p>
+<p>The first step is to reference the DOM to Image JS in the HTML page. This can be easily accomplished by referencing the CDN in the HTML:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="1"><a style="outline: none; text-decoration:none; color:inherit" href="#1">1</a>
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://unpkg.com/dom-to-image@2.6.0/dist/dom-to-image.min.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;</span></span></code></pre></td></tr></table>
+</div>
+</div>
+<p>After referencing a CDN, we still need to create a function that allows us to capture a screenshot.</p>
+<p>This function takes an HTML element as a parameter and returns a Promise that resolves to an image.</p>
+<p>Here&rsquo;s an example of how to use <code>domtoimage.toPng()</code> to accomplish this:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="1"><a style="outline: none; text-decoration:none; color:inherit" href="#1"> 1</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="2"><a style="outline: none; text-decoration:none; color:inherit" href="#2"> 2</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="3"><a style="outline: none; text-decoration:none; color:inherit" href="#3"> 3</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="4"><a style="outline: none; text-decoration:none; color:inherit" href="#4"> 4</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="5"><a style="outline: none; text-decoration:none; color:inherit" href="#5"> 5</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="6"><a style="outline: none; text-decoration:none; color:inherit" href="#6"> 6</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="7"><a style="outline: none; text-decoration:none; color:inherit" href="#7"> 7</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="8"><a style="outline: none; text-decoration:none; color:inherit" href="#8"> 8</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="9"><a style="outline: none; text-decoration:none; color:inherit" href="#9"> 9</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="10"><a style="outline: none; text-decoration:none; color:inherit" href="#10">10</a>
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="11"><a style="outline: none; text-decoration:none; color:inherit" href="#11">11</a>
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">captureScreenshot</span>(<span style="color:#a6e22e">element</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Promise((<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">domtoimage</span>.<span style="color:#a6e22e">toPng</span>(<span style="color:#a6e22e">element</span>)
+</span></span><span style="display:flex;"><span>      .<span style="color:#a6e22e">then</span>((<span style="color:#a6e22e">dataUrl</span>) =&gt; {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">resolve</span>(<span style="color:#a6e22e">dataUrl</span>);
+</span></span><span style="display:flex;"><span>      })
+</span></span><span style="display:flex;"><span>      .<span style="color:#66d9ef">catch</span>((<span style="color:#a6e22e">error</span>) =&gt; {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">reject</span>(<span style="color:#a6e22e">error</span>);
+</span></span><span style="display:flex;"><span>      });
+</span></span><span style="display:flex;"><span>  });
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></td></tr></table>
+</div>
+</div>
+<p>After creating a function, executing the function allows easy retrieval of a screen capture from HTML:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="1"><a style="outline: none; text-decoration:none; color:inherit" href="#1">1</a>
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">captureScreenshot</span>(document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;element-id&#39;</span>));</span></span></code></pre></td></tr></table>
+</div>
+</div>
+<p>Here&rsquo;s how! With just a few lines of code, you can now use the powerful DOM to Image to create a simple web page screenshot feature.</p>
+<p>When we need to quickly grab a screen capture of a webpage, this tool can save time and hassle, making it an invaluable tool for anyone who uses the web.</p>
+
+
+		<hr>
+
+		
+		<h4>Category：
+			
+				<a class="capitalize" href="/categories/front-end">front-end</a>
+			
+		</h4>
+
+		
+		<h4>Tags</h4>
+		
+			<a class="tag" href="/tags/webpage-screenshot/">Webpage Screenshot</a>
+		
+			<a class="tag" href="/tags/dom-to-image/">Dom-to-image</a>
+		
+			<a class="tag" href="/tags/javascript-package/">JavaScript Package</a>
+		
+			<a class="tag" href="/tags/generative-ai/">Generative AI</a>
+		
+
+		
+		<div class="flex flex-wrap justify-between">
+			
+				<div class="sm:flex-1 pr-2 w-full sm:w-1/2">
+					<h4 class="!mb-0">Prev</h4>
+					<a href="/gcp-node/">If I already have node.js files, how do I deploy them to Google Cloud Platform(GCP)</a>
+				</div>
+			
+			
+		</div>
+
+		<hr>
+
+		
+		
+		
+
+	</article>
+
+
+				</div>
+				
+				<ul class="flex justify-center">
+					
+  
+  <li>
+    <a class="inline-block mx-1" href="https://www.facebook.com/letswrite.tw/">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z" fill="rgba(102,102,102,1)"/></svg>
+    </a>
+  </li>
+
+  
+  <li>
+    <a class="inline-block mx-1" href="https://t.me/letswritetw">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-3.11-8.83l.013-.007.87 2.87c.112.311.266.367.453.341.188-.025.287-.126.41-.244l1.188-1.148 2.55 1.888c.466.257.801.124.917-.432l1.657-7.822c.183-.728-.137-1.02-.702-.788l-9.733 3.76c-.664.266-.66.638-.12.803l2.497.78z" fill="rgba(102,102,102,1)"/></svg>
+    </a>
+  </li>
+
+  
+  <li>
+    <a class="inline-block mx-1" href="https://github.com/letswritetw">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 2C6.475 2 2 6.475 2 12a9.994 9.994 0 0 0 6.838 9.488c.5.087.687-.213.687-.476 0-.237-.013-1.024-.013-1.862-2.512.463-3.162-.612-3.362-1.175-.113-.288-.6-1.175-1.025-1.413-.35-.187-.85-.65-.013-.662.788-.013 1.35.725 1.538 1.025.9 1.512 2.338 1.087 2.912.825.088-.65.35-1.087.638-1.337-2.225-.25-4.55-1.113-4.55-4.938 0-1.088.387-1.987 1.025-2.688-.1-.25-.45-1.275.1-2.65 0 0 .837-.262 2.75 1.026a9.28 9.28 0 0 1 2.5-.338c.85 0 1.7.112 2.5.337 1.912-1.3 2.75-1.024 2.75-1.024.55 1.375.2 2.4.1 2.65.637.7 1.025 1.587 1.025 2.687 0 3.838-2.337 4.688-4.562 4.938.362.312.675.912.675 1.85 0 1.337-.013 2.412-.013 2.75 0 .262.188.574.688.474A10.016 10.016 0 0 0 22 12c0-5.525-4.475-10-10-10z" fill="rgba(102,102,102,1)"/></svg>
+    </a>
+  </li>
+
+  
+  <li>
+    <a class="inline-block mx-1" href="https://www.instagram.com/letswrite.tw/">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153a4.908 4.908 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 0 1-1.153 1.772 4.915 4.915 0 0 1-1.772 1.153c-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 0 1-1.772-1.153 4.904 4.904 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 0 1 1.153-1.772A4.897 4.897 0 0 1 5.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6.5-.25a1.25 1.25 0 0 0-2.5 0 1.25 1.25 0 0 0 2.5 0zM12 9a3 3 0 1 1 0 6 3 3 0 0 1 0-6z" fill="rgba(102,102,102,1)"/></svg>
+    </a>
+  </li>
+
+  
+  <li>
+    <a class="inline-block mx-1" href="https://twitter.com/letswrite_tw">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M22.162 5.656a8.384 8.384 0 0 1-2.402.658A4.196 4.196 0 0 0 21.6 4c-.82.488-1.719.83-2.656 1.015a4.182 4.182 0 0 0-7.126 3.814 11.874 11.874 0 0 1-8.62-4.37 4.168 4.168 0 0 0-.566 2.103c0 1.45.738 2.731 1.86 3.481a4.168 4.168 0 0 1-1.894-.523v.052a4.185 4.185 0 0 0 3.355 4.101 4.21 4.21 0 0 1-1.89.072A4.185 4.185 0 0 0 7.97 16.65a8.394 8.394 0 0 1-6.191 1.732 11.83 11.83 0 0 0 6.41 1.88c7.693 0 11.9-6.373 11.9-11.9 0-.18-.005-.362-.013-.54a8.496 8.496 0 0 0 2.087-2.165z" fill="rgba(102,102,102,1)"/></svg>
+    </a>
+  </li>
+				</ul>
+
+				<p class="p-4 text-center text-xs">&copy; 2023 Let&#39;s Write. All Rights Reserved.</p>
+
+			</div>
+
+		</div>
+
+		
+
+<script src="https://en.letswrite.tw/main.min.7641d51f1382483bab227ce3f7fa51e541bf6a9df71643b13a5e8590ce43bb1d.js"></script>
+
+	</body>
+
+</html>

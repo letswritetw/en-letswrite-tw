@@ -8,6 +8,15 @@
     <copyright>Let&#39;s Write. All Rights Reserved.</copyright>
     <lastBuildDate>Fri, 01 Jul 2022 00:00:00 +0800</lastBuildDate><atom:link href="https://en.letswrite.tw/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Simple Webpage Screenshot Functionality - DOM to Image</title>
+      <link>https://en.letswrite.tw/dom-to-image/</link>
+      <pubDate>Sat, 25 Feb 2023 10:16:28 +0800</pubDate>
+      
+      <guid>https://en.letswrite.tw/dom-to-image/</guid>
+      <description>This article explores the DOM to Image package, which can be used by frontend developers to capture webpage screenshots. It provides a step-by-step guide to using the package, including tips on configuring the parameters for the captured image. Additionally, the author shares an Easter egg about generative AI.</description>
+    </item>
+    
+    <item>
       <title>If I already have node.js files, how do I deploy them to Google Cloud Platform(GCP)</title>
       <link>https://en.letswrite.tw/gcp-node/</link>
       <pubDate>Wed, 23 Oct 2019 14:11:00 +0000</pubDate>

@@ -2,13 +2,48 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://en.letswrite.tw/</loc>
-    <lastmod>2022-07-01T00:00:00+08:00</lastmod>
+    <loc>https://en.letswrite.tw/categories/</loc>
+    <lastmod>2023-02-25T10:16:28+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url><url>
-    <loc>https://en.letswrite.tw/categories/</loc>
-    <lastmod>2019-10-23T14:11:00+00:00</lastmod>
+    <loc>https://en.letswrite.tw/tags/dom-to-image/</loc>
+    <lastmod>2023-02-25T10:16:28+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url><url>
+    <loc>https://en.letswrite.tw/categories/front-end/</loc>
+    <lastmod>2023-02-25T10:16:28+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url><url>
+    <loc>https://en.letswrite.tw/tags/generative-ai/</loc>
+    <lastmod>2023-02-25T10:16:28+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url><url>
+    <loc>https://en.letswrite.tw/tags/javascript-package/</loc>
+    <lastmod>2023-02-25T10:16:28+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url><url>
+    <loc>https://en.letswrite.tw/dom-to-image/</loc>
+    <lastmod>2023-02-25T10:16:28+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url><url>
+    <loc>https://en.letswrite.tw/tags/</loc>
+    <lastmod>2023-02-25T10:16:28+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url><url>
+    <loc>https://en.letswrite.tw/tags/webpage-screenshot/</loc>
+    <lastmod>2023-02-25T10:16:28+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url><url>
+    <loc>https://en.letswrite.tw/</loc>
+    <lastmod>2022-07-01T00:00:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url><url>
@@ -34,16 +69,6 @@
   </url><url>
     <loc>https://en.letswrite.tw/tags/node/</loc>
     <lastmod>2019-10-23T14:11:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1</priority>
-  </url><url>
-    <loc>https://en.letswrite.tw/tags/</loc>
-    <lastmod>2019-10-23T14:11:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1</priority>
-  </url><url>
-    <loc>https://en.letswrite.tw/categories/front-end/</loc>
-    <lastmod>2019-10-07T13:53:50+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url><url>
