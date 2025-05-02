@@ -25,16 +25,20 @@
 
 
 
-<link rel="stylesheet" href="https://en.letswrite.tw/css/tailwind.min.29f98f76a7f4ee6cb8a4036629b0d7d2f25ca5d0cca2e8f87a90ccadb71be487.css">
+<link rel="stylesheet" href="https://en.letswrite.tw/css/tailwind.min.435b60606db954b3152a78e176f26f4fea0a95263242dc0cdc598d9add0e3376.css">
 
 
-<meta property="og:title" content="Progressive Image Loading like Medium" />
-<meta property="og:description" content="Outline of this article: Three ways to progressive images loading, Three steps of Medium Progressive Images Loading, Code Part, Test page loading time" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://en.letswrite.tw/medium-lazyload/" /><meta property="article:section" content="" />
-<meta property="article:published_time" content="2019-10-07T13:53:50+00:00" />
-<meta property="article:modified_time" content="2019-10-07T13:53:50+00:00" />
-
+<meta property="og:url" content="https://en.letswrite.tw/medium-lazyload/">
+  <meta property="og:site_name" content="Let&#39;s Write, EN">
+  <meta property="og:title" content="Progressive Image Loading like Medium">
+  <meta property="og:description" content="Outline of this article: Three ways to progressive images loading, Three steps of Medium Progressive Images Loading, Code Part, Test page loading time">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2019-10-07T13:53:50+08:00">
+    <meta property="article:modified_time" content="2019-10-07T13:53:50+08:00">
+    <meta property="article:tag" content="Image">
+    <meta property="article:tag" content="Medium">
+    <meta property="article:tag" content="Progressive">
 
 
 
@@ -109,6 +113,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   
     <a
       class=" px-4 hover:text-main"
+      href="/categories/ai/"
+      title="AI">AI</a>
+  
+    <a
+      class=" px-4 hover:text-main"
       href="/categories/front-end/"
       title="Front-End">Front-End</a>
   
@@ -135,14 +144,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
-  <div class="mb-2">
-    <a href="/medium-lazyload/">
-      <img
-        class="block mx-auto rounded-lg"
-        src="/medium-lazyload/medium-lazyload_huf755b341a897521d918e557aa730ca9e_62530_1200x0_resize_q75_box.jpg" alt="medium-lazyload.jpg"
-        width="1200" height="630">
-        </a>
-  </div>
+<div class="mb-2">
+  <a href="/medium-lazyload/">
+    <img class="block mx-auto rounded-lg" src="/medium-lazyload/medium-lazyload_hu_7e05f83a8a4969f3.jpg" alt="medium-lazyload.jpg"
+      width="1792" height="1024">
+  </a>
+</div>
 
 
 		
@@ -174,7 +181,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		<hr>
 
 		
-		<p>本篇中文版：<a href="https://letswrite.tw/medium-lazyload/">像Medium的漸近式圖片加載</a></p>
+		<p>本篇中文版：<a href="https://letswrite.tw/medium-lazyload/">像 Medium 的漸近式圖片加載</a></p>
 <h2 id="three-ways-to-progressive-images-loading">Three ways to progressive images loading</h2>
 <p>The first time I knew the Medium was three years ago. I was amazed when I saw their progressive loading effect.</p>
 <p>At the time, I just thought the technique was difficult because I was not familiar with JavaScript at the time.</p>
@@ -206,17 +213,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>In short, when both units of padding-top and padding-bottom are %, then it refers to the width of the div instead of height.</p>
 <p>For example, the <a href="https://getbootstrap.com/docs/3.3/components/#responsive-embed">Bootstrap Responsive Embed</a> is use this feature to make iframe RWD.</p>
 <p>The following is the html of image block div:</p>
-<script type="application/javascript" src="https://gist.github.com/letswritetw/4e839fabcaf7b39383498cf73dc8afb2.js"></script>
+<script src="https://gist.github.com/letswritetw/4e839fabcaf7b39383498cf73dc8afb2.js"></script>
 
 <p>Here is the SASS that I let the background-image fill the div:</p>
-<script type="application/javascript" src="https://gist.github.com/letswritetw/1fc830f2d3537ebe048eb4165f785b70.js"></script>
+<script src="https://gist.github.com/letswritetw/1fc830f2d3537ebe048eb4165f785b70.js"></script>
 
 <p>Because the background-image is directly inline html, so I only deal with size and postion.</p>
 <p>It is important to note that height should be set to 0.</p>
 <p>16:9, 4:3, both them are computed by (9/16) * 100, (3/4) * 100. If your image out of those sizes, use js to get the width and height of the div and mathematically calculate: (height/width) * 100.</p>
 <h3 id="javascript">JavaScript</h3>
 <p>I use jQuery and ES6 to code JavaScript:</p>
-<script type="application/javascript" src="https://gist.github.com/letswritetw/084f07341d6bae554ba9b90c413f1bbc.js"></script>
+<script src="https://gist.github.com/letswritetw/084f07341d6bae554ba9b90c413f1bbc.js"></script>
 
 <p>First, I deal width free size images which means it doesn’t belong to 16:9 || 4:3. But we need back-end IT to render the width and height of image to data-width and data-height.</p>
 <p>Second, I use <a href="http://imakewebthings.com/waypoints/">waypoint</a> to listen to each image scrolled to the window.</p>
@@ -228,19 +235,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p><a href="https://letswritetw.github.io/letswrite-medium-lazyload/">Progressive image loading like Medium demo</a></p>
 <hr>
 <h2 id="test-page-loading-time">Test page loading time</h2>
-<p>I tested the page load time with <strong><a href="https://www.pingdom.com/">pindom</a></strong>  and found it to be really fast.</p>
+<p>I tested the page load time with <strong><a href="https://www.pingdom.com/">pindom</a></strong> and found it to be really fast.</p>
 <p>This result is not use any lazy load speed, 4.57s:</p>
 <figure><img src="https://i0.wp.com/miro.medium.com/max/978/1*LAemH0TlNiv1VkBqPivQeg.png?ssl=1"
-         alt="not use any lazy load speed"/><figcaption>
-            <h4>not use any lazy load speed</h4>
-        </figcaption>
+    alt="not use any lazy load speed"><figcaption>
+      <h4>not use any lazy load speed</h4>
+    </figcaption>
 </figure>
 
 <p>This result is using progressive image loading, down to 2.02s:</p>
 <figure><img src="https://i0.wp.com/miro.medium.com/max/987/1*5pP5v3uHblxKA9aqhzZarQ.png?ssl=1"
-         alt="using progressive image loading"/><figcaption>
-            <h4>using progressive image loading</h4>
-        </figcaption>
+    alt="using progressive image loading"><figcaption>
+      <h4>using progressive image loading</h4>
+    </figcaption>
 </figure>
 
 <p>Finally, we know that progressive image loading helps speed up page loading and further improve SEO.</p>
@@ -260,11 +267,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		
 		<h4>Tags</h4>
 		
-			<a class="tag" href="/tags/image/">image</a>
+			<a class="tag" href="/tags/image/">Image</a>
 		
-			<a class="tag" href="/tags/medium/">medium</a>
+			<a class="tag" href="/tags/medium/">Medium</a>
 		
-			<a class="tag" href="/tags/progressive/">progressive</a>
+			<a class="tag" href="/tags/progressive/">Progressive</a>
 		
 
 		
@@ -320,7 +327,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   
 				</ul>
 
-				<p class="p-4 text-center text-xs">&copy; 2023 Let&#39;s Write. All Rights Reserved.</p>
+				<p class="p-4 text-center text-xs">&copy; 2025 Let&#39;s Write. All Rights Reserved.</p>
 
 			</div>
 

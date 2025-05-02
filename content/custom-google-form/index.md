@@ -1,15 +1,15 @@
 ---
-title: 'Fully customizable Google Forms'
-date: '2019-08-21T21:02:42+00:00'
-summary: 'Before writing an article on how to use google excel as a database, this first writes how to use google forms as a form on the web page.'
+title: "Fully customizable Google Forms"
+date: "2019-08-21T21:02:42+08:00"
+summary: "Before writing an article on how to use google excel as a database, this first writes how to use google forms as a form on the web page."
 cover: custom-google-form.jpg
 categories:
-    - google
+  - google
 tags:
-    - click
-    - data
-    - form
-    - input
+  - click
+  - data
+  - form
+  - input
 draft: false
 ---
 
@@ -34,7 +34,7 @@ Tools used in this article:
 - form contents：[Google Forms](https://www.google.com/forms/about/)
 - form style：[Skeleton](http://getskeleton.com/)
 
-- - - - - -
+---
 
 ## Design the required fields and create them with Google Forms
 
@@ -66,7 +66,7 @@ This is the demo form：
 
 After the form is finished, remember to go to the **responses** and click **create spreadsheet** to create a google excel to see if the data is actually coming in.
 
-- - - - - -
+---
 
 ## Take the necessary information from google forms
 
@@ -101,9 +101,11 @@ From the code starting with **&lt;form** , you can see the **action** tag, which
 
 The POST url like this:
 
-{{< highlight plaintext "linenos=table,anchorlinenos=true,hl_inline=true" >}}
+<!-- prettier-ignore-start -->
+{{< highlight plaintext "linenos=inline" >}}
 https://docs.google.com/forms/d/e/1FAIpQLScxpBiexGfPha5_vq1fos2r_9dl1QfkCJBvHWHRIbgwudOHaQ/formResponse
 {{< /highlight >}}
+<!-- prettier-ignore-end -->
 
 ### find fields name
 
@@ -117,15 +119,19 @@ After left-click, you will see the part of the code on the element panel, and th
 
 The input code is：
 
-{{< highlight html "linenos=table,anchorlinenos=true,hl_inline=true" >}}
+<!-- prettier-ignore-start -->
+{{< highlight html "linenos=inline" >}}
 <input type="text" class="quantumWizTextinputPaperinputInput exportInput" jsname="YPqjbf" autocomplete="off" tabindex="0" aria-label="name" aria-describedby="i.desc.2087285872 i.err.2087285872" name="entry.2065974955" value="" dir="auto" data-initial-dir="auto" data-initial-value="" aria-invalid="false">
 {{< /highlight >}}
+<!-- prettier-ignore-end -->
 
 The **name** is our need tag:
 
-{{< highlight html "linenos=table,anchorlinenos=true,hl_inline=true" >}}
+<!-- prettier-ignore-start -->
+{{< highlight html "linenos=inline" >}}
 name="entry.2065974955"
 {{< /highlight >}}
+<!-- prettier-ignore-end -->
 
 The other three items are handled in the same way, all we need **name** are as follow：
 
@@ -136,7 +142,7 @@ The other three items are handled in the same way, all we need **name** are as f
 
 Now we have POST url, fields name, and we can totally custom our form.
 
-- - - - - -
+---
 
 ## Build a web page form
 
@@ -146,7 +152,7 @@ This post use Skeleton to build a simple form, and the demo is as follow:
 
 Although in the stage of making google forms, each question is a short answer type, but in the custom form, you can distinguish between input, radio, select, and textarea. As long as you can catch the value and post it, you can be sure that the data is received.
 
-- - - - - -
+---
 
 ## Custom form + Google Forms value
 
@@ -164,7 +170,7 @@ The second way is use AJAX, we POST google forms url dirctly, and the data’s k
 
 This article is mainly about writing the second way.
 
-- - - - - -
+---
 
 ## POST to Google Forms
 
@@ -212,6 +218,6 @@ And the test web page is here: [Customize google form demo](https://letswritetw.
 
 Here you can see if the data has been sent：[response google excel](https://docs.google.com/spreadsheets/d/1HYd0OwuDYZKsRptbsgQrkJ3SMKJyV26SYZn49cuEa-Q/edit?usp=sharing)
 
-- - - - - -
+---
 
 If you find this article helpful, please click on the LIKE button made by myself. If you are willing to share on the social, that’s even better.

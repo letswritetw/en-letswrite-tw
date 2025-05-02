@@ -1,13 +1,13 @@
 ---
-title: 'Google Analytics Event tracking setting up'
-date: '2019-08-15T16:34:47+00:00'
-summary: 'Outline of this article：What is Google Analytic Event Tracking、3+1 elements of the GA event、GA Event can affect bounce rate、Write GA Event tracking code'
+title: "Google Analytics Event tracking setting up"
+date: "2019-08-15T16:34:47+08:00"
+summary: "Outline of this article：What is Google Analytic Event Tracking、3+1 elements of the GA event、GA Event can affect bounce rate、Write GA Event tracking code"
 cover: ga-event.jpg
 categories:
   - google
 tags:
   - event
-  - 'Google Analytics'
+  - "Google Analytics"
   - report
 draft: false
 ---
@@ -16,7 +16,7 @@ draft: false
 
 ## What is Google Analytic Event Tracking
 
-Google Analytics Event tracking is the GA Event we often hear. Simply put,   
+Google Analytics Event tracking is the GA Event we often hear. Simply put,  
 GA records what the user did on the page? There are records of the click count of a button, the depth of page scrolling, how many people watch the video, etc. Usually, the event page, e-commerce website are most often require GA Event.
 
 ### What are the benefits of learning GA Event?
@@ -28,14 +28,14 @@ These two functions are:
 1. Custom Dimensions
 2. Ecommerce report
 
-The use of custom dimensions is written in “[Use of GA custom dimensions,   
+The use of custom dimensions is written in “[Use of GA custom dimensions,  
 and understand article data under the category(Chinese)](https://letswrite.tw/ga-custom-dimension/)“.
 
 Articles about Ecommerce report will be written in the future.
 
 Learning GA Event is the way to actively communicate with GA. If you use GA often, you must learn.
 
-- - - - - -
+---
 
 ## 3 + 1 elements of the GA event
 
@@ -51,7 +51,7 @@ Another option is:
 
 What values ​​do categories, actions, and labels give? It depends entirely on how the website operator wants to see GA Events report. There is no need to say that there are fixed rules.
 
-- - - - - -
+---
 
 The following Event report demo and screenshots are all from the [demo account](https://support.google.com/analytics/answer/6367342?hl=zh-Hant) provided by Google .
 
@@ -59,7 +59,7 @@ The demo account is very useful, even if you don’t have your own website, you 
 
 It is recommended that you can start to learn the GA and you can join the demo account.
 
-- - - - - -
+---
 
 ### Event Category
 
@@ -71,11 +71,11 @@ These data displayed by the report preset is the Event Category. The Event Categ
 
 It is very similar to the folder name we usually have when storing information. Will we defined casually? Not very likely, because it is difficult to find the information you need after the chaos.
 
-In actual use, suppose that the GA Event to be placed is a promotional page with fewer pages and shorter time. Event Category can take the name of the promotion, like: 2019spring\_promotion, 201908member\_promotion. When you look at the report in this way, you can directly click on the Events report on this page to see the data inside.
+In actual use, suppose that the GA Event to be placed is a promotional page with fewer pages and shorter time. Event Category can take the name of the promotion, like: 2019spring_promotion, 201908member_promotion. When you look at the report in this way, you can directly click on the Events report on this page to see the data inside.
 
 If it is for the entire website, it will be more laborious. The entire website can have many categories, such as the direction of the navigation, the direction of the page, the direction of the ad, the direction of the product, etc. This is what the website operator and marketing have to think about.
 
-- - - - - -
+---
 
 ### Event Action
 
@@ -100,7 +100,7 @@ There are many kinds of javascript events, you can refer to it to set up GA Even
 
 This is a list of approximate, used as a reference for the action of the event, the actual use should be discussed with the engineers to see what events are set under what action.
 
-- - - - - -
+---
 
 ### Event Label
 
@@ -133,7 +133,7 @@ So refer to the example above, GA Event can be written as:
 
 In this way, when looking at the report, it is divided into events, which one has more interaction.
 
-- - - - - -
+---
 
 ### Event Value
 
@@ -143,7 +143,7 @@ According to the official example, when someone watches the film press pause, th
 
 Or when the user adds a product to the shopping cart, the amount of the item can be set to a value.
 
-- - - - - -
+---
 
 ## GA Event can affect bounce rate
 
@@ -156,9 +156,9 @@ The GA Event will be counted in the interaction, that is, even if the user enter
 The official document also says:
 
 > For example, suppose you have a page with a video player where the bounce rate is historically high, and you have not implemented Event measurement for the page. If you subsequently set up Event measurement for the player, you might notice a decrease in the bounce rate for that page, because Analytics will record user interaction with the player and send that interaction to the server as an additional GIF request.
-> 
+>
 > It’s important to keep in mind that any implementation of Event measurement that automatically executes on page load will result in a zero bounce rate for the page.
-> 
+>
 > <cite>Implementation considerations [Bounce Rate Impact](https://support.google.com/analytics/answer/1033068?hl=en#Implementation)</cite>
 
 This means that if the user goes to the first page, the page is set to execute an event, such as an event that “rolls the depth is 0” or an event with “an ad exposure +1”. If the user does not enter other pages, the window will be closed and will not be counted in the bounce rate. The bounce rate of this page will be 0 because the user has an execution event.
@@ -167,7 +167,7 @@ If you want to set the event does not affect the bounce rate, even if the event 
 
 The way to set up non-interactive events will be written together with the write code into the next paragraph.
 
-- - - - - -
+---
 
 ## Write GA Event tracking code
 
@@ -190,28 +190,34 @@ Now the tracking code provided by GA is all gtag. Here both ga and gtag will be 
 
 The code for the ga usage event is as follows:
 
-{{< highlight js "linenos=table,anchorlinenos=true,hl_inline=true" >}}
-  ga('send', 'event', {
-    eventCategory: 'event category',
-    eventAction: 'event action',
-    eventLabel: 'event label',
-    eventValue: 'event value'
-  });
+<!-- prettier-ignore-start -->
+{{< highlight js "linenos=inline" >}}
+ga('send', 'event', {
+  eventCategory: 'event category',
+  eventAction: 'event action',
+  eventLabel: 'event label',
+  eventValue: 'event value'
+});
 {{< /highlight >}}
+<!-- prettier-ignore-end -->
 
 Can also be abbreviated as:
 
-{{< highlight js "linenos=table,anchorlinenos=true,hl_inline=true" >}}
-  ga('send', 'event', 'event category', 'event action', 'event label', 'event value');
+<!-- prettier-ignore-start -->
+{{< highlight js "linenos=inline" >}}
+ga('send', 'event', 'event category', 'event action', 'event label', 'event value');
 {{< /highlight >}}
+<!-- prettier-ignore-end -->
 
 If you want to set a non-interactive event, this is the case:
 
-{{< highlight js "linenos=table,anchorlinenos=true,hl_inline=true" >}}
-  ga('send', 'event', 'event category', 'event action', 'event label', 'event value', {
-    nonInteraction: true
-  });
+<!-- prettier-ignore-start -->
+{{< highlight js "linenos=inline" >}}
+ga('send', 'event', 'event category', 'event action', 'event label', 'event value', {
+  nonInteraction: true
+});
 {{< /highlight >}}
+<!-- prettier-ignore-end -->
 
 \* Event Value is not required and may not be written.
 
@@ -219,23 +225,27 @@ If you want to set a non-interactive event, this is the case:
 
 The code for the gtag usage event is as follows:
 
-{{< highlight js "linenos=table,anchorlinenos=true,hl_inline=true" >}}
-  gtag('event', 'event action', {
-    'event_category': 'event category',
-    'event_label': 'event label',
-    'value': 'event value'
-  });
+<!-- prettier-ignore-start -->
+{{< highlight js "linenos=inline" >}}
+gtag('event', 'event action', {
+  'event_category': 'event category',
+  'event_label': 'event label',
+  'value': 'event value'
+});
 {{< /highlight >}}
+<!-- prettier-ignore-end -->
 
 If you want to set a non-interactive event, this is the case:
 
-{{< highlight js "linenos=table,anchorlinenos=true,hl_inline=true" >}}
-  gtag('event', 'event action', {
-    'event_category': 'event category',
-    'event_label': 'event label',
-    'non_interaction': true
-  });
+<!-- prettier-ignore-start -->
+{{< highlight js "linenos=inline" >}}
+gtag('event', 'event action', {
+  'event_category': 'event category',
+  'event_label': 'event label',
+  'non_interaction': true
+});
 {{< /highlight >}}
+<!-- prettier-ignore-end -->
 
 In addition, gtag provides Default Google Analytics Events. Default events table can be seen from the following link:
 
@@ -243,13 +253,14 @@ In addition, gtag provides Default Google Analytics Events. Default events table
 
 \* Event values ​​are not required and may not be written.
 
-- - - - - -
+---
 
 ## Case demonstration
 
 Here is a case. Suppose there is a page that provides file download. The id of the download button is “btn-download”. To find out how many people clicked the download button, you can write:
 
-{{< highlight js "linenos=table,anchorlinenos=true,hl_inline=true" >}}
+<!-- prettier-ignore-start -->
+{{< highlight js "linenos=inline" >}}
 var btnDownload = document.getElementById('btn-download');
 btnDownload.addEventListener('click', function() {
   gtag('event', 'download_click', {
@@ -258,6 +269,7 @@ btnDownload.addEventListener('click', function() {
   });
 }, false);
 {{< /highlight >}}
+<!-- prettier-ignore-end -->
 
 This is the basic way to use GA Event.
 
@@ -267,6 +279,6 @@ If you want to know the click of the advertisement, GA has a function to convert
 
 Finally, a link to the official documentation is attached: [About Events](https://support.google.com/analytics/answer/1033068?hl=en)
 
-- - - - - -
+---
 
 If you find this article helpful, please click on the helpful button made by myself. If you are willing to share on the social, that’s even better.

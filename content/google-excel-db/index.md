@@ -1,7 +1,7 @@
 ---
-title: 'How to use Google Sheets as a database'
-date: '2019-08-22T20:26:54+00:00'
-summary: 'In this article, I will write how to use Google Sheets as a database, and I will create a simple member list page to demonstrate.'
+title: "How to use Google Sheets as a database"
+date: "2019-08-22T20:26:54+08:00"
+summary: "In this article, I will write how to use Google Sheets as a database, and I will create a simple member list page to demonstrate."
 cover: google-excel-db.jpg
 categories:
   - google
@@ -12,7 +12,7 @@ tags:
 draft: false
 ---
 
-本篇中文版：[如何用Google Excel當作資料庫](https://letswrite.tw/google-excel-db/)
+本篇中文版：[如何用 Google Excel 當作資料庫](https://letswrite.tw/google-excel-db/)
 
 ## Resources used in this article
 
@@ -27,7 +27,7 @@ These tools are used in this article:
 - css framework: [Skeleton](http://getskeleton.com/)
 - source code: [Github](https://github.com/letswritetw/letswrite-google-excel-db-en)
 
-- - - - - -
+---
 
 ## Create a Google Sheet
 
@@ -84,41 +84,51 @@ In fact, when we publish the google sheet, it’s easy to AJAX the data. All we 
 
 The structure of the request google sheet url is like this:
 
-{{< highlight plaintext "linenos=table,anchorlinenos=true,hl_inline=true" >}}
+<!-- prettier-ignore-start -->
+{{< highlight plaintext "linenos=inline" >}}
 https://spreadsheets.google.com/feeds/list/{excel_id}/{sheet}/public/values?alt=json
-{{< / highlight >}}
+{{< /highlight >}}
+<!-- prettier-ignore-end -->
 
-There are two elements that should be replaced here: **excel\_id**, **sheet**.
+There are two elements that should be replaced here: **excel_id**, **sheet**.
 
 The **sheet** is … yeah, the sheet like excel sheet. We can only GET one at a time.
 
-The **excel\_id** is depending on the url, the google sheet url looks like this:
+The **excel_id** is depending on the url, the google sheet url looks like this:
 
-{{< highlight plaintext "linenos=table,anchorlinenos=true,hl_inline=true" >}}
+<!-- prettier-ignore-start -->
+{{< highlight plaintext "linenos=inline" >}}
 https://docs.google.com/spreadsheets/d/{excel_id}/edit#gid=0
-{{< / highlight >}}
+{{< /highlight >}}
+<!-- prettier-ignore-end -->
 
 So, the URL for my demo google sheet like this is:
 
-{{< highlight plaintext "linenos=table,anchorlinenos=true,hl_inline=true" >}}
+<!-- prettier-ignore-start -->
+{{< highlight plaintext "linenos=inline" >}}
 https://docs.google.com/spreadsheets/d/1IrmKHvX6tQ8zgzPC3ggD3UPu1-hQrE29nfHRs40wUJQ/edit#gid=0
-{{< / highlight >}}
+{{< /highlight >}}
+<!-- prettier-ignore-end -->
 
-The **excel\_id** is: 1IrmKHvX6tQ8zgzPC3ggD3UPu1-hQrE29nfHRs40wUJQ**
+The **excel_id** is: 1IrmKHvX6tQ8zgzPC3ggD3UPu1-hQrE29nfHRs40wUJQ\*\*
 
 After we put the excel id, sheet into the URL, we can get this:
 
-{{< highlight plaintext "linenos=table,anchorlinenos=true,hl_inline=true" >}}
+<!-- prettier-ignore-start -->
+{{< highlight plaintext "linenos=inline" >}}
 https://spreadsheets.google.com/feeds/list/1IrmKHvX6tQ8zgzPC3ggD3UPu1-hQrE29nfHRs40wUJQ/1/public/values?alt=json
-{{< / highlight >}}
+{{< /highlight >}}
+<!-- prettier-ignore-end -->
 
 Finaly, we use the url to AJAX. I am using jQuery to handle GET method:
 
-{{< highlight js "linenos=table,anchorlinenos=true,hl_inline=true" >}}
+<!-- prettier-ignore-start -->
+{{< highlight js "linenos=inline" >}}
 fetch('https://spreadsheets.google.com/feeds/list/1IrmKHvX6tQ8zgzPC3ggD3UPu1-hQrE29nfHRs40wUJQ/1/public/values?alt=json')
   .then(res => res.json)
   .then(res => console.log(res))
-{{< / highlight >}}
+{{< /highlight >}}
+<!-- prettier-ignore-end -->
 
 The result of console.log:
 
@@ -142,6 +152,6 @@ Here is the source code used in this article. Welcome to use:
 
 <https://github.com/letswritetw/letswrite-google-excel-db-en>
 
-- - - - - -
+---
 
 If you find this article helpful, please click on the helpful button made by myself. If you are willing to share on the social, that’s even better.

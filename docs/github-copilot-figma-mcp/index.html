@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+	
+<meta charset="utf-8">
+
+<title>How to Speed Up Front-End Layouts with GitHub Copilot &#43; Figma MCP</title>
+<meta name="description" content="">
+<link rel="canonical" href="https://en.letswrite.tw/github-copilot-figma-mcp/">
+
+<meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1">
+<meta name="MobileOptimized" content="320">
+<meta name="HandheldFriendly" content="True">
+<meta name="format-detection" content="telephone=no">
+<meta name="theme-color" content="#42A6F7">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="application-name" content="Let&#39;s Write, EN">
+<meta name="msapplication-TileColor" content="#42A6F7">
+
+
+<link rel="shortcut icon" href="https://letswritetw.github.io/letswritetw/dist/img/logo_512.png">
+<link rel="apple-touch-icon" href="https://letswritetw.github.io/letswritetw/dist/img/logo_512.png">
+<link rel="icon" type="image/png" href="https://letswritetw.github.io/letswritetw/dist/img/logo_512.png">
+
+
+
+<link rel="stylesheet" href="https://en.letswrite.tw/css/tailwind.min.435b60606db954b3152a78e176f26f4fea0a95263242dc0cdc598d9add0e3376.css">
+
+
+<meta property="og:url" content="https://en.letswrite.tw/github-copilot-figma-mcp/">
+  <meta property="og:site_name" content="Let&#39;s Write, EN">
+  <meta property="og:title" content="How to Speed Up Front-End Layouts with GitHub Copilot &#43; Figma MCP">
+  <meta property="og:description" content="This hands-on guide explores how to use GitHub Copilot’s Agent Mode with Figma’s MCP integration to quickly generate HTML and CSS from Figma designs using AI. While not perfect, the results are surprisingly usable for simple layouts and could save front-end developers a lot of time.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2025-05-02T20:00:00+08:00">
+    <meta property="article:modified_time" content="2025-05-02T20:00:00+08:00">
+    <meta property="article:tag" content="Copilot">
+    <meta property="article:tag" content="CSS">
+    <meta property="article:tag" content="GitHub">
+    <meta property="article:tag" content="HTML">
+    <meta property="article:tag" content="MCP">
+
+
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NDGP84X');</script>
+
+	<body class="bg-gray-100">
+
+		
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NDGP84X"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+		
+<script type="application/ld+json">
+  {
+    "@context": "https://www.schema.org",
+    "@type": "Organization",
+    "name": "Let\u0027s Write, EN",
+    "url": "https:\/\/en.letswrite.tw\/",
+    "logo": "https:\/\/letswritetw.github.io\/letswritetw\/dist\/img\/logo_512.png"
+  }
+</script>
+
+		<div class="p-4 sm:p-8 bg-gray-100">
+
+			<div class="mx-auto p-4 sm:p-8 max-w-3xl bg-white rounded-lg shadow-xl">
+
+				<ul class="flex justify-end">
+					
+  
+  
+
+  
+  <li>
+    <a class="inline-block mx-1" href="https://t.me/letswritetw">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-3.11-8.83l.013-.007.87 2.87c.112.311.266.367.453.341.188-.025.287-.126.41-.244l1.188-1.148 2.55 1.888c.466.257.801.124.917-.432l1.657-7.822c.183-.728-.137-1.02-.702-.788l-9.733 3.76c-.664.266-.66.638-.12.803l2.497.78z" fill="rgba(102,102,102,1)"/></svg>
+    </a>
+  </li>
+
+  
+  <li>
+    <a class="inline-block mx-1" href="https://github.com/letswritetw">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 2C6.475 2 2 6.475 2 12a9.994 9.994 0 0 0 6.838 9.488c.5.087.687-.213.687-.476 0-.237-.013-1.024-.013-1.862-2.512.463-3.162-.612-3.362-1.175-.113-.288-.6-1.175-1.025-1.413-.35-.187-.85-.65-.013-.662.788-.013 1.35.725 1.538 1.025.9 1.512 2.338 1.087 2.912.825.088-.65.35-1.087.638-1.337-2.225-.25-4.55-1.113-4.55-4.938 0-1.088.387-1.987 1.025-2.688-.1-.25-.45-1.275.1-2.65 0 0 .837-.262 2.75 1.026a9.28 9.28 0 0 1 2.5-.338c.85 0 1.7.112 2.5.337 1.912-1.3 2.75-1.024 2.75-1.024.55 1.375.2 2.4.1 2.65.637.7 1.025 1.587 1.025 2.687 0 3.838-2.337 4.688-4.562 4.938.362.312.675.912.675 1.85 0 1.337-.013 2.412-.013 2.75 0 .262.188.574.688.474A10.016 10.016 0 0 0 22 12c0-5.525-4.475-10-10-10z" fill="rgba(102,102,102,1)"/></svg>
+    </a>
+  </li>
+
+  
+  
+
+  
+  
+				</ul>
+
+				
+<h2 class="py-4 text-center font-bold text-4xl">
+  <a class="inline-block hover:text-main" href="/">Let&#39;s Write, EN</a>
+</h2>
+
+<p class="pb-4 text-center">Front-end engineer August&#39;s study notes — solving problems, in simple ways.</p>
+
+<nav class="mb-4 py-2 bg-gray-100 rounded-lg text-center">
+  
+  
+  
+    <a
+      class=" px-4 hover:text-main"
+      href="/"
+      title="Index">Index</a>
+  
+    <a
+      class=" px-4 hover:text-main"
+      href="/categories/ai/"
+      title="AI">AI</a>
+  
+    <a
+      class=" px-4 hover:text-main"
+      href="/categories/front-end/"
+      title="Front-End">Front-End</a>
+  
+    <a
+      class=" px-4 hover:text-main"
+      href="/categories/google/"
+      title="Google">Google</a>
+  
+</nav>
+
+				<div>
+					
+
+	<aside id="trigger-to-top"></aside>
+
+	<a id="js-to-top" class="fixed right-6 sm:right-10 bottom-6 sm:bottom-10 flex justify-center items-center w-10 h-10 bg-gray-300 rounded-lg transition-opacity" href="#">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 8l6 6H6z" fill="rgba(255,255,255,1)"/></svg>
+	</a>
+
+	<article class="single-article">
+
+		
+		
+
+
+
+<div class="mb-2">
+  <a href="/github-copilot-figma-mcp/">
+    <img class="block mx-auto rounded-lg" src="/github-copilot-figma-mcp/github-copilot-figma-mcp_hu_4c6e8fe212bfe736.jpg" alt="github-copilot-figma-mcp.jpg"
+      width="1792" height="1024">
+  </a>
+</div>
+
+
+		
+		<h1>How to Speed Up Front-End Layouts with GitHub Copilot &#43; Figma MCP</h1>
+
+		
+		<p class="text-sm">2025-05-02 20:00</p>
+
+		<hr>
+
+		
+		<div class="single-toc">
+			<h2>TOC</h2>
+			<nav id="TableOfContents">
+  <ul>
+    <li><a href="#the-problem-were-solving">The Problem We&rsquo;re Solving</a></li>
+    <li><a href="#listen-in-key-takeaways-from-googles-notebooklm">Listen in: Key takeaways from Google&rsquo;s NotebookLM.</a></li>
+    <li><a href="#what-youll-need">What You’ll Need</a></li>
+    <li><a href="#getting-a-figma-access-token">Getting a Figma Access Token</a></li>
+    <li><a href="#setting-up-figma-mcp-in-vs-code">Setting Up Figma MCP in VS Code</a>
+      <ul>
+        <li><a href="#install-filesystem">Install Filesystem</a></li>
+        <li><a href="#install-figma-mcp">Install Figma MCP</a></li>
+      </ul>
+    </li>
+    <li><a href="#copy-the-figma-design-link">Copy the Figma Design Link</a></li>
+    <li><a href="#using-github-copilot-agent-mode-in-vs-code">Using GitHub Copilot Agent Mode in VS Code</a></li>
+    <li><a href="#final-thoughts">Final Thoughts</a></li>
+  </ul>
+</nav>
+		</div>
+
+		<hr>
+
+		
+		<p>本篇中文版：<a href="https://www.letswrite.tw/github-copilot-figma-mcp/">GitHub Copilot + Figma MCP Server 實戰：用 AI 快速切版教學</a></p>
+<h2 id="the-problem-were-solving">The Problem We&rsquo;re Solving</h2>
+<p>Lately, I&rsquo;ve been exploring MCP and came across a thread where someone tested using Figma MCP for layout generation. I figured, why not try it myself?</p>
+<p>After some experimentation, I confirmed that yes—it works, at least for simple design mockups. There were a few formatting glitches, but overall the output was usable.</p>
+<p>Even at this early stage, it&rsquo;s impressive. With more development, this tool could seriously reduce the time front-end developers spend on layout work—freeing them up for more impactful tasks.</p>
+<p>Of course, that assumes clients know exactly what they want. Otherwise, tweaking layouts with AI might be more time-consuming than just coding them manually. 😅</p>
+<hr>
+<h2 id="listen-in-key-takeaways-from-googles-notebooklm">Listen in: Key takeaways from Google&rsquo;s NotebookLM.</h2>
+
+
+
+
+<div class="block mt-4 mb-8 max-w-full">
+  <iframe class="w-full" frameborder="0"
+          width="704" height="396"
+          loading="lazy" marginheight="0" marginwidth="0"
+          src="https://www.youtube.com/embed/KNBc3scRWKQ"></iframe>
+</div>
+<hr>
+<h2 id="what-youll-need">What You’ll Need</h2>
+<p>To try this out using Figma MCP, here’s what you’ll need:</p>
+<ul>
+<li><a href="https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem">Filesystem</a></li>
+<li><a href="https://github.com/GLips/Figma-Context-MCP">Figma-Context-MCP</a></li>
+</ul>
+<p>And for the demo, I used a shared community design from Figma:</p>
+<ul>
+<li><a href="https://www.figma.com/community/file/1222060007934600841">Responsive Landing Page Design</a></li>
+</ul>
+<p>Note: You’ll need a paid GitHub Copilot plan to use Agent Mode. It’s gradually rolling out to VS Code, but if you don’t have it yet, follow the docs here: <a href="https://code.visualstudio.com/docs/copilot/chat/chat-agent-mode">Use agent mode in VS Code</a></p>
+<hr>
+<h2 id="getting-a-figma-access-token">Getting a Figma Access Token</h2>
+<p>You can get your access token from Figma’s web app, but since you&rsquo;ll need a link from the Desktop version for it to work, I suggest downloading Figma Desktop here: <a href="https://www.figma.com/downloads/">Figma downloads</a>.</p>
+<p>Once installed and logged in:</p>
+<ol>
+<li>Click your profile picture</li>
+<li>Go to <strong>Settings &gt; Security</strong></li>
+<li>Under <strong>Personal Access Tokens</strong>, click <strong>Generate new token</strong></li>
+</ol>
+<p>Save the token—you’ll need it soon.</p>
+<hr>
+<h2 id="setting-up-figma-mcp-in-vs-code">Setting Up Figma MCP in VS Code</h2>
+<h3 id="install-filesystem">Install Filesystem</h3>
+<p>To let the Agent read and write local files, install the MCP Filesystem module.</p>
+<ol>
+<li>Open VS Code</li>
+<li>Press <code>Shift + Cmd + P</code></li>
+<li>Type <code>mcp</code>, select <strong>“MCP: Add Server” &gt; “NPM Package”</strong></li>
+<li>Enter <code>@modelcontextprotocol/server-filesystem</code> and press Enter</li>
+<li>Approve the permission prompt</li>
+</ol>
+<p>Then, choose a folder to give MCP access to (don’t pick your entire root directory—for security, use a dedicated folder instead).</p>
+<h3 id="install-figma-mcp">Install Figma MCP</h3>
+<ol>
+<li>Press <code>Cmd + P</code> in VS Code to open the search</li>
+<li>Find <code>settings.json</code> (this is your global settings file)</li>
+</ol>
+<p>Assuming Filesystem is already installed, you’ll see an <code>mcp</code> section. Add this block at the same level:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#e6db74">&#34;Framelink Figma MCP&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>  <span style="color:#f92672">&#34;command&#34;</span>: <span style="color:#e6db74">&#34;npx&#34;</span>,
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>  <span style="color:#f92672">&#34;args&#34;</span>: [
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>    <span style="color:#e6db74">&#34;-y&#34;</span>,
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>    <span style="color:#e6db74">&#34;figma-developer-mcp&#34;</span>,
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>    <span style="color:#e6db74">&#34;--figma-api-key=Figma_access_token&#34;</span>,
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span>    <span style="color:#e6db74">&#34;--stdio&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8</span><span>  ]
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9</span><span>}</span></span></code></pre></div>
+<p>Replace <code>Figma_access_token</code> with the token you generated earlier.</p>
+<hr>
+<h2 id="copy-the-figma-design-link">Copy the Figma Design Link</h2>
+<p>Important: You must copy the design link from the Figma Desktop app, or the MCP will fail authorization.</p>
+<p>Right-click the section you want the Agent to work on:</p>
+<p><strong>Right-click &gt; Copy/Paste as &gt; Copy link to selection</strong></p>
+<figure><img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/gn7betf2dhmoxlxqrksr.png"
+    alt="Copy link in Figma"><figcaption>
+      <h4>Copy link in Figma</h4>
+    </figcaption>
+</figure>
+
+<hr>
+<h2 id="using-github-copilot-agent-mode-in-vs-code">Using GitHub Copilot Agent Mode in VS Code</h2>
+<p>Switch GitHub Copilot to Agent Mode:</p>
+<figure><img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/tuc2pu656un66bquxftw.png"
+    alt="Agent mode in VS Code"><figcaption>
+      <h4>Agent mode in VS Code</h4>
+    </figcaption>
+</figure>
+
+<p>Then enter the following prompt:</p>
+<blockquote>
+<p>Please generate HTML and CSS based on the design below. Convert all images to PNG and save them in the img folder:
+<code>{Figma Design Link}</code></p></blockquote>
+<p>Replace <code>{Figma Design Link}</code> with the link you copied earlier.</p>
+<p>Once you hit enter, Copilot Agent will prompt for some permissions. Approve them all, and it’ll generate your HTML, CSS, and image files.</p>
+<p>We ask it to convert everything to PNG because, based on August’s tests, SVG files often fail to load or render incorrectly. PNGs are more reliable in this workflow.</p>
+<p>Here’s a video of the Agent in action:</p>
+
+
+
+
+<div class="block mt-4 mb-8 max-w-full">
+  <iframe class="w-full" frameborder="0"
+          width="704" height="396"
+          loading="lazy" marginheight="0" marginwidth="0"
+          src="https://www.youtube.com/embed/c0jDjPptmek"></iframe>
+</div>
+<p>And here’s the final output:
+<a href="https://letswritetw.github.io/Figma-Context-MCP/">https://letswritetw.github.io/Figma-Context-MCP/</a></p>
+<p>Source code:
+<a href="https://github.com/letswritetw/Figma-Context-MCP/tree/main/docs">https://github.com/letswritetw/Figma-Context-MCP/tree/main/docs</a></p>
+<p>Besides some weird image behavior, everything else worked decently. A front-end dev could clean it up and use it as a base for production.</p>
+<hr>
+<h2 id="final-thoughts">Final Thoughts</h2>
+<p>Right now, Figma MCP still has quirks. But think about it—how long has it been since ChatGPT went viral? In such a short time, MCP has already reached this level. Give it a little more time, and it’ll be a real time-saver.</p>
+<p>Will AI replace front-end developers? Not anytime soon. Development is about more than slicing designs—it&rsquo;s about solving real problems.</p>
+<p>You still need experience to meet client needs, communicate with designers, negotiate API specs with back-end devs, and work with PMs (sometimes argue with them 😅). AI can&rsquo;t replace that level of insight—yet.</p>
+<p>But if AI can give us a quick mockup to show a client or use for internal discussions, that’s already a huge win.</p>
+<p>My mindset: Don’t treat AI as competition—see it as your ever-reliable assistant that never gets tired.</p>
+<p>Which is why the name “Copilot” is just perfect.</p>
+<hr>
+<p>Translated by ChatGPT.</p>
+
+
+		<hr>
+
+		
+		<h4>Category：
+			
+				<a class="capitalize" href="/categories/ai">ai</a>
+			
+		</h4>
+
+		
+		<h4>Tags</h4>
+		
+			<a class="tag" href="/tags/copilot/">Copilot</a>
+		
+			<a class="tag" href="/tags/css/">CSS</a>
+		
+			<a class="tag" href="/tags/github/">GitHub</a>
+		
+			<a class="tag" href="/tags/html/">HTML</a>
+		
+			<a class="tag" href="/tags/mcp/">MCP</a>
+		
+
+		
+		<div class="flex flex-wrap justify-between">
+			
+				<div class="sm:flex-1 pr-2 w-full sm:w-1/2">
+					<h4 class="!mb-0">Prev</h4>
+					<a href="/dom-to-image/">Simple Webpage Screenshot Functionality - DOM to Image</a>
+				</div>
+			
+			
+		</div>
+
+		<hr>
+
+		
+		
+		
+
+	</article>
+
+
+				</div>
+				
+				<ul class="flex justify-center">
+					
+  
+  
+
+  
+  <li>
+    <a class="inline-block mx-1" href="https://t.me/letswritetw">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-3.11-8.83l.013-.007.87 2.87c.112.311.266.367.453.341.188-.025.287-.126.41-.244l1.188-1.148 2.55 1.888c.466.257.801.124.917-.432l1.657-7.822c.183-.728-.137-1.02-.702-.788l-9.733 3.76c-.664.266-.66.638-.12.803l2.497.78z" fill="rgba(102,102,102,1)"/></svg>
+    </a>
+  </li>
+
+  
+  <li>
+    <a class="inline-block mx-1" href="https://github.com/letswritetw">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 2C6.475 2 2 6.475 2 12a9.994 9.994 0 0 0 6.838 9.488c.5.087.687-.213.687-.476 0-.237-.013-1.024-.013-1.862-2.512.463-3.162-.612-3.362-1.175-.113-.288-.6-1.175-1.025-1.413-.35-.187-.85-.65-.013-.662.788-.013 1.35.725 1.538 1.025.9 1.512 2.338 1.087 2.912.825.088-.65.35-1.087.638-1.337-2.225-.25-4.55-1.113-4.55-4.938 0-1.088.387-1.987 1.025-2.688-.1-.25-.45-1.275.1-2.65 0 0 .837-.262 2.75 1.026a9.28 9.28 0 0 1 2.5-.338c.85 0 1.7.112 2.5.337 1.912-1.3 2.75-1.024 2.75-1.024.55 1.375.2 2.4.1 2.65.637.7 1.025 1.587 1.025 2.687 0 3.838-2.337 4.688-4.562 4.938.362.312.675.912.675 1.85 0 1.337-.013 2.412-.013 2.75 0 .262.188.574.688.474A10.016 10.016 0 0 0 22 12c0-5.525-4.475-10-10-10z" fill="rgba(102,102,102,1)"/></svg>
+    </a>
+  </li>
+
+  
+  
+
+  
+  
+				</ul>
+
+				<p class="p-4 text-center text-xs">&copy; 2025 Let&#39;s Write. All Rights Reserved.</p>
+
+			</div>
+
+		</div>
+
+		
+
+<script src="https://en.letswrite.tw/main.min.7641d51f1382483bab227ce3f7fa51e541bf6a9df71643b13a5e8590ce43bb1d.js"></script>
+
+	</body>
+
+</html>

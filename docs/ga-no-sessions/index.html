@@ -25,16 +25,19 @@
 
 
 
-<link rel="stylesheet" href="https://en.letswrite.tw/css/tailwind.min.29f98f76a7f4ee6cb8a4036629b0d7d2f25ca5d0cca2e8f87a90ccadb71be487.css">
+<link rel="stylesheet" href="https://en.letswrite.tw/css/tailwind.min.435b60606db954b3152a78e176f26f4fea0a95263242dc0cdc598d9add0e3376.css">
 
 
-<meta property="og:title" content="If the page has id=&#34;ga&#34;, google analytics with gtag will not receive sessions." />
-<meta property="og:description" content="If the html of the page has id=&ldquo;ga&rdquo;, and the way to set the Google Analytics code is gtag, then GA will not receive the pageview." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://en.letswrite.tw/ga-no-sessions/" /><meta property="article:section" content="" />
-<meta property="article:published_time" content="2019-08-18T11:43:03+00:00" />
-<meta property="article:modified_time" content="2019-08-18T11:43:03+00:00" />
-
+<meta property="og:url" content="https://en.letswrite.tw/ga-no-sessions/">
+  <meta property="og:site_name" content="Let&#39;s Write, EN">
+  <meta property="og:title" content="If the page has id=&#34;ga&#34;, google analytics with gtag will not receive sessions.">
+  <meta property="og:description" content="If the html of the page has id=“ga”, and the way to set the Google Analytics code is gtag, then GA will not receive the pageview.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2019-08-18T11:43:03+08:00">
+    <meta property="article:modified_time" content="2019-08-18T11:43:03+08:00">
+    <meta property="article:tag" content="Google Analytics">
+    <meta property="article:tag" content="Traffic">
 
 
 
@@ -109,6 +112,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   
     <a
       class=" px-4 hover:text-main"
+      href="/categories/ai/"
+      title="AI">AI</a>
+  
+    <a
+      class=" px-4 hover:text-main"
       href="/categories/front-end/"
       title="Front-End">Front-End</a>
   
@@ -135,14 +143,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
-  <div class="mb-2">
-    <a href="/ga-no-sessions/">
-      <img
-        class="block mx-auto rounded-lg"
-        src="/ga-no-sessions/ga-no-sessions_hucd97753ac30a1e0041360e5faf160e7f_79151_1200x0_resize_q75_box.jpg" alt="ga-no-sessions.jpg"
-        width="1200" height="630">
-        </a>
-  </div>
+<div class="mb-2">
+  <a href="/ga-no-sessions/">
+    <img class="block mx-auto rounded-lg" src="/ga-no-sessions/ga-no-sessions_hu_ad1baf6c258298b5.jpg" alt="ga-no-sessions.jpg"
+      width="1792" height="1024">
+  </a>
+</div>
 
 
 		
@@ -169,7 +175,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		<hr>
 
 		
-		<p>本篇中文版：<a href="https://letswrite.tw/ga-no-sessions/">如果頁面有id=&ldquo;ga&rdquo;，用 gtag 埋 Google Analytics 會收不到流量</a></p>
+		<p>本篇中文版：<a href="https://letswrite.tw/ga-no-sessions/">如果頁面有 id=&ldquo;ga&rdquo;，用 gtag 埋 Google Analytics 會收不到流量</a></p>
 <p>First, let’s start with the conclusion:<br>
 <strong>If the html of the page has <code>id=&quot;ga&quot;</code>, and the way to set the Google Analytics code is gtag, then GA will not receive the pageview.</strong></p>
 <p>This article is the process from finding a problem to finding a problem and finally solving the problem.</p>
@@ -203,18 +209,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>Then delete the entire <code>&lt;body&gt;</code>, well, Ga received traffic!</p>
 <p>That’s for sure, it’s a problem with the front-end page, not a GA setting or a server problem.</p>
 <p>Html line by line, delete this line:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="1"><a style="outline: none; text-decoration:none; color:inherit" href="#1">1</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="2"><a style="outline: none; text-decoration:none; color:inherit" href="#2">2</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="3"><a style="outline: none; text-decoration:none; color:inherit" href="#3">3</a>
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">h3</span>&gt;
-</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ez-toc-section&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ga&#34;</span> <span style="color:#a6e22e">tabindex</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;-1&#34;</span>&gt;ga&lt;/<span style="color:#f92672">span</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">h3</span>&gt;</span></span></code></pre></td></tr></table>
-</div>
-</div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>&lt;<span style="color:#f92672">h3</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>  &lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ez-toc-section&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ga&#34;</span> <span style="color:#a6e22e">tabindex</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;-1&#34;</span>&gt;ga&lt;/<span style="color:#f92672">span</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>&lt;/<span style="color:#f92672">h3</span>&gt;</span></span></code></pre></div>
 <p>GA can receive traffic and finally find the problem. This line of questions will be related to GA is <code>id=&quot;ga&quot;</code>.</p>
 <p>But I am also confused, why do I write the line <code>id=&quot;ga&quot;</code>? I feel this id will be a reserved word for google analytics.</p>
 <p>After reading the page, I found out that in order to make the page add internal links, and to make it easier for everyone to read, I have installed the “<a href="https://tw.wordpress.org/plugins/easy-table-of-contents/">Easy Table of Contents</a>” plugin. The id is automatically generated by this plugin. It will catch the English in the title. Automatically turn English into the id of this title. As a result, both of my articles have a title called “ga”.</p>
@@ -226,8 +223,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <h2 id="say-again-why-the-ga-traffic-is-zero">Say again why the GA traffic is zero？</h2>
 <p>This is very important. This is the experience of real people and non-adapted tragedies, so I will explain them at the end:</p>
 <blockquote>
-<p><strong>If the webpage’s html, id=&ldquo;ga&rdquo; appears, and the way to setting Google Analytics is gtag, then GA will not receive the pageviews.</strong></p>
-</blockquote>
+<p><strong>If the webpage’s html, id=&ldquo;ga&rdquo; appears, and the way to setting Google Analytics is gtag, then GA will not receive the pageviews.</strong></p></blockquote>
 <p>If you find this article helpful, please click on the helpful button made by myself. If you are willing to share on the social, that’s even better.</p>
 
 
@@ -245,7 +241,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		
 			<a class="tag" href="/tags/google-analytics/">Google Analytics</a>
 		
-			<a class="tag" href="/tags/traffic/">traffic</a>
+			<a class="tag" href="/tags/traffic/">Traffic</a>
 		
 
 		
@@ -310,7 +306,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   
 				</ul>
 
-				<p class="p-4 text-center text-xs">&copy; 2023 Let&#39;s Write. All Rights Reserved.</p>
+				<p class="p-4 text-center text-xs">&copy; 2025 Let&#39;s Write. All Rights Reserved.</p>
 
 			</div>
 

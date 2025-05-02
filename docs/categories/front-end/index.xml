@@ -1,29 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>front-end on Let&#39;s Write, EN</title>
+    <title>Front-End on Let&#39;s Write, EN</title>
     <link>https://en.letswrite.tw/categories/front-end/</link>
-    <description>Recent content in front-end on Let&#39;s Write, EN</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Front-End on Let&#39;s Write, EN</description>
+    <generator>Hugo</generator>
+    <language>en</language>
     <copyright>Let&#39;s Write. All Rights Reserved.</copyright>
-    <lastBuildDate>Sat, 25 Feb 2023 10:16:28 +0800</lastBuildDate><atom:link href="https://en.letswrite.tw/categories/front-end/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 25 Feb 2023 10:16:28 +0800</lastBuildDate>
+    <atom:link href="https://en.letswrite.tw/categories/front-end/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Simple Webpage Screenshot Functionality - DOM to Image</title>
       <link>https://en.letswrite.tw/dom-to-image/</link>
       <pubDate>Sat, 25 Feb 2023 10:16:28 +0800</pubDate>
-      
       <guid>https://en.letswrite.tw/dom-to-image/</guid>
       <description>This article explores the DOM to Image package, which can be used by frontend developers to capture webpage screenshots. It provides a step-by-step guide to using the package, including tips on configuring the parameters for the captured image. Additionally, the author shares an Easter egg about generative AI.</description>
     </item>
-    
     <item>
       <title>Progressive Image Loading like Medium</title>
       <link>https://en.letswrite.tw/medium-lazyload/</link>
-      <pubDate>Mon, 07 Oct 2019 13:53:50 +0000</pubDate>
-      
+      <pubDate>Mon, 07 Oct 2019 13:53:50 +0800</pubDate>
       <guid>https://en.letswrite.tw/medium-lazyload/</guid>
       <description>Outline of this article: Three ways to progressive images loading, Three steps of Medium Progressive Images Loading, Code Part, Test page loading time</description>
     </item>
-    
   </channel>
 </rss>

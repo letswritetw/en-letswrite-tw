@@ -1,18 +1,18 @@
 ---
-title: 'Progressive Image Loading like Medium'
-date: '2019-10-07T13:53:50+00:00'
-summary: 'Outline of this article: Three ways to progressive images loading, Three steps of Medium Progressive Images Loading, Code Part, Test page loading time'
+title: "Progressive Image Loading like Medium"
+date: "2019-10-07T13:53:50+08:00"
+summary: "Outline of this article: Three ways to progressive images loading, Three steps of Medium Progressive Images Loading, Code Part, Test page loading time"
 cover: medium-lazyload.jpg
 categories:
-    - front-end
+  - front-end
 tags:
-    - image
-    - medium
-    - progressive
+  - image
+  - medium
+  - progressive
 draft: false
 ---
 
-本篇中文版：[像Medium的漸近式圖片加載](https://letswrite.tw/medium-lazyload/)
+本篇中文版：[像 Medium 的漸近式圖片加載](https://letswrite.tw/medium-lazyload/)
 
 ## Three ways to progressive images loading
 
@@ -34,7 +34,7 @@ There are 3 ways to progressive loading images:
 
 What’s even more amazing is that the article tested the two methods of lazy load and medium progressive image loading. The loading speed of medium is faster.
 
-- - - - - -
+---
 
 ## Three steps of Medium Progressive Images Loading
 
@@ -46,7 +46,7 @@ Medium Progressive Images Loading looks complicated, but if we think a while, it
 
 This is the three steps I thought of, and we’ll move on to the code part.
 
-- - - - - -
+---
 
 ## Code Part
 
@@ -98,11 +98,11 @@ Demo page is here:
 
 [Progressive image loading like Medium demo](https://letswritetw.github.io/letswrite-medium-lazyload/)
 
-- - - - - -
+---
 
 ## Test page loading time
 
-I tested the page load time with **[pindom](https://www.pingdom.com/)**  and found it to be really fast.
+I tested the page load time with **[pindom](https://www.pingdom.com/)** and found it to be really fast.
 
 This result is not use any lazy load speed, 4.57s:
 
@@ -114,6 +114,6 @@ This result is using progressive image loading, down to 2.02s:
 
 Finally, we know that progressive image loading helps speed up page loading and further improve SEO.
 
-- - - - - -
+---
 
 If you find this article helpful, please click on the helpful button made by myself. If you are willing to share on the social, that’s even better.

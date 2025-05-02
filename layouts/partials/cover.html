@@ -1,13 +1,11 @@
 {{ $Uri := .RelPermalink }}
 {{ $Image := .Resources.GetMatch (print .Params.cover) }}
-{{ $ImageResize := $Image.Resize "1200x" }}
+{{ $ImageResize := $Image.Resize "1792x" }}
 {{ with $Image }}
-  <div class="mb-2">
-    <a href="{{ $Uri }}">
-      <img
-        class="block mx-auto rounded-lg"
-        src="{{ $ImageResize.RelPermalink }}" alt="{{ .Title }}"
-        width="{{ $ImageResize.Width }}" height="{{ $ImageResize.Height }}">
-        </a>
-  </div>
+<div class="mb-2">
+  <a href="{{ $Uri }}">
+    <img class="block mx-auto rounded-lg" src="{{ $ImageResize.RelPermalink }}" alt="{{ .Title }}"
+      width="{{ $ImageResize.Width }}" height="{{ $ImageResize.Height }}">
+  </a>
+</div>
 {{ end }}

@@ -4,188 +4,185 @@
     <title>Tags on Let&#39;s Write, EN</title>
     <link>https://en.letswrite.tw/tags/</link>
     <description>Recent content in Tags on Let&#39;s Write, EN</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
+    <language>en</language>
     <copyright>Let&#39;s Write. All Rights Reserved.</copyright>
-    <lastBuildDate>Sat, 25 Feb 2023 10:16:28 +0800</lastBuildDate><atom:link href="https://en.letswrite.tw/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 02 May 2025 20:00:00 +0800</lastBuildDate>
+    <atom:link href="https://en.letswrite.tw/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Dom-to-image</title>
+      <title>Copilot</title>
+      <link>https://en.letswrite.tw/tags/copilot/</link>
+      <pubDate>Fri, 02 May 2025 20:00:00 +0800</pubDate>
+      <guid>https://en.letswrite.tw/tags/copilot/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CSS</title>
+      <link>https://en.letswrite.tw/tags/css/</link>
+      <pubDate>Fri, 02 May 2025 20:00:00 +0800</pubDate>
+      <guid>https://en.letswrite.tw/tags/css/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>GitHub</title>
+      <link>https://en.letswrite.tw/tags/github/</link>
+      <pubDate>Fri, 02 May 2025 20:00:00 +0800</pubDate>
+      <guid>https://en.letswrite.tw/tags/github/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>HTML</title>
+      <link>https://en.letswrite.tw/tags/html/</link>
+      <pubDate>Fri, 02 May 2025 20:00:00 +0800</pubDate>
+      <guid>https://en.letswrite.tw/tags/html/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>MCP</title>
+      <link>https://en.letswrite.tw/tags/mcp/</link>
+      <pubDate>Fri, 02 May 2025 20:00:00 +0800</pubDate>
+      <guid>https://en.letswrite.tw/tags/mcp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dom-to-Image</title>
       <link>https://en.letswrite.tw/tags/dom-to-image/</link>
       <pubDate>Sat, 25 Feb 2023 10:16:28 +0800</pubDate>
-      
       <guid>https://en.letswrite.tw/tags/dom-to-image/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Generative AI</title>
       <link>https://en.letswrite.tw/tags/generative-ai/</link>
       <pubDate>Sat, 25 Feb 2023 10:16:28 +0800</pubDate>
-      
       <guid>https://en.letswrite.tw/tags/generative-ai/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>JavaScript Package</title>
       <link>https://en.letswrite.tw/tags/javascript-package/</link>
       <pubDate>Sat, 25 Feb 2023 10:16:28 +0800</pubDate>
-      
       <guid>https://en.letswrite.tw/tags/javascript-package/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Webpage Screenshot</title>
       <link>https://en.letswrite.tw/tags/webpage-screenshot/</link>
       <pubDate>Sat, 25 Feb 2023 10:16:28 +0800</pubDate>
-      
       <guid>https://en.letswrite.tw/tags/webpage-screenshot/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>GCP</title>
       <link>https://en.letswrite.tw/tags/gcp/</link>
-      <pubDate>Wed, 23 Oct 2019 14:11:00 +0000</pubDate>
-      
+      <pubDate>Wed, 23 Oct 2019 14:11:00 +0800</pubDate>
       <guid>https://en.letswrite.tw/tags/gcp/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>javascript</title>
+      <title>Javascript</title>
       <link>https://en.letswrite.tw/tags/javascript/</link>
-      <pubDate>Wed, 23 Oct 2019 14:11:00 +0000</pubDate>
-      
+      <pubDate>Wed, 23 Oct 2019 14:11:00 +0800</pubDate>
       <guid>https://en.letswrite.tw/tags/javascript/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>node</title>
+      <title>Node</title>
       <link>https://en.letswrite.tw/tags/node/</link>
-      <pubDate>Wed, 23 Oct 2019 14:11:00 +0000</pubDate>
-      
+      <pubDate>Wed, 23 Oct 2019 14:11:00 +0800</pubDate>
       <guid>https://en.letswrite.tw/tags/node/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>image</title>
+      <title>Image</title>
       <link>https://en.letswrite.tw/tags/image/</link>
-      <pubDate>Mon, 07 Oct 2019 13:53:50 +0000</pubDate>
-      
+      <pubDate>Mon, 07 Oct 2019 13:53:50 +0800</pubDate>
       <guid>https://en.letswrite.tw/tags/image/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>medium</title>
+      <title>Medium</title>
       <link>https://en.letswrite.tw/tags/medium/</link>
-      <pubDate>Mon, 07 Oct 2019 13:53:50 +0000</pubDate>
-      
+      <pubDate>Mon, 07 Oct 2019 13:53:50 +0800</pubDate>
       <guid>https://en.letswrite.tw/tags/medium/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>progressive</title>
+      <title>Progressive</title>
       <link>https://en.letswrite.tw/tags/progressive/</link>
-      <pubDate>Mon, 07 Oct 2019 13:53:50 +0000</pubDate>
-      
+      <pubDate>Mon, 07 Oct 2019 13:53:50 +0800</pubDate>
       <guid>https://en.letswrite.tw/tags/progressive/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>data</title>
+      <title>Data</title>
       <link>https://en.letswrite.tw/tags/data/</link>
-      <pubDate>Thu, 22 Aug 2019 20:26:54 +0000</pubDate>
-      
+      <pubDate>Thu, 22 Aug 2019 20:26:54 +0800</pubDate>
       <guid>https://en.letswrite.tw/tags/data/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>excel</title>
+      <title>Excel</title>
       <link>https://en.letswrite.tw/tags/excel/</link>
-      <pubDate>Thu, 22 Aug 2019 20:26:54 +0000</pubDate>
-      
+      <pubDate>Thu, 22 Aug 2019 20:26:54 +0800</pubDate>
       <guid>https://en.letswrite.tw/tags/excel/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>sheet</title>
+      <title>Sheet</title>
       <link>https://en.letswrite.tw/tags/sheet/</link>
-      <pubDate>Thu, 22 Aug 2019 20:26:54 +0000</pubDate>
-      
+      <pubDate>Thu, 22 Aug 2019 20:26:54 +0800</pubDate>
       <guid>https://en.letswrite.tw/tags/sheet/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>click</title>
+      <title>Click</title>
       <link>https://en.letswrite.tw/tags/click/</link>
-      <pubDate>Wed, 21 Aug 2019 21:02:42 +0000</pubDate>
-      
+      <pubDate>Wed, 21 Aug 2019 21:02:42 +0800</pubDate>
       <guid>https://en.letswrite.tw/tags/click/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>form</title>
+      <title>Form</title>
       <link>https://en.letswrite.tw/tags/form/</link>
-      <pubDate>Wed, 21 Aug 2019 21:02:42 +0000</pubDate>
-      
+      <pubDate>Wed, 21 Aug 2019 21:02:42 +0800</pubDate>
       <guid>https://en.letswrite.tw/tags/form/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>input</title>
+      <title>Input</title>
       <link>https://en.letswrite.tw/tags/input/</link>
-      <pubDate>Wed, 21 Aug 2019 21:02:42 +0000</pubDate>
-      
+      <pubDate>Wed, 21 Aug 2019 21:02:42 +0800</pubDate>
       <guid>https://en.letswrite.tw/tags/input/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Google Analytics</title>
       <link>https://en.letswrite.tw/tags/google-analytics/</link>
-      <pubDate>Sun, 18 Aug 2019 11:43:03 +0000</pubDate>
-      
+      <pubDate>Sun, 18 Aug 2019 11:43:03 +0800</pubDate>
       <guid>https://en.letswrite.tw/tags/google-analytics/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>traffic</title>
+      <title>Traffic</title>
       <link>https://en.letswrite.tw/tags/traffic/</link>
-      <pubDate>Sun, 18 Aug 2019 11:43:03 +0000</pubDate>
-      
+      <pubDate>Sun, 18 Aug 2019 11:43:03 +0800</pubDate>
       <guid>https://en.letswrite.tw/tags/traffic/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>event</title>
+      <title>Event</title>
       <link>https://en.letswrite.tw/tags/event/</link>
-      <pubDate>Thu, 15 Aug 2019 16:34:47 +0000</pubDate>
-      
+      <pubDate>Thu, 15 Aug 2019 16:34:47 +0800</pubDate>
       <guid>https://en.letswrite.tw/tags/event/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>report</title>
+      <title>Report</title>
       <link>https://en.letswrite.tw/tags/report/</link>
-      <pubDate>Thu, 15 Aug 2019 16:34:47 +0000</pubDate>
-      
+      <pubDate>Thu, 15 Aug 2019 16:34:47 +0800</pubDate>
       <guid>https://en.letswrite.tw/tags/report/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

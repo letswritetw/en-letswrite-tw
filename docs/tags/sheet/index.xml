@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>sheet on Let&#39;s Write, EN</title>
+    <title>Sheet on Let&#39;s Write, EN</title>
     <link>https://en.letswrite.tw/tags/sheet/</link>
-    <description>Recent content in sheet on Let&#39;s Write, EN</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Sheet on Let&#39;s Write, EN</description>
+    <generator>Hugo</generator>
+    <language>en</language>
     <copyright>Let&#39;s Write. All Rights Reserved.</copyright>
-    <lastBuildDate>Thu, 22 Aug 2019 20:26:54 +0000</lastBuildDate><atom:link href="https://en.letswrite.tw/tags/sheet/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 22 Aug 2019 20:26:54 +0800</lastBuildDate>
+    <atom:link href="https://en.letswrite.tw/tags/sheet/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to use Google Sheets as a database</title>
       <link>https://en.letswrite.tw/google-excel-db/</link>
-      <pubDate>Thu, 22 Aug 2019 20:26:54 +0000</pubDate>
-      
+      <pubDate>Thu, 22 Aug 2019 20:26:54 +0800</pubDate>
       <guid>https://en.letswrite.tw/google-excel-db/</guid>
       <description>In this article, I will write how to use Google Sheets as a database, and I will create a simple member list page to demonstrate.</description>
     </item>
-    
   </channel>
 </rss>

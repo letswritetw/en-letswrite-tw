@@ -4,17 +4,17 @@
     <title>Generative AI on Let&#39;s Write, EN</title>
     <link>https://en.letswrite.tw/tags/generative-ai/</link>
     <description>Recent content in Generative AI on Let&#39;s Write, EN</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
+    <language>en</language>
     <copyright>Let&#39;s Write. All Rights Reserved.</copyright>
-    <lastBuildDate>Sat, 25 Feb 2023 10:16:28 +0800</lastBuildDate><atom:link href="https://en.letswrite.tw/tags/generative-ai/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 25 Feb 2023 10:16:28 +0800</lastBuildDate>
+    <atom:link href="https://en.letswrite.tw/tags/generative-ai/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Simple Webpage Screenshot Functionality - DOM to Image</title>
       <link>https://en.letswrite.tw/dom-to-image/</link>
       <pubDate>Sat, 25 Feb 2023 10:16:28 +0800</pubDate>
-      
       <guid>https://en.letswrite.tw/dom-to-image/</guid>
       <description>This article explores the DOM to Image package, which can be used by frontend developers to capture webpage screenshots. It provides a step-by-step guide to using the package, including tips on configuring the parameters for the captured image. Additionally, the author shares an Easter egg about generative AI.</description>
     </item>
-    
   </channel>
 </rss>

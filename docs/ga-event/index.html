@@ -25,16 +25,20 @@
 
 
 
-<link rel="stylesheet" href="https://en.letswrite.tw/css/tailwind.min.29f98f76a7f4ee6cb8a4036629b0d7d2f25ca5d0cca2e8f87a90ccadb71be487.css">
+<link rel="stylesheet" href="https://en.letswrite.tw/css/tailwind.min.435b60606db954b3152a78e176f26f4fea0a95263242dc0cdc598d9add0e3376.css">
 
 
-<meta property="og:title" content="Google Analytics Event tracking setting up" />
-<meta property="og:description" content="Outline of this article：What is Google Analytic Event Tracking、3&#43;1 elements of the GA event、GA Event can affect bounce rate、Write GA Event tracking code" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://en.letswrite.tw/ga-event/" /><meta property="article:section" content="" />
-<meta property="article:published_time" content="2019-08-15T16:34:47+00:00" />
-<meta property="article:modified_time" content="2019-08-15T16:34:47+00:00" />
-
+<meta property="og:url" content="https://en.letswrite.tw/ga-event/">
+  <meta property="og:site_name" content="Let&#39;s Write, EN">
+  <meta property="og:title" content="Google Analytics Event tracking setting up">
+  <meta property="og:description" content="Outline of this article：What is Google Analytic Event Tracking、3&#43;1 elements of the GA event、GA Event can affect bounce rate、Write GA Event tracking code">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2019-08-15T16:34:47+08:00">
+    <meta property="article:modified_time" content="2019-08-15T16:34:47+08:00">
+    <meta property="article:tag" content="Event">
+    <meta property="article:tag" content="Google Analytics">
+    <meta property="article:tag" content="Report">
 
 
 
@@ -109,6 +113,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   
     <a
       class=" px-4 hover:text-main"
+      href="/categories/ai/"
+      title="AI">AI</a>
+  
+    <a
+      class=" px-4 hover:text-main"
       href="/categories/front-end/"
       title="Front-End">Front-End</a>
   
@@ -135,14 +144,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
-  <div class="mb-2">
-    <a href="/ga-event/">
-      <img
-        class="block mx-auto rounded-lg"
-        src="/ga-event/ga-event_hu5234c3a84ab5ca9b6bedb708246ee1ba_74114_1200x0_resize_q75_box.jpg" alt="ga-event.jpg"
-        width="1200" height="630">
-        </a>
-  </div>
+<div class="mb-2">
+  <a href="/ga-event/">
+    <img class="block mx-auto rounded-lg" src="/ga-event/ga-event_hu_4757395ca4bace95.jpg" alt="ga-event.jpg"
+      width="1792" height="1024">
+  </a>
+</div>
 
 
 		
@@ -222,9 +229,9 @@ and understand article data under the category(Chinese)</a>“.</p>
 <h3 id="event-category">Event Category</h3>
 <p>After entering GA, click on “Behavior” -&gt; “Events” -&gt; “Overview” and you will see the Events report:</p>
 <figure><img src="https://i0.wp.com/imgur.com/t8twkcc.png?ssl=1"
-         alt="GA event report, screenshot source: Google Demo Account"/><figcaption>
-            <h4>GA event report, screenshot source: Google Demo Account</h4>
-        </figcaption>
+    alt="GA event report, screenshot source: Google Demo Account"><figcaption>
+      <h4>GA event report, screenshot source: Google Demo Account</h4>
+    </figcaption>
 </figure>
 
 <p>These data displayed by the report preset is the Event Category. The Event Category is a summary, which is the sum of events, so it cannot be defined casually.</p>
@@ -235,9 +242,9 @@ and understand article data under the category(Chinese)</a>“.</p>
 <h3 id="event-action">Event Action</h3>
 <p>The Event Action is the behavior of recording this event, you can see from the report of the demo account:</p>
 <figure><img src="https://i0.wp.com/imgur.com/FG9Vjyi.png?ssl=1"
-         alt="Demo Account Event Action Report"/><figcaption>
-            <h4>Demo Account Event Action Report</h4>
-        </figcaption>
+    alt="Demo Account Event Action Report"><figcaption>
+      <h4>Demo Account Event Action Report</h4>
+    </figcaption>
 </figure>
 
 <p>More in the record is the Click events, in addition to join / remove cart, promotion click, these two are used in Ecommerce reports.</p>
@@ -259,9 +266,9 @@ and understand article data under the category(Chinese)</a>“.</p>
 <p>This GA document is classified as an optional item to be filled out. In practical situation, it is recommended to fill it out.</p>
 <p>Take a look at the GA Events report to see why you must fill it out:</p>
 <figure><img src="https://i0.wp.com/imgur.com/ikiwrA6.png?ssl=1"
-         alt="Demo Account Event Label Report"/><figcaption>
-            <h4>Demo Account Event Label Report</h4>
-        </figcaption>
+    alt="Demo Account Event Label Report"><figcaption>
+      <h4>Demo Account Event Label Report</h4>
+    </figcaption>
 </figure>
 
 <p>Event Category, Event Action are large categories, and Event Label is small categories.</p>
@@ -297,8 +304,7 @@ and understand article data under the category(Chinese)</a>“.</p>
 <blockquote>
 <p>For example, suppose you have a page with a video player where the bounce rate is historically high, and you have not implemented Event measurement for the page. If you subsequently set up Event measurement for the player, you might notice a decrease in the bounce rate for that page, because Analytics will record user interaction with the player and send that interaction to the server as an additional GIF request.</p>
 <p>It’s important to keep in mind that any implementation of Event measurement that automatically executes on page load will result in a zero bounce rate for the page.</p>
-<p><!-- raw HTML omitted -->Implementation considerations <a href="https://support.google.com/analytics/answer/1033068?hl=en#Implementation">Bounce Rate Impact</a><!-- raw HTML omitted --></p>
-</blockquote>
+<p><!-- raw HTML omitted -->Implementation considerations <a href="https://support.google.com/analytics/answer/1033068?hl=en#Implementation">Bounce Rate Impact</a><!-- raw HTML omitted --></p></blockquote>
 <p>This means that if the user goes to the first page, the page is set to execute an event, such as an event that “rolls the depth is 0” or an event with “an ad exposure +1”. If the user does not enter other pages, the window will be closed and will not be counted in the bounce rate. The bounce rate of this page will be 0 because the user has an execution event.</p>
 <p>If you want to set the event does not affect the bounce rate, even if the event is executed, then you should <strong>set the “Non-Interaction Events” of the event to true</strong>. This way, even if the user enters and triggers events and closes the window without going to another page, this session will be calculated at the bounce rate.</p>
 <p>The way to set up non-interactive events will be written together with the write code into the next paragraph.</p>
@@ -313,116 +319,53 @@ and understand article data under the category(Chinese)</a>“.</p>
 <p>Attach an official note with GTM, see this: <a href="https://support.google.com/tagmanager/answer/6106716?hl=en">Google Analytics events</a></p>
 <p>There are two types of code writing, mainly depending on which type of GA tracking code is used: ga, gtag. This can be seen from the tracking code, like gtag will see gtag in the code:</p>
 <figure><img src="https://i0.wp.com/imgur.com/MAJ2nwB.png?ssl=1"
-         alt="gtag tracking code"/><figcaption>
-            <h4>gtag tracking code</h4>
-        </figcaption>
+    alt="gtag tracking code"><figcaption>
+      <h4>gtag tracking code</h4>
+    </figcaption>
 </figure>
 
 <p>Now the tracking code provided by GA is all gtag. Here both ga and gtag will be written.</p>
 <h3 id="ga-code">Ga code</h3>
 <p>The code for the ga usage event is as follows:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="1"><a style="outline: none; text-decoration:none; color:inherit" href="#1">1</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="2"><a style="outline: none; text-decoration:none; color:inherit" href="#2">2</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="3"><a style="outline: none; text-decoration:none; color:inherit" href="#3">3</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="4"><a style="outline: none; text-decoration:none; color:inherit" href="#4">4</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="5"><a style="outline: none; text-decoration:none; color:inherit" href="#5">5</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="6"><a style="outline: none; text-decoration:none; color:inherit" href="#6">6</a>
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>  <span style="color:#a6e22e">ga</span>(<span style="color:#e6db74">&#39;send&#39;</span>, <span style="color:#e6db74">&#39;event&#39;</span>, {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">eventCategory</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;event category&#39;</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">eventAction</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;event action&#39;</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">eventLabel</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;event label&#39;</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">eventValue</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;event value&#39;</span>
-</span></span><span style="display:flex;"><span>  });</span></span></code></pre></td></tr></table>
-</div>
-</div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#a6e22e">ga</span>(<span style="color:#e6db74">&#39;send&#39;</span>, <span style="color:#e6db74">&#39;event&#39;</span>, {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>  <span style="color:#a6e22e">eventCategory</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;event category&#39;</span>,
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>  <span style="color:#a6e22e">eventAction</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;event action&#39;</span>,
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>  <span style="color:#a6e22e">eventLabel</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;event label&#39;</span>,
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>  <span style="color:#a6e22e">eventValue</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;event value&#39;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>});</span></span></code></pre></div>
 <p>Can also be abbreviated as:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="1"><a style="outline: none; text-decoration:none; color:inherit" href="#1">1</a>
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>  <span style="color:#a6e22e">ga</span>(<span style="color:#e6db74">&#39;send&#39;</span>, <span style="color:#e6db74">&#39;event&#39;</span>, <span style="color:#e6db74">&#39;event category&#39;</span>, <span style="color:#e6db74">&#39;event action&#39;</span>, <span style="color:#e6db74">&#39;event label&#39;</span>, <span style="color:#e6db74">&#39;event value&#39;</span>);</span></span></code></pre></td></tr></table>
-</div>
-</div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#a6e22e">ga</span>(<span style="color:#e6db74">&#39;send&#39;</span>, <span style="color:#e6db74">&#39;event&#39;</span>, <span style="color:#e6db74">&#39;event category&#39;</span>, <span style="color:#e6db74">&#39;event action&#39;</span>, <span style="color:#e6db74">&#39;event label&#39;</span>, <span style="color:#e6db74">&#39;event value&#39;</span>);</span></span></code></pre></div>
 <p>If you want to set a non-interactive event, this is the case:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="1"><a style="outline: none; text-decoration:none; color:inherit" href="#1">1</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="2"><a style="outline: none; text-decoration:none; color:inherit" href="#2">2</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="3"><a style="outline: none; text-decoration:none; color:inherit" href="#3">3</a>
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>  <span style="color:#a6e22e">ga</span>(<span style="color:#e6db74">&#39;send&#39;</span>, <span style="color:#e6db74">&#39;event&#39;</span>, <span style="color:#e6db74">&#39;event category&#39;</span>, <span style="color:#e6db74">&#39;event action&#39;</span>, <span style="color:#e6db74">&#39;event label&#39;</span>, <span style="color:#e6db74">&#39;event value&#39;</span>, {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">nonInteraction</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>
-</span></span><span style="display:flex;"><span>  });</span></span></code></pre></td></tr></table>
-</div>
-</div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#a6e22e">ga</span>(<span style="color:#e6db74">&#39;send&#39;</span>, <span style="color:#e6db74">&#39;event&#39;</span>, <span style="color:#e6db74">&#39;event category&#39;</span>, <span style="color:#e6db74">&#39;event action&#39;</span>, <span style="color:#e6db74">&#39;event label&#39;</span>, <span style="color:#e6db74">&#39;event value&#39;</span>, {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>  <span style="color:#a6e22e">nonInteraction</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>});</span></span></code></pre></div>
 <p>* Event Value is not required and may not be written.</p>
 <h3 id="gtag-code">Gtag code</h3>
 <p>The code for the gtag usage event is as follows:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="1"><a style="outline: none; text-decoration:none; color:inherit" href="#1">1</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="2"><a style="outline: none; text-decoration:none; color:inherit" href="#2">2</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="3"><a style="outline: none; text-decoration:none; color:inherit" href="#3">3</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="4"><a style="outline: none; text-decoration:none; color:inherit" href="#4">4</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="5"><a style="outline: none; text-decoration:none; color:inherit" href="#5">5</a>
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>  <span style="color:#a6e22e">gtag</span>(<span style="color:#e6db74">&#39;event&#39;</span>, <span style="color:#e6db74">&#39;event action&#39;</span>, {
-</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;event_category&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;event category&#39;</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;event_label&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;event label&#39;</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;value&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;event value&#39;</span>
-</span></span><span style="display:flex;"><span>  });</span></span></code></pre></td></tr></table>
-</div>
-</div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#a6e22e">gtag</span>(<span style="color:#e6db74">&#39;event&#39;</span>, <span style="color:#e6db74">&#39;event action&#39;</span>, {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>  <span style="color:#e6db74">&#39;event_category&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;event category&#39;</span>,
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>  <span style="color:#e6db74">&#39;event_label&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;event label&#39;</span>,
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>  <span style="color:#e6db74">&#39;value&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;event value&#39;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>});</span></span></code></pre></div>
 <p>If you want to set a non-interactive event, this is the case:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="1"><a style="outline: none; text-decoration:none; color:inherit" href="#1">1</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="2"><a style="outline: none; text-decoration:none; color:inherit" href="#2">2</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="3"><a style="outline: none; text-decoration:none; color:inherit" href="#3">3</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="4"><a style="outline: none; text-decoration:none; color:inherit" href="#4">4</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="5"><a style="outline: none; text-decoration:none; color:inherit" href="#5">5</a>
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>  <span style="color:#a6e22e">gtag</span>(<span style="color:#e6db74">&#39;event&#39;</span>, <span style="color:#e6db74">&#39;event action&#39;</span>, {
-</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;event_category&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;event category&#39;</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;event_label&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;event label&#39;</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;non_interaction&#39;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>
-</span></span><span style="display:flex;"><span>  });</span></span></code></pre></td></tr></table>
-</div>
-</div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#a6e22e">gtag</span>(<span style="color:#e6db74">&#39;event&#39;</span>, <span style="color:#e6db74">&#39;event action&#39;</span>, {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>  <span style="color:#e6db74">&#39;event_category&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;event category&#39;</span>,
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>  <span style="color:#e6db74">&#39;event_label&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;event label&#39;</span>,
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>  <span style="color:#e6db74">&#39;non_interaction&#39;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>});</span></span></code></pre></div>
 <p>In addition, gtag provides Default Google Analytics Events. Default events table can be seen from the following link:</p>
 <p><a href="https://developers.google.com/analytics/devguides/collection/gtagjs/events#default_google_analytics_events">Default Google Analytics Events</a></p>
 <p>* Event values ​​are not required and may not be written.</p>
 <hr>
 <h2 id="case-demonstration">Case demonstration</h2>
 <p>Here is a case. Suppose there is a page that provides file download. The id of the download button is “btn-download”. To find out how many people clicked the download button, you can write:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="1"><a style="outline: none; text-decoration:none; color:inherit" href="#1">1</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="2"><a style="outline: none; text-decoration:none; color:inherit" href="#2">2</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="3"><a style="outline: none; text-decoration:none; color:inherit" href="#3">3</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="4"><a style="outline: none; text-decoration:none; color:inherit" href="#4">4</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="5"><a style="outline: none; text-decoration:none; color:inherit" href="#5">5</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="6"><a style="outline: none; text-decoration:none; color:inherit" href="#6">6</a>
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="7"><a style="outline: none; text-decoration:none; color:inherit" href="#7">7</a>
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">btnDownload</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;btn-download&#39;</span>);
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">btnDownload</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;click&#39;</span>, <span style="color:#66d9ef">function</span>() {
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">gtag</span>(<span style="color:#e6db74">&#39;event&#39;</span>, <span style="color:#e6db74">&#39;download_click&#39;</span>, {
-</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;event_category&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;download&#39;</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;event_label&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;file name&#39;</span>
-</span></span><span style="display:flex;"><span>  });
-</span></span><span style="display:flex;"><span>}, <span style="color:#66d9ef">false</span>);</span></span></code></pre></td></tr></table>
-</div>
-</div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">btnDownload</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;btn-download&#39;</span>);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#a6e22e">btnDownload</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;click&#39;</span>, <span style="color:#66d9ef">function</span>() {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>  <span style="color:#a6e22e">gtag</span>(<span style="color:#e6db74">&#39;event&#39;</span>, <span style="color:#e6db74">&#39;download_click&#39;</span>, {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>    <span style="color:#e6db74">&#39;event_category&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;download&#39;</span>,
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>    <span style="color:#e6db74">&#39;event_label&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;file name&#39;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>  });
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span>}, <span style="color:#66d9ef">false</span>);</span></span></code></pre></div>
 <p>This is the basic way to use GA Event.</p>
 <p>If you want to know the click of the advertisement, GA has a function to convert CTR. This is one of the functions of the e-commerce report. Please refer to this:</p>
 <p><a href="https://letswrite.tw/ga-ec-report/">GA Report: Ecommerce Internal Promotion report(Chinese)</a></p>
@@ -443,11 +386,11 @@ and understand article data under the category(Chinese)</a>“.</p>
 		
 		<h4>Tags</h4>
 		
-			<a class="tag" href="/tags/event/">event</a>
+			<a class="tag" href="/tags/event/">Event</a>
 		
 			<a class="tag" href="/tags/google-analytics/">Google Analytics</a>
 		
-			<a class="tag" href="/tags/report/">report</a>
+			<a class="tag" href="/tags/report/">Report</a>
 		
 
 		
@@ -498,7 +441,7 @@ and understand article data under the category(Chinese)</a>“.</p>
   
 				</ul>
 
-				<p class="p-4 text-center text-xs">&copy; 2023 Let&#39;s Write. All Rights Reserved.</p>
+				<p class="p-4 text-center text-xs">&copy; 2025 Let&#39;s Write. All Rights Reserved.</p>
 
 			</div>
 

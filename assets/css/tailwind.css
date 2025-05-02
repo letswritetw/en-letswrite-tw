@@ -2,12 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
+html,
+body {
   overflow: auto;
   height: -webkit-fill-available;
 }
 html {
-  -webkit-overflow-scrolling: touch
+  -webkit-overflow-scrolling: touch;
 }
 body {
   -webkit-font-smoothing: antialiased;
@@ -20,16 +21,16 @@ img {
 
 /* 分頁按鈕 */
 .pagination {
-  @apply flex justify-center py-4
+  @apply flex justify-center py-4;
 }
 .pagination a {
-  @apply flex justify-center items-center p-2 hover:text-main
+  @apply flex justify-center items-center p-2 hover:text-main;
 }
 .pagination .active a {
-  @apply text-main pointer-events-none
+  @apply text-main pointer-events-none;
 }
 .pagination .disabled a {
-  @apply text-gray-200 pointer-events-none
+  @apply text-gray-200 pointer-events-none;
 }
 
 /* 單文頁 */
@@ -37,34 +38,37 @@ img {
 .single-article h2,
 .single-article h3,
 .single-article h4 {
-  @apply mt-8 mb-4 font-bold
+  @apply mt-8 mb-4 font-bold;
 }
 .single-article h1 {
-  @apply text-3xl
+  @apply text-3xl;
 }
 .single-article h2 {
-  @apply text-2xl
+  @apply text-2xl;
 }
 .single-article h3 {
-  @apply text-xl
+  @apply text-xl;
 }
 .single-article h4 {
-  @apply text-lg
+  @apply text-lg;
 }
 .single-article figcaption h4 {
-  @apply mt-2 mb-4 font-normal text-center text-sm
+  @apply mt-2 mb-4 font-normal text-center text-sm;
 }
 .single-article p,
 .single-article figure,
 .single-article .highlight {
-  @apply mb-4 leading-relaxed break-all
+  @apply mb-4 leading-relaxed break-all;
+}
+.single-article .highlight pre {
+  @apply overflow-x-auto p-2;
 }
 
 .single-article a {
-  @apply text-main hover:text-mainHover
+  @apply text-main hover:text-mainHover;
 }
 .single-toc a {
-  @apply text-gray-500 hover:text-mainHover visited:text-gray-800
+  @apply text-gray-500 hover:text-mainHover visited:text-gray-800;
 }
 
 hr {
@@ -72,29 +76,43 @@ hr {
 }
 
 .single-article img {
-  @apply mx-auto rounded-lg
+  @apply mx-auto rounded-lg;
 }
 
-.single-article ul, .single-article ol {
-  @apply pl-6 pr-2 py-2
+.single-article ul,
+.single-article ol {
+  @apply pl-6 pr-2 py-2;
 }
 .single-article li {
-  @apply pb-2 break-all
+  @apply pb-2 break-all;
 }
 .single-article ul {
-  @apply list-disc
+  @apply list-disc;
 }
 .single-article ol {
-  @apply list-decimal
+  @apply list-decimal;
 }
 
 .single-article .highlight table {
-  @apply p-2 max-w-full rounded-lg
+  @apply p-2 max-w-full rounded-lg;
 }
 .single-article .highlight table pre {
-  @apply p-2 max-w-full whitespace-normal
+  @apply p-2 max-w-full whitespace-normal;
 }
 
 .single-article .tag {
-  @apply inline-block mr-2 px-4 py-1 border border-gray-300 rounded-lg text-sm text-gray-500 hover:bg-gray-400 hover:border-gray-400 hover:text-white
+  @apply inline-block mr-2 px-4 py-1 border border-gray-300 rounded-lg text-sm text-gray-500 hover:bg-gray-400 hover:border-gray-400 hover:text-white;
+}
+
+.single-article blockquote {
+  @apply p-4 my-4 border-l-4 border-main;
+}
+.single-article blockquote p {
+  @apply mb-0;
+}
+.single-article blockquote p + p {
+  @apply mt-2;
+}
+.single-article p code {
+  @apply bg-main bg-opacity-20 px-1 py-0.5 rounded;
 }

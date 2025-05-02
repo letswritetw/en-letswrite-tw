@@ -17,14 +17,18 @@ menu:
     title: Index
     url: /
     weight: 1
+  - name: AI
+    title: AI
+    url: /categories/ai/
+    weight: 2
   - name: Front-End
     title: Front-End
     url: /categories/front-end/
-    weight: 2
+    weight: 3
   - name: Google
     title: Google
     url: /categories/google/
-    weight: 3
+    weight: 4
 
 # copyright
 copyright: Let's Write. All Rights Reserved.

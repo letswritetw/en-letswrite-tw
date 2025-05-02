@@ -1,14 +1,14 @@
 ---
-title: 'If I already have node.js files, how do I deploy them to Google Cloud Platform(GCP)'
-date: '2019-10-23T14:11:00+00:00'
-summary: 'Outline of this article：What problem is this article to solve?Introducing GCP and the UI. 5 steps to using GCP App Engine. 3 considerations.'
+title: "If I already have node.js files, how do I deploy them to Google Cloud Platform(GCP)"
+date: "2019-10-23T14:11:00+08:00"
+summary: "Outline of this article：What problem is this article to solve?Introducing GCP and the UI. 5 steps to using GCP App Engine. 3 considerations."
 cover: gcp-node.jpg
 categories:
-    - google
+  - google
 tags:
-    - GCP
-    - javascript
-    - node
+  - GCP
+  - javascript
+  - node
 draft: false
 ---
 
@@ -24,7 +24,7 @@ But my problem is: If I already have a node.js app or files, how do I deploy the
 
 After 1.5 days of study hard, August wrote this note.
 
-- - - - - -
+---
 
 ## Introducing GCP (Google Cloud Platform) and the UI
 
@@ -56,7 +56,7 @@ But which one should I use it? This is my opinion:
 
 Since I’m not familiar with the host and have completed the node.js files, I chose App Engine.
 
-- - - - - -
+---
 
 ## 5 steps to using GCP App Engine
 
@@ -68,7 +68,7 @@ The overall process for fully deploying files is as follows:
 4. Open the Cloud Build API for the project
 5. use terminal and then type: gcloud app deploy
 
-- - - - - -
+---
 
 ### 1 Install Google Cloud SDK
 
@@ -86,9 +86,11 @@ I choose **Interactive installation**, because it’s simple.
 
 Open the terminal and type:
 
-{{< highlight bash "linenos=table,anchorlinenos=true,hl_inline=true" >}}
+<!-- prettier-ignore-start -->
+{{< highlight bash "linenos=inline" >}}
 $ curl https://sdk.cloud.google.com | bash
-{{< / highlight >}}
+{{< /highlight >}}
+<!-- prettier-ignore-end -->
 
 and answer a few questions, the system will automatically install the SDK.
 
@@ -102,7 +104,7 @@ When I restart the terminal and type **gcloud -v**, I can get the message! I alm
 
 If you also see this message, it means that this step is successful and we can proceed to the next step.
 
-- - - - - -
+---
 
 ### 2 Into the folder which you want to deploy, open terminal and then type: gcloud init
 
@@ -134,7 +136,7 @@ The node.js has a **package.json**, in the line of **scripts**, we need add **st
 
 **NAME.js** should be changed to the project main javascript filename.
 
-- - - - - -
+---
 
 ### 4 Open the Cloud Build API for the project
 
@@ -148,7 +150,7 @@ After the Cloud Build API is opening, you can use the terminal to type once: **g
 
 These five steps are how we deploy a node.js website to the GCP.
 
-- - - - - -
+---
 
 ## 3 considerations
 
@@ -160,13 +162,13 @@ Since I always use nodemon to develop node.js, so I fill **nodemon XXXX.js** to 
 
 ### 2 .gcloudignore is so~~~ important
 
-When we complete the `gcloud app deploy`, it will automatically create **.gcloudignore**  file.
+When we complete the `gcloud app deploy`, it will automatically create **.gcloudignore** file.
 
 This file as same as **.gitignore** of github, so if a file name is written to it, it will not be deployed.
 
-Therefore, the **node\_modules/** can not be delete definitely.
+Therefore, the **node_modules/** can not be delete definitely.
 
-The size of the **node\_modules** file is usually so large that GCP can install the npm plugin by reading package.json. So please note that: **node\_modules /** cannot be removed.
+The size of the **node_modules** file is usually so large that GCP can install the npm plugin by reading package.json. So please note that: **node_modules /** cannot be removed.
 
 ### 3 Considerations during development
 
@@ -178,6 +180,6 @@ In the main javascript file, we should pay attention to the port, static file lo
 
 When August saw the node.js file successfully deployed to the GCP and displayed the web page, my tears almost dripped. Because I became better than the beginning.
 
-- - - - - -
+---
 
 If you find this article helpful, please click on the helpful button made by myself. If you are willing to share on the social, that’s even better.

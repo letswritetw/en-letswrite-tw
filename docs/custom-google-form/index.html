@@ -25,16 +25,21 @@
 
 
 
-<link rel="stylesheet" href="https://en.letswrite.tw/css/tailwind.min.29f98f76a7f4ee6cb8a4036629b0d7d2f25ca5d0cca2e8f87a90ccadb71be487.css">
+<link rel="stylesheet" href="https://en.letswrite.tw/css/tailwind.min.435b60606db954b3152a78e176f26f4fea0a95263242dc0cdc598d9add0e3376.css">
 
 
-<meta property="og:title" content="Fully customizable Google Forms" />
-<meta property="og:description" content="Before writing an article on how to use google excel as a database, this first writes how to use google forms as a form on the web page." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://en.letswrite.tw/custom-google-form/" /><meta property="article:section" content="" />
-<meta property="article:published_time" content="2019-08-21T21:02:42+00:00" />
-<meta property="article:modified_time" content="2019-08-21T21:02:42+00:00" />
-
+<meta property="og:url" content="https://en.letswrite.tw/custom-google-form/">
+  <meta property="og:site_name" content="Let&#39;s Write, EN">
+  <meta property="og:title" content="Fully customizable Google Forms">
+  <meta property="og:description" content="Before writing an article on how to use google excel as a database, this first writes how to use google forms as a form on the web page.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2019-08-21T21:02:42+08:00">
+    <meta property="article:modified_time" content="2019-08-21T21:02:42+08:00">
+    <meta property="article:tag" content="Click">
+    <meta property="article:tag" content="Data">
+    <meta property="article:tag" content="Form">
+    <meta property="article:tag" content="Input">
 
 
 
@@ -109,6 +114,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   
     <a
       class=" px-4 hover:text-main"
+      href="/categories/ai/"
+      title="AI">AI</a>
+  
+    <a
+      class=" px-4 hover:text-main"
       href="/categories/front-end/"
       title="Front-End">Front-End</a>
   
@@ -135,14 +145,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
-  <div class="mb-2">
-    <a href="/custom-google-form/">
-      <img
-        class="block mx-auto rounded-lg"
-        src="/custom-google-form/custom-google-form_hucd97753ac30a1e0041360e5faf160e7f_99504_1200x0_resize_q75_box.jpg" alt="custom-google-form.jpg"
-        width="1200" height="630">
-        </a>
-  </div>
+<div class="mb-2">
+  <a href="/custom-google-form/">
+    <img class="block mx-auto rounded-lg" src="/custom-google-form/custom-google-form_hu_f8da9db696e48921.jpg" alt="custom-google-form.jpg"
+      width="1792" height="1024">
+  </a>
+</div>
 
 
 		
@@ -237,76 +245,55 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <h3 id="find-post-url">find POST url</h3>
 <p>You right-click an element on the form page and select <strong>Inspect</strong> to jump into the <strong>Elements</strong> panel. If you use Windows system, you can press <strong>F12</strong> directly.</p>
 <figure><img src="https://i0.wp.com/i.imgur.com/8ypIQ8o.png?ssl=1"
-         alt="elements panel"/><figcaption>
-            <h4>elements panel</h4>
-        </figcaption>
+    alt="elements panel"><figcaption>
+      <h4>elements panel</h4>
+    </figcaption>
 </figure>
 
 <p>On the left is the page of the original form, and on the right is the code.</p>
 <p>Randomly click on the code, you will see the number of selected lines become blue background:</p>
 <figure><img src="https://i0.wp.com/i.imgur.com/j6WzGXN.png?ssl=1"
-         alt="blue background block is the code of your select"/><figcaption>
-            <h4>blue background block is the code of your select</h4>
-        </figcaption>
+    alt="blue background block is the code of your select"><figcaption>
+      <h4>blue background block is the code of your select</h4>
+    </figcaption>
 </figure>
 
 <p>Then, if you are using a Windows system, press <strong>ctrl + F</strong>, if it is Mac, <strong>cmd + F</strong>, and you will see the search input:</p>
 <figure><img src="https://i0.wp.com/i.imgur.com/yF0jBxI.jpg?ssl=1"
-         alt="open search input"/><figcaption>
-            <h4>open search input</h4>
-        </figcaption>
+    alt="open search input"><figcaption>
+      <h4>open search input</h4>
+    </figcaption>
 </figure>
 
 <p>Type <strong>&lt;form</strong> in the search input and in the search results you will see some code with a yellow background.</p>
 <figure><img src="https://i0.wp.com/i.imgur.com/MoavM2u.jpg?ssl=1"
-         alt="art of search “&amp;lt;form”"/><figcaption>
-            <h4>art of search “&amp;lt;form”</h4>
-        </figcaption>
+    alt="art of search “&amp;lt;form”"><figcaption>
+      <h4>art of search “&amp;lt;form”</h4>
+    </figcaption>
 </figure>
 
 <p>From the code starting with <strong>&lt;form</strong> , you can see the <strong>action</strong> tag, which has a url value. It is the POST URL and we need to copy it.</p>
 <p>The POST url like this:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="1"><a style="outline: none; text-decoration:none; color:inherit" href="#1">1</a>
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>https://docs.google.com/forms/d/e/1FAIpQLScxpBiexGfPha5_vq1fos2r_9dl1QfkCJBvHWHRIbgwudOHaQ/formResponse</span></span></code></pre></td></tr></table>
-</div>
-</div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>https://docs.google.com/forms/d/e/1FAIpQLScxpBiexGfPha5_vq1fos2r_9dl1QfkCJBvHWHRIbgwudOHaQ/formResponse</span></span></code></pre></div>
 <h3 id="find-fields-name">find fields name</h3>
 <p>First, click the button labeled &ldquo;1&rdquo; in the image below, then move the mouse to the name of the form until the position at the beginning of “input” is displayed, left-click.</p>
 <figure><img src="https://i0.wp.com/i.imgur.com/ebA1eko.jpg?ssl=1"
-         alt="find input code"/><figcaption>
-            <h4>find input code</h4>
-        </figcaption>
+    alt="find input code"><figcaption>
+      <h4>find input code</h4>
+    </figcaption>
 </figure>
 
 <p>After left-click, you will see the part of the code on the element panel, and there is a code width light blue background:</p>
 <figure><img src="https://i0.wp.com/i.imgur.com/6xBCLcK.jpg?ssl=1"
-         alt="The selected input is highlighted"/><figcaption>
-            <h4>The selected input is highlighted</h4>
-        </figcaption>
+    alt="The selected input is highlighted"><figcaption>
+      <h4>The selected input is highlighted</h4>
+    </figcaption>
 </figure>
 
 <p>The input code is：</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="1"><a style="outline: none; text-decoration:none; color:inherit" href="#1">1</a>
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;quantumWizTextinputPaperinputInput exportInput&#34;</span> <span style="color:#a6e22e">jsname</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;YPqjbf&#34;</span> <span style="color:#a6e22e">autocomplete</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;off&#34;</span> <span style="color:#a6e22e">tabindex</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0&#34;</span> <span style="color:#a6e22e">aria-label</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;name&#34;</span> <span style="color:#a6e22e">aria-describedby</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;i.desc.2087285872 i.err.2087285872&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;entry.2065974955&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span> <span style="color:#a6e22e">dir</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;auto&#34;</span> <span style="color:#a6e22e">data-initial-dir</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;auto&#34;</span> <span style="color:#a6e22e">data-initial-value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span> <span style="color:#a6e22e">aria-invalid</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;false&#34;</span>&gt;</span></span></code></pre></td></tr></table>
-</div>
-</div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;quantumWizTextinputPaperinputInput exportInput&#34;</span> <span style="color:#a6e22e">jsname</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;YPqjbf&#34;</span> <span style="color:#a6e22e">autocomplete</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;off&#34;</span> <span style="color:#a6e22e">tabindex</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0&#34;</span> <span style="color:#a6e22e">aria-label</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;name&#34;</span> <span style="color:#a6e22e">aria-describedby</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;i.desc.2087285872 i.err.2087285872&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;entry.2065974955&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span> <span style="color:#a6e22e">dir</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;auto&#34;</span> <span style="color:#a6e22e">data-initial-dir</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;auto&#34;</span> <span style="color:#a6e22e">data-initial-value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span> <span style="color:#a6e22e">aria-invalid</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;false&#34;</span>&gt;</span></span></code></pre></div>
 <p>The <strong>name</strong> is our need tag:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="1"><a style="outline: none; text-decoration:none; color:inherit" href="#1">1</a>
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>name=&#34;entry.2065974955&#34;</span></span></code></pre></td></tr></table>
-</div>
-</div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>name=&#34;entry.2065974955&#34;</span></span></code></pre></div>
 <p>The other three items are handled in the same way, all we need <strong>name</strong> are as follow：</p>
 <ul>
 <li>name：entry.2065974955</li>
@@ -319,9 +306,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <h2 id="build-a-web-page-form">Build a web page form</h2>
 <p>This post use Skeleton to build a simple form, and the demo is as follow:</p>
 <figure><img src="https://i0.wp.com/i.imgur.com/3UCsaft.png?ssl=1"
-         alt="custom form demo"/><figcaption>
-            <h4>custom form demo</h4>
-        </figcaption>
+    alt="custom form demo"><figcaption>
+      <h4>custom form demo</h4>
+    </figcaption>
 </figure>
 
 <p>Although in the stage of making google forms, each question is a short answer type, but in the custom form, you can distinguish between input, radio, select, and textarea. As long as you can catch the value and post it, you can be sure that the data is received.</p>
@@ -331,7 +318,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>The google form fields name are correspond to the fields in google excel. There are two ways to set name fields:</p>
 <p>The first way: we use the normal form method, we set the action URL and each input name, when we click the submit button, the browser will handle the submit function.</p>
 <p>This is an example of the first way, remember to replace the url and each input name:</p>
-<script type="application/javascript" src="https://gist.github.com/letswritetw/70c2531bfe0f8fb8ffddff8026909787.js"></script>
+<script src="https://gist.github.com/letswritetw/70c2531bfe0f8fb8ffddff8026909787.js"></script>
 
 <p>The second way is use AJAX, we POST google forms url dirctly, and the data’s key is input name.</p>
 <p>This article is mainly about writing the second way.</p>
@@ -347,28 +334,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </ul>
 <p>We can use them to code html and js.</p>
 <h3 id="html">HTML</h3>
-<script type="application/javascript" src="https://gist.github.com/letswritetw/4485ed7f7f6c112008fc8c0be1d2bfc0.js"></script>
+<script src="https://gist.github.com/letswritetw/4485ed7f7f6c112008fc8c0be1d2bfc0.js"></script>
 
 <h3 id="js">JS</h3>
 <p>The part of js, we get each input value and AJAX to google form.</p>
 <p>Usually for the form, it will verify whether the columns are empty or verify that the format is correct. But this article is mainly about how to customize the form, so I gave up the verification part. If input value is empty, I will send “no set”.</p>
-<script type="application/javascript" src="https://gist.github.com/letswritetw/59983a6a406f97f1de52143fa14d6db6.js"></script>
+<script src="https://gist.github.com/letswritetw/59983a6a406f97f1de52143fa14d6db6.js"></script>
 
 <p>The data’s key is the name which we get from google form’s name.</p>
 <p>The POST url is the action value which we get from google form’s action.</p>
 <p>Finally, we can test whether the data is successfully entered into the google excel.</p>
 <p>We fill the form and click confirm button:</p>
 <figure><img src="https://i0.wp.com/i.imgur.com/FWAK3ac.png?ssl=1"
-         alt="fill the form"/><figcaption>
-            <h4>fill the form</h4>
-        </figcaption>
+    alt="fill the form"><figcaption>
+      <h4>fill the form</h4>
+    </figcaption>
 </figure>
 
 <p>Then we open response google excel and we can see that the data came in successfully !</p>
 <figure><img src="https://i0.wp.com/i.imgur.com/H1SooVm.png?ssl=1"
-         alt="google excel save data successfully"/><figcaption>
-            <h4>google excel save data successfully</h4>
-        </figcaption>
+    alt="google excel save data successfully"><figcaption>
+      <h4>google excel save data successfully</h4>
+    </figcaption>
 </figure>
 
 <p>The source code used in this article is here, welcome to download and use:</p>
@@ -391,13 +378,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		
 		<h4>Tags</h4>
 		
-			<a class="tag" href="/tags/click/">click</a>
+			<a class="tag" href="/tags/click/">Click</a>
 		
-			<a class="tag" href="/tags/data/">data</a>
+			<a class="tag" href="/tags/data/">Data</a>
 		
-			<a class="tag" href="/tags/form/">form</a>
+			<a class="tag" href="/tags/form/">Form</a>
 		
-			<a class="tag" href="/tags/input/">input</a>
+			<a class="tag" href="/tags/input/">Input</a>
 		
 
 		
@@ -453,7 +440,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   
 				</ul>
 
-				<p class="p-4 text-center text-xs">&copy; 2023 Let&#39;s Write. All Rights Reserved.</p>
+				<p class="p-4 text-center text-xs">&copy; 2025 Let&#39;s Write. All Rights Reserved.</p>
 
 			</div>
 
