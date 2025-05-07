@@ -3,6 +3,8 @@ title: "Fully customizable Google Forms"
 date: "2019-08-21T21:02:42+08:00"
 summary: "Before writing an article on how to use google excel as a database, this first writes how to use google forms as a form on the web page."
 cover: custom-google-form.jpg
+images:
+  - custom-google-form.jpg
 categories:
   - google
 tags:

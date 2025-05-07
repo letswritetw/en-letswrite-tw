@@ -40,5 +40,6 @@ summaryLength: 15
 params:
   subtitle: Front-end engineer August's study notes — solving problems, in simple ways.
   mainColor: '#42A6F7'
+  images: ["https://en.letswrite.tw/index_fb.png"]
   favicon: https://letswritetw.github.io/letswritetw/dist/img/logo_512.png
 

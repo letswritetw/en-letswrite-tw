@@ -3,6 +3,8 @@ title: "If I already have node.js files, how do I deploy them to Google Cloud Pl
 date: "2019-10-23T14:11:00+08:00"
 summary: "Outline of this article：What problem is this article to solve?Introducing GCP and the UI. 5 steps to using GCP App Engine. 3 considerations."
 cover: gcp-node.jpg
+images:
+  - gcp-node.jpg
 categories:
   - google
 tags:

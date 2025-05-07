@@ -3,6 +3,8 @@ title: "Simple Webpage Screenshot Functionality - DOM to Image"
 date: "2023-02-25T10:16:28+08:00"
 summary: "This article explores the DOM to Image package, which can be used by frontend developers to capture webpage screenshots. It provides a step-by-step guide to using the package, including tips on configuring the parameters for the captured image. Additionally, the author shares an Easter egg about generative AI."
 cover: dom-to-image.jpg
+images:
+  - dom-to-image.jpg
 categories:
   - front-end
 tags:

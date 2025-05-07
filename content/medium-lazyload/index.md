@@ -3,6 +3,8 @@ title: "Progressive Image Loading like Medium"
 date: "2019-10-07T13:53:50+08:00"
 summary: "Outline of this article: Three ways to progressive images loading, Three steps of Medium Progressive Images Loading, Code Part, Test page loading time"
 cover: medium-lazyload.jpg
+images:
+  - medium-lazyload.jpg
 categories:
   - front-end
 tags:

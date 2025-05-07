@@ -3,6 +3,8 @@ title: "How to use Google Sheets as a database"
 date: "2019-08-22T20:26:54+08:00"
 summary: "In this article, I will write how to use Google Sheets as a database, and I will create a simple member list page to demonstrate."
 cover: google-excel-db.jpg
+images:
+  - google-excel-db.jpg
 categories:
   - google
 tags:
