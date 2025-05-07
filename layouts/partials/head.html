@@ -1,4 +1,3 @@
-
 <meta charset="utf-8">
 
 <title>{{ .Title }}</title>
@@ -15,21 +14,28 @@
 <meta name="application-name" content="{{ .Site.Title }}">
 <meta name="msapplication-TileColor" content="{{ .Site.Params.mainColor }}">
 
-{{/*  Favicons  */}}
+{{/* Favicons */}}
 <link rel="shortcut icon" href="{{ .Site.Params.favicon }}">
 <link rel="apple-touch-icon" href="{{ .Site.Params.favicon }}">
 <link rel="icon" type="image/png" href="{{ .Site.Params.favicon }}">
 
-{{/*  CSS  */}}
+{{/* CSS */}}
 {{ $tailwind := resources.Get "css/tailwind.min.css" | fingerprint }}
 <link rel="stylesheet" href="{{ $tailwind.Permalink }}">
 
-{{/*  Open Graph  */}}
+{{/* Open Graph */}}
 {{ template "_internal/opengraph.html" . }}
 
-{{/*  GTM  */}}
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-NDGP84X');</script>
+{{/* GTM */}}
+<script>(function (w, d, s, l, i) {
+    w[l] = w[l] || []; w[l].push({
+      'gtm.start':
+        new Date().getTime(), event: 'gtm.js'
+    }); var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+  })(window, document, 'script', 'dataLayer', 'GTM-NDGP84X');</script>
+
+{{/* Google 站內搜尋 */}}
+<script async src="https://cse.google.com/cse.js?cx=95b479913308d456e">
+</script>

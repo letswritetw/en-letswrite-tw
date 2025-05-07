@@ -116,3 +116,22 @@ hr {
 .single-article code {
   @apply bg-main bg-opacity-20 px-1 py-0.5 rounded;
 }
+
+.gsc-control-cse {
+  @apply !pr-0;
+}
+
+@media screen and (min-width: 641px) {
+  .gsc-input-box,
+  .gsc-search-button-v2 {
+    height: 35px;
+    @apply !rounded-lg;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .gsc-input-box,
+  .gsc-search-button-v2 {
+    height: 46px;
+  }
+}
