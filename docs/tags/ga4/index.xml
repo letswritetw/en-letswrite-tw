@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GA4 on Let&#39;s Write, EN</title>
+    <link>https://en.letswrite.tw/tags/ga4/</link>
+    <description>Recent content in GA4 on Let&#39;s Write, EN</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>Let&#39;s Write. All Rights Reserved.</copyright>
+    <lastBuildDate>Fri, 09 May 2025 10:00:00 +0800</lastBuildDate>
+    <atom:link href="https://en.letswrite.tw/tags/ga4/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Integrating Multi-Site Google Analytics Data Using Google Apps Script</title>
+      <link>https://en.letswrite.tw/integrating-multi-site-google-analytics-data-using-google-apps-script/</link>
+      <pubDate>Fri, 09 May 2025 10:00:00 +0800</pubDate>
+      <guid>https://en.letswrite.tw/integrating-multi-site-google-analytics-data-using-google-apps-script/</guid>
+      <description>This tutorial walks through how to consolidate Google Analytics data from multiple sites using Google Apps Script and the Google Analytics Data API, enabling easy, centralized reporting.</description>
+    </item>
+  </channel>
+</rss>

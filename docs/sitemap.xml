@@ -2,12 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://en.letswrite.tw/categories/ai/</loc>
-    <lastmod>2025-05-02T20:00:00+08:00</lastmod>
+    <loc>https://en.letswrite.tw/categories/</loc>
+    <lastmod>2025-05-09T10:00:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url><url>
-    <loc>https://en.letswrite.tw/categories/</loc>
+    <loc>https://en.letswrite.tw/tags/ga4/</loc>
+    <lastmod>2025-05-09T10:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url><url>
+    <loc>https://en.letswrite.tw/categories/google/</loc>
+    <lastmod>2025-05-09T10:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url><url>
+    <loc>https://en.letswrite.tw/integrating-multi-site-google-analytics-data-using-google-apps-script/</loc>
+    <lastmod>2025-05-09T10:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url><url>
+    <loc>https://en.letswrite.tw/tags/</loc>
+    <lastmod>2025-05-09T10:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url><url>
+    <loc>https://en.letswrite.tw/categories/ai/</loc>
     <lastmod>2025-05-02T20:00:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
@@ -38,11 +58,6 @@
     <priority>1</priority>
   </url><url>
     <loc>https://en.letswrite.tw/tags/mcp/</loc>
-    <lastmod>2025-05-02T20:00:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1</priority>
-  </url><url>
-    <loc>https://en.letswrite.tw/tags/</loc>
     <lastmod>2025-05-02T20:00:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
@@ -83,11 +98,6 @@
     <priority>1</priority>
   </url><url>
     <loc>https://en.letswrite.tw/tags/gcp/</loc>
-    <lastmod>2019-10-23T14:11:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1</priority>
-  </url><url>
-    <loc>https://en.letswrite.tw/categories/google/</loc>
     <lastmod>2019-10-23T14:11:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
