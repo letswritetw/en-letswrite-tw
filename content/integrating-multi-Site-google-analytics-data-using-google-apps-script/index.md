@@ -22,6 +22,12 @@ But with the GA API, engineers can fetch data from each site and display it all 
 
 ---
 
+## Listen in: Key takeaways from Google's NotebookLM.
+
+{{< iframe src="https://www.youtube.com/embed/BcdttM3Dnr4" width="704" height="396" >}}
+
+---
+
 ## Step 1: Enable the GA API
 
 ### Get Your GCP Project ID
