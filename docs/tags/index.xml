@@ -7,8 +7,22 @@
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>Let&#39;s Write. All Rights Reserved.</copyright>
-    <lastBuildDate>Fri, 09 May 2025 10:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 20 May 2025 08:18:00 +0800</lastBuildDate>
     <atom:link href="https://en.letswrite.tw/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Event</title>
+      <link>https://en.letswrite.tw/tags/event/</link>
+      <pubDate>Tue, 20 May 2025 08:18:00 +0800</pubDate>
+      <guid>https://en.letswrite.tw/tags/event/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Storage</title>
+      <link>https://en.letswrite.tw/tags/storage/</link>
+      <pubDate>Tue, 20 May 2025 08:18:00 +0800</pubDate>
+      <guid>https://en.letswrite.tw/tags/storage/</guid>
+      <description></description>
+    </item>
     <item>
       <title>GA4</title>
       <link>https://en.letswrite.tw/tags/ga4/</link>
@@ -175,13 +189,6 @@
       <link>https://en.letswrite.tw/tags/traffic/</link>
       <pubDate>Sun, 18 Aug 2019 11:43:03 +0800</pubDate>
       <guid>https://en.letswrite.tw/tags/traffic/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Event</title>
-      <link>https://en.letswrite.tw/tags/event/</link>
-      <pubDate>Thu, 15 Aug 2019 16:34:47 +0800</pubDate>
-      <guid>https://en.letswrite.tw/tags/event/</guid>
       <description></description>
     </item>
     <item>

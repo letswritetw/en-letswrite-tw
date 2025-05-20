@@ -1,27 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Event on Let&#39;s Write, EN</title>
-    <link>https://en.letswrite.tw/tags/event/</link>
-    <description>Recent content in Event on Let&#39;s Write, EN</description>
+    <title>Storage on Let&#39;s Write, EN</title>
+    <link>https://en.letswrite.tw/tags/storage/</link>
+    <description>Recent content in Storage on Let&#39;s Write, EN</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>Let&#39;s Write. All Rights Reserved.</copyright>
     <lastBuildDate>Tue, 20 May 2025 08:18:00 +0800</lastBuildDate>
-    <atom:link href="https://en.letswrite.tw/tags/event/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://en.letswrite.tw/tags/storage/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Detecting localStorage Changes on the Same Page</title>
       <link>https://en.letswrite.tw/detecting-localstorage-changes-on-the-same-page/</link>
       <pubDate>Tue, 20 May 2025 08:18:00 +0800</pubDate>
       <guid>https://en.letswrite.tw/detecting-localstorage-changes-on-the-same-page/</guid>
       <description>Learn how to track changes to localStorage within the same tab using CustomEvent and method overrides.</description>
-    </item>
-    <item>
-      <title>Google Analytics Event tracking setting up</title>
-      <link>https://en.letswrite.tw/ga-event/</link>
-      <pubDate>Thu, 15 Aug 2019 16:34:47 +0800</pubDate>
-      <guid>https://en.letswrite.tw/ga-event/</guid>
-      <description>Outline of this article：What is Google Analytic Event Tracking、3+1 elements of the GA event、GA Event can affect bounce rate、Write GA Event tracking code</description>
     </item>
   </channel>
 </rss>

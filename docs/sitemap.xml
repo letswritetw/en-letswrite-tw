@@ -3,7 +3,32 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://en.letswrite.tw/categories/</loc>
-    <lastmod>2025-05-09T10:00:00+08:00</lastmod>
+    <lastmod>2025-05-20T08:18:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url><url>
+    <loc>https://en.letswrite.tw/detecting-localstorage-changes-on-the-same-page/</loc>
+    <lastmod>2025-05-20T08:18:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url><url>
+    <loc>https://en.letswrite.tw/tags/event/</loc>
+    <lastmod>2025-05-20T08:18:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url><url>
+    <loc>https://en.letswrite.tw/categories/front-end/</loc>
+    <lastmod>2025-05-20T08:18:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url><url>
+    <loc>https://en.letswrite.tw/tags/storage/</loc>
+    <lastmod>2025-05-20T08:18:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url><url>
+    <loc>https://en.letswrite.tw/tags/</loc>
+    <lastmod>2025-05-20T08:18:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url><url>
@@ -18,11 +43,6 @@
     <priority>1</priority>
   </url><url>
     <loc>https://en.letswrite.tw/integrating-multi-site-google-analytics-data-using-google-apps-script/</loc>
-    <lastmod>2025-05-09T10:00:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1</priority>
-  </url><url>
-    <loc>https://en.letswrite.tw/tags/</loc>
     <lastmod>2025-05-09T10:00:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
@@ -63,11 +83,6 @@
     <priority>1</priority>
   </url><url>
     <loc>https://en.letswrite.tw/tags/dom-to-image/</loc>
-    <lastmod>2023-02-25T10:16:28+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1</priority>
-  </url><url>
-    <loc>https://en.letswrite.tw/categories/front-end/</loc>
     <lastmod>2023-02-25T10:16:28+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
@@ -189,11 +204,6 @@
   </url><url>
     <loc>https://en.letswrite.tw/tags/traffic/</loc>
     <lastmod>2019-08-18T11:43:03+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1</priority>
-  </url><url>
-    <loc>https://en.letswrite.tw/tags/event/</loc>
-    <lastmod>2019-08-15T16:34:47+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url><url>

@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>Let&#39;s Write. All Rights Reserved.</copyright>
-    <lastBuildDate>Sat, 25 Feb 2023 10:16:28 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 20 May 2025 08:18:00 +0800</lastBuildDate>
     <atom:link href="https://en.letswrite.tw/categories/front-end/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Detecting localStorage Changes on the Same Page</title>
+      <link>https://en.letswrite.tw/detecting-localstorage-changes-on-the-same-page/</link>
+      <pubDate>Tue, 20 May 2025 08:18:00 +0800</pubDate>
+      <guid>https://en.letswrite.tw/detecting-localstorage-changes-on-the-same-page/</guid>
+      <description>Learn how to track changes to localStorage within the same tab using CustomEvent and method overrides.</description>
+    </item>
     <item>
       <title>Simple Webpage Screenshot Functionality - DOM to Image</title>
       <link>https://en.letswrite.tw/dom-to-image/</link>
