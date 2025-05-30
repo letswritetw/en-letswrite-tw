@@ -1,6 +1,6 @@
 ---
 title: "How to Set Up a Local LLM with Ollama + Ngrok for Remote Access"
-date: "2025-06-01T08:18:00+08:00"
+date: "2025-05-30T08:18:00+08:00"
 summary: "This guide walks you through setting up a local LLM on a Mac mini using Ollama and enabling remote access with Ngrok. It’s a simple, secure way to use AI tools without sending your data to the cloud."
 cover: ollama-ngrok.webp
 images:
@@ -11,7 +11,8 @@ tags:
   - API
   - Ngrok
   - Ollama
-draft: true
+  - LLM
+draft: false
 ---
 
 本篇中文版：[使用 Ollama + Ngrok 搭建本地 LLM，遠端存取 AI 模型教學](https://www.letswrite.tw/ollama-ngrok/)
@@ -22,11 +23,11 @@ AI tools like ChatGPT are super handy, but there’s always that concern your wo
 
 I recently got a new Mac mini and decided to set up a local LLM (Large Language Model) for work. Once installed, I needed remote access too. After several failed attempts with NAT port forwarding, I opted for a much simpler method—Ngrok.
 
-<!-- ---
+---
 
 ## Listen in: Key takeaways from Google's NotebookLM.
 
-{{< iframe src="https://www.youtube.com/embed/KNBc3scRWKQ" width="704" height="396" >}} -->
+{{< iframe src="https://www.youtube.com/embed/WuSR8VkZ7rY" width="704" height="396" >}}
 
 ---
 

@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>Let&#39;s Write. All Rights Reserved.</copyright>
-    <lastBuildDate>Tue, 20 May 2025 08:18:00 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 30 May 2025 08:18:00 +0800</lastBuildDate>
     <atom:link href="https://en.letswrite.tw/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Set Up a Local LLM with Ollama &#43; Ngrok for Remote Access</title>
+      <link>https://en.letswrite.tw/ollama-ngrok/</link>
+      <pubDate>Fri, 30 May 2025 08:18:00 +0800</pubDate>
+      <guid>https://en.letswrite.tw/ollama-ngrok/</guid>
+      <description>This guide walks you through setting up a local LLM on a Mac mini using Ollama and enabling remote access with Ngrok. It’s a simple, secure way to use AI tools without sending your data to the cloud.</description>
+    </item>
     <item>
       <title>Detecting localStorage Changes on the Same Page</title>
       <link>https://en.letswrite.tw/localstorage-event/</link>

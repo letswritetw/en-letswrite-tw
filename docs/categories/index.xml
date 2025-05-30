@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>Let&#39;s Write. All Rights Reserved.</copyright>
-    <lastBuildDate>Tue, 20 May 2025 08:18:00 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 30 May 2025 08:18:00 +0800</lastBuildDate>
     <atom:link href="https://en.letswrite.tw/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ai</title>
+      <link>https://en.letswrite.tw/categories/ai/</link>
+      <pubDate>Fri, 30 May 2025 08:18:00 +0800</pubDate>
+      <guid>https://en.letswrite.tw/categories/ai/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Front-End</title>
       <link>https://en.letswrite.tw/categories/front-end/</link>
@@ -21,13 +28,6 @@
       <link>https://en.letswrite.tw/categories/google/</link>
       <pubDate>Fri, 09 May 2025 08:18:00 +0800</pubDate>
       <guid>https://en.letswrite.tw/categories/google/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Ai</title>
-      <link>https://en.letswrite.tw/categories/ai/</link>
-      <pubDate>Fri, 02 May 2025 08:18:00 +0800</pubDate>
-      <guid>https://en.letswrite.tw/categories/ai/</guid>
       <description></description>
     </item>
   </channel>
