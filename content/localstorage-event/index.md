@@ -2,9 +2,9 @@
 title: "Detecting localStorage Changes on the Same Page"
 date: "2025-05-20T08:18:00+08:00"
 summary: "Learn how to track changes to localStorage within the same tab using CustomEvent and method overrides."
-cover: detecting-localStorage-changes-on-the-same-page.webp
+cover: localstorage-event.webp
 images:
-  - detecting-localStorage-changes-on-the-same-page.webp
+  - localstorage-event.webp
 categories:
   - front-end
 tags:

@@ -7,12 +7,12 @@
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>Let&#39;s Write. All Rights Reserved.</copyright>
-    <lastBuildDate>Thu, 22 Aug 2019 20:26:54 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 22 Aug 2019 08:18:00 +0800</lastBuildDate>
     <atom:link href="https://en.letswrite.tw/tags/sheet/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to use Google Sheets as a database</title>
       <link>https://en.letswrite.tw/google-excel-db/</link>
-      <pubDate>Thu, 22 Aug 2019 20:26:54 +0800</pubDate>
+      <pubDate>Thu, 22 Aug 2019 08:18:00 +0800</pubDate>
       <guid>https://en.letswrite.tw/google-excel-db/</guid>
       <description>In this article, I will write how to use Google Sheets as a database, and I will create a simple member list page to demonstrate.</description>
     </item>

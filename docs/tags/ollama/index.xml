@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ollama on Let&#39;s Write, EN</title>
+    <link>http://localhost:1313/tags/ollama/</link>
+    <description>Recent content in Ollama on Let&#39;s Write, EN</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>Let&#39;s Write. All Rights Reserved.</copyright>
+    <lastBuildDate>Fri, 30 May 2025 08:18:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/ollama/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Set Up a Local LLM with Ollama &#43; Ngrok for Remote Access</title>
+      <link>http://localhost:1313/ollama-ngrok/</link>
+      <pubDate>Fri, 30 May 2025 08:18:00 +0800</pubDate>
+      <guid>http://localhost:1313/ollama-ngrok/</guid>
+      <description>This guide walks you through setting up a local LLM on a Mac mini using Ollama and enabling remote access with Ngrok. It’s a simple, secure way to use AI tools without sending your data to the cloud.</description>
+    </item>
+  </channel>
+</rss>

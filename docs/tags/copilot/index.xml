@@ -7,12 +7,12 @@
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>Let&#39;s Write. All Rights Reserved.</copyright>
-    <lastBuildDate>Fri, 02 May 2025 20:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 02 May 2025 08:18:00 +0800</lastBuildDate>
     <atom:link href="https://en.letswrite.tw/tags/copilot/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Speed Up Front-End Layouts with GitHub Copilot &#43; Figma MCP</title>
       <link>https://en.letswrite.tw/github-copilot-figma-mcp/</link>
-      <pubDate>Fri, 02 May 2025 20:00:00 +0800</pubDate>
+      <pubDate>Fri, 02 May 2025 08:18:00 +0800</pubDate>
       <guid>https://en.letswrite.tw/github-copilot-figma-mcp/</guid>
       <description>This hands-on guide explores how to use GitHub Copilot&amp;rsquo;s Agent Mode with Figma&amp;rsquo;s MCP integration to quickly generate HTML and CSS from Figma designs using AI. While not perfect, the results are surprisingly usable for simple layouts and could save front-end developers a lot of time.</description>
     </item>

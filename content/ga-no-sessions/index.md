@@ -1,6 +1,6 @@
 ---
 title: 'If the page has id="ga", google analytics with gtag will not receive sessions.'
-date: "2019-08-18T11:43:03+08:00"
+date: "2019-08-18T08:18:00+08:00"
 summary: 'If the html of the page has id="ga", and the way to set the Google Analytics code is gtag, then GA will not receive the pageview.'
 cover: ga-no-sessions.jpg
 images:

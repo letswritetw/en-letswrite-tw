@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AI on Let&#39;s Write, EN</title>
+    <link>http://localhost:1313/tags/ai/</link>
+    <description>Recent content in AI on Let&#39;s Write, EN</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>Let&#39;s Write. All Rights Reserved.</copyright>
+    <lastBuildDate>Fri, 30 May 2025 08:18:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Integrating Multi-Site Google Analytics Data Using Google Apps Script</title>
+      <link>http://localhost:1313/ollama-ngrok/</link>
+      <pubDate>Fri, 30 May 2025 08:18:00 +0800</pubDate>
+      <guid>http://localhost:1313/ollama-ngrok/</guid>
+      <description>This tutorial walks through how to consolidate Google Analytics data from multiple sites using Google Apps Script and the Google Analytics Data API, enabling easy, centralized reporting.</description>
+    </item>
+  </channel>
+</rss>

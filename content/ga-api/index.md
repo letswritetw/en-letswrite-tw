@@ -1,10 +1,10 @@
 ---
 title: "Integrating Multi-Site Google Analytics Data Using Google Apps Script"
-date: "2025-05-09T10:00:00+08:00"
+date: "2025-05-09T08:18:00+08:00"
 summary: "This tutorial walks through how to consolidate Google Analytics data from multiple sites using Google Apps Script and the Google Analytics Data API, enabling easy, centralized reporting."
-cover: integrating-multi-Site-google-analytics-data-using-gas.jpg
+cover: ga-api.jpg
 images:
-  - integrating-multi-Site-google-analytics-data-using-gas.jpg
+  - ga-api.jpg
 categories:
   - google
 tags:

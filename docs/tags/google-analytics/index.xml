@@ -7,19 +7,19 @@
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>Let&#39;s Write. All Rights Reserved.</copyright>
-    <lastBuildDate>Sun, 18 Aug 2019 11:43:03 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 18 Aug 2019 08:18:00 +0800</lastBuildDate>
     <atom:link href="https://en.letswrite.tw/tags/google-analytics/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>If the page has id=&#34;ga&#34;, google analytics with gtag will not receive sessions.</title>
       <link>https://en.letswrite.tw/ga-no-sessions/</link>
-      <pubDate>Sun, 18 Aug 2019 11:43:03 +0800</pubDate>
+      <pubDate>Sun, 18 Aug 2019 08:18:00 +0800</pubDate>
       <guid>https://en.letswrite.tw/ga-no-sessions/</guid>
       <description>If the html of the page has id=&amp;ldquo;ga&amp;rdquo;, and the way to set the Google Analytics code is gtag, then GA will not receive the pageview.</description>
     </item>
     <item>
       <title>Google Analytics Event tracking setting up</title>
       <link>https://en.letswrite.tw/ga-event/</link>
-      <pubDate>Thu, 15 Aug 2019 16:34:47 +0800</pubDate>
+      <pubDate>Thu, 15 Aug 2019 08:18:00 +0800</pubDate>
       <guid>https://en.letswrite.tw/ga-event/</guid>
       <description>Outline of this article：What is Google Analytic Event Tracking、3+1 elements of the GA event、GA Event can affect bounce rate、Write GA Event tracking code</description>
     </item>

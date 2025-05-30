@@ -1,6 +1,6 @@
 ---
 title: "How to Speed Up Front-End Layouts with GitHub Copilot + Figma MCP"
-date: "2025-05-02T20:00:00+08:00"
+date: "2025-05-02T08:18:00+08:00"
 summary: "This hands-on guide explores how to use GitHub Copilot's Agent Mode with Figma's MCP integration to quickly generate HTML and CSS from Figma designs using AI. While not perfect, the results are surprisingly usable for simple layouts and could save front-end developers a lot of time."
 cover: github-copilot-figma-mcp.jpg
 images:

@@ -1,6 +1,6 @@
 ---
 title: "Google Analytics Event tracking setting up"
-date: "2019-08-15T16:34:47+08:00"
+date: "2019-08-15T08:18:00+08:00"
 summary: "Outline of this article：What is Google Analytic Event Tracking、3+1 elements of the GA event、GA Event can affect bounce rate、Write GA Event tracking code"
 cover: ga-event.jpg
 images:

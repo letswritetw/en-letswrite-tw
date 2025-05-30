@@ -11,22 +11,22 @@
     <atom:link href="https://en.letswrite.tw/categories/front-end/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Detecting localStorage Changes on the Same Page</title>
-      <link>https://en.letswrite.tw/detecting-localstorage-changes-on-the-same-page/</link>
+      <link>https://en.letswrite.tw/localstorage-event/</link>
       <pubDate>Tue, 20 May 2025 08:18:00 +0800</pubDate>
-      <guid>https://en.letswrite.tw/detecting-localstorage-changes-on-the-same-page/</guid>
+      <guid>https://en.letswrite.tw/localstorage-event/</guid>
       <description>Learn how to track changes to localStorage within the same tab using CustomEvent and method overrides.</description>
     </item>
     <item>
       <title>Simple Webpage Screenshot Functionality - DOM to Image</title>
       <link>https://en.letswrite.tw/dom-to-image/</link>
-      <pubDate>Sat, 25 Feb 2023 10:16:28 +0800</pubDate>
+      <pubDate>Sat, 25 Feb 2023 08:18:00 +0800</pubDate>
       <guid>https://en.letswrite.tw/dom-to-image/</guid>
       <description>This article explores the DOM to Image package, which can be used by frontend developers to capture webpage screenshots. It provides a step-by-step guide to using the package, including tips on configuring the parameters for the captured image. Additionally, the author shares an Easter egg about generative AI.</description>
     </item>
     <item>
       <title>Progressive Image Loading like Medium</title>
       <link>https://en.letswrite.tw/medium-lazyload/</link>
-      <pubDate>Mon, 07 Oct 2019 13:53:50 +0800</pubDate>
+      <pubDate>Mon, 07 Oct 2019 08:18:00 +0800</pubDate>
       <guid>https://en.letswrite.tw/medium-lazyload/</guid>
       <description>Outline of this article: Three ways to progressive images loading, Three steps of Medium Progressive Images Loading, Code Part, Test page loading time</description>
     </item>
