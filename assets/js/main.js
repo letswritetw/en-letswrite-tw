@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       };
       const observer = new IntersectionObserver(toTopFunc, toTopOptions);
-      observer.observe(toTopTrigger)
+      observer.observe(toTopTrigger);
 
       toTopBtn.addEventListener('click', e => {
         e.preventDefault();
