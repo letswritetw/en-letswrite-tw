@@ -3,9 +3,9 @@
 
 <meta charset="utf-8">
 
-<title>How to Set Up a Local LLM with Ollama &#43; Ngrok for Remote Access</title>
+<title>Automate Your Git Commit Messages with AI</title>
 <meta name="description" content="">
-<link rel="canonical" href="https://en.letswrite.tw/ollama-ngrok/">
+<link rel="canonical" href="https://en.letswrite.tw/ai-git-commit/">
 
 <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1">
@@ -27,19 +27,18 @@
 <link rel="stylesheet" href="https://en.letswrite.tw/css/tailwind.min.9c582a4476ef5570a3ca8dae3dfe6ee76674de6b6aa24e1bdd27c67e58101fc9.css">
 
 
-<meta property="og:url" content="https://en.letswrite.tw/ollama-ngrok/">
+<meta property="og:url" content="https://en.letswrite.tw/ai-git-commit/">
   <meta property="og:site_name" content="Let&#39;s Write, EN">
-  <meta property="og:title" content="How to Set Up a Local LLM with Ollama &#43; Ngrok for Remote Access">
-  <meta property="og:description" content="This guide walks you through setting up a local LLM on a Mac mini using Ollama and enabling remote access with Ngrok. It’s a simple, secure way to use AI tools without sending your data to the cloud.">
+  <meta property="og:title" content="Automate Your Git Commit Messages with AI">
+  <meta property="og:description" content="Tired of writing Git commit messages? This guide shows how to use the OpenAI API with a simple Node.js script to generate clear, useful commit messages instantly—with minimal setup and very low cost.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
-    <meta property="article:published_time" content="2025-05-30T08:18:00+08:00">
-    <meta property="article:modified_time" content="2025-05-30T08:18:00+08:00">
+    <meta property="article:published_time" content="2025-06-12T08:18:00+08:00">
+    <meta property="article:modified_time" content="2025-06-12T08:18:00+08:00">
     <meta property="article:tag" content="API">
-    <meta property="article:tag" content="Ngrok">
-    <meta property="article:tag" content="Ollama">
-    <meta property="article:tag" content="LLM">
-    <meta property="og:image" content="https://en.letswrite.tw/ollama-ngrok/ollama-ngrok.webp">
+    <meta property="article:tag" content="Node.js">
+    <meta property="article:tag" content="OpenAI">
+    <meta property="og:image" content="https://en.letswrite.tw/ai-git-commit/ai-git-commit.jpg">
 
 
 
@@ -171,18 +170,18 @@
 
 
 <div class="mb-2">
-  <a href="/ollama-ngrok/">
-    <img class="block mx-auto rounded-lg" src="/ollama-ngrok/ollama-ngrok_hu_f070f9cef27bec6c.webp" alt="ollama-ngrok.webp"
+  <a href="/ai-git-commit/">
+    <img class="block mx-auto rounded-lg" src="/ai-git-commit/ai-git-commit_hu_f1c8c910bc0f5d94.jpg" alt="ai-git-commit.jpg"
       width="1792" height="1024">
   </a>
 </div>
 
 
 		
-		<h1>How to Set Up a Local LLM with Ollama &#43; Ngrok for Remote Access</h1>
+		<h1>Automate Your Git Commit Messages with AI</h1>
 
 		
-		<p class="text-sm">2025-05-30 08:18</p>
+		<p class="text-sm">2025-06-12 08:18</p>
 
 		<hr>
 
@@ -191,14 +190,14 @@
 			<h2>TOC</h2>
 			<nav id="TableOfContents">
   <ul>
-    <li><a href="#what-this-guide-solves">What This Guide Solves</a></li>
+    <li><a href="#what-this-post-is-about">What This Post Is About</a></li>
     <li><a href="#listen-in-key-takeaways-from-googles-notebooklm">Listen in: Key takeaways from Google&rsquo;s NotebookLM.</a></li>
-    <li><a href="#installing-and-using-ollama">Installing and Using Ollama</a>
-      <ul>
-        <li><a href="#using-the-api">Using the API</a></li>
-      </ul>
-    </li>
-    <li><a href="#installing-and-using-ngrok">Installing and Using Ngrok</a></li>
+    <li><a href="#what-you-need-openai-api-key">What You Need: OpenAI API Key</a></li>
+    <li><a href="#what-you-need-install-nodejs">What You Need: Install Node.js</a></li>
+    <li><a href="#install-required-packages">Install Required Packages</a></li>
+    <li><a href="#create-a-env-file">Create a <code>.env</code> File</a></li>
+    <li><a href="#add-commitcjs-script">Add <code>commit.cjs</code> Script</a></li>
+    <li><a href="#how-to-use-it">How to Use It</a></li>
   </ul>
 </nav>
 		</div>
@@ -206,10 +205,13 @@
 		<hr>
 
 		
-		<p>本篇中文版：<a href="https://www.letswrite.tw/ollama-ngrok/">使用 Ollama + Ngrok 搭建本地 LLM，遠端存取 AI 模型教學</a></p>
-<h2 id="what-this-guide-solves">What This Guide Solves</h2>
-<p>AI tools like ChatGPT are super handy, but there’s always that concern your work data might be used as training material. The recent buzz around DeepSeek and its bans in several countries highlights these security worries.</p>
-<p>I recently got a new Mac mini and decided to set up a local LLM (Large Language Model) for work. Once installed, I needed remote access too. After several failed attempts with NAT port forwarding, I opted for a much simpler method—Ngrok.</p>
+		<p>本篇中文版：<a href="https://www.letswrite.tw/ai-git-commit/">使用 AI 自動生成 Git Commit 訊息</a></p>
+<hr>
+<h2 id="what-this-post-is-about">What This Post Is About</h2>
+<p>After finishing some code—like fixing a bug or adding a new feature—writing Git commit messages can feel like a chore. Most of the time, we just jot down something quick that only makes sense to us at that moment. But when we need to revisit a past update, it becomes a time-consuming scavenger hunt to figure out which commit changed what.</p>
+<p>That kind of mental effort? Let’s hand it over to AI.</p>
+<p>August used the OpenAI API with the budget-friendly <code>gpt-4o-mini</code> model to instantly generate commit messages. Since it uses the API, there&rsquo;s a small cost involved, but with <code>gpt-4o-mini</code> being so affordable, even heavy usage might cost less than $1 a month.</p>
+<p>If you’ve stumbled upon this post, chances are you’ve been coding for a while and are looking to save time on writing commit messages. This post keeps things simple—no deep dives into setup. Instead, we’ll just drop the essentials and link to more detailed guides if you need them.</p>
 <hr>
 <h2 id="listen-in-key-takeaways-from-googles-notebooklm">Listen in: Key takeaways from Google&rsquo;s NotebookLM.</h2>
 
@@ -220,125 +222,59 @@
   <iframe class="w-full" frameborder="0"
           width="704" height="396"
           loading="lazy" marginheight="0" marginwidth="0"
-          src="https://www.youtube.com/embed/WuSR8VkZ7rY"></iframe>
+          src="https://www.youtube.com/embed/gcq9VC4aWF4"></iframe>
 </div>
 <hr>
-<h2 id="installing-and-using-ollama">Installing and Using Ollama</h2>
-<p>Official site: <a href="https://ollama.com/">https://ollama.com/</a></p>
-<p>Just click &ldquo;Download&rdquo; to install it.</p>
-<p>Once installed, you can download models like Llama, Phi, Gemma, and Mistral—most open-source ones are available here:</p>
-<p><a href="https://ollama.com/search">https://ollama.com/search</a></p>
-<p>For reference, I&rsquo;m using a Mac mini with:</p>
-<ul>
-<li>10-core CPU</li>
-<li>10-core GPU</li>
-<li>16GB unified memory</li>
-</ul>
-<p>Running Phi-4 14B is smooth, but larger models like Mistral Small3 22B tend to lag.</p>
-<p>Downloading a model is easy: find it on the site, copy the terminal command, and run it.</p>
-<figure><img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/8w72szkj46brzh3v2oed.png"
-    alt="Ollama model download interface"><figcaption>
-      <h4>Ollama model download interface</h4>
-    </figcaption>
-</figure>
-
-<p><strong>Key Ollama commands:</strong></p>
-<ul>
-<li><code>ollama serve</code> – Start the Ollama server</li>
-<li><code>ollama run</code> – Run a model</li>
-<li><code>ollama list</code> – List all models</li>
-<li><code>ollama rm</code> – Remove a model</li>
-<li><code>ollama create</code> – Create a model from a Modelfile</li>
-<li><code>ollama show</code> – Show model info</li>
-<li><code>ollama stop</code> – Stop a running model</li>
-<li><code>ollama pull</code> – Pull a model from Ollama</li>
-<li><code>ollama push</code> – Push a model to Ollama</li>
-<li><code>ollama ps</code> – Show running models</li>
-<li><code>ollama cp</code> – Copy a model</li>
-<li><code>ollama help</code> – Show help info</li>
-</ul>
-<p>You&rsquo;ll most often use the first four.</p>
-<p>Once your model is ready, you’ll see a basic chat interface:</p>
-<figure><img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/cx9lis3fsn3qynaeo84k.jpg"
-    alt="Chat interface"><figcaption>
-      <h4>Chat interface</h4>
-    </figcaption>
-</figure>
-
-<p>Type <code>/bye</code> to exit.</p>
-<p>Since I needed remote access for my work computer, I used the API mode. Luckily, Ollama enables API usage by default.</p>
-<h3 id="using-the-api">Using the API</h3>
-<p>Docs: <a href="https://github.com/ollama/ollama/blob/main/docs/api.md">https://github.com/ollama/ollama/blob/main/docs/api.md</a></p>
-<p><strong>POST Endpoint:</strong></p>
-<p><code>http://localhost:11434/api/generate</code></p>
-<p><strong>Common parameters:</strong></p>
-<ul>
-<li><code>model</code> (required): model name</li>
-<li><code>prompt</code>: input prompt</li>
-<li><code>suffix</code>: text to append to response</li>
-<li><code>images</code>: Base64-encoded image list (for multimodal models like Llava)</li>
-<li><code>format</code>: response format (<code>json</code> or JSON schema)</li>
-<li><code>options</code>: model parameters like temperature</li>
-<li><code>system</code>: overrides system message in Modelfile</li>
-<li><code>template</code>: overrides prompt template in Modelfile</li>
-<li><code>stream</code>: set to false to return a single object instead of a stream</li>
-<li><code>raw</code>: set to true to disable prompt formatting</li>
-<li><code>keep_alive</code>: how long to keep model in memory (default: 5 min)</li>
-</ul>
-<p>Here’s a basic test using Postman:</p>
-<figure><img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/d655skif0r7qrqr7cozc.png"
-    alt="Postman test"><figcaption>
-      <h4>Postman test</h4>
-    </figcaption>
-</figure>
-
-<p>If you get a response, it’s working!</p>
+<h2 id="what-you-need-openai-api-key">What You Need: OpenAI API Key</h2>
+<p>To have AI write your commit messages, you’ll need an OpenAI API key.</p>
+<p>Just a heads-up: using AI isn’t free, but choosing the right model makes it super cost-effective.</p>
+<p>We’ve covered how to get the key in previous posts, so here’s a link to that section:</p>
+<p><a href="https://www.letswrite.tw/gitlab-ai-code-review/#openai-api-key">CodiumAI PR-Agent: AI-Powered Code Reviews on GitLab</a></p>
 <hr>
-<h2 id="installing-and-using-ngrok">Installing and Using Ngrok</h2>
-<p>What’s Ngrok? Imagine you’ve got a “secret base” at home (your computer or server), but your coworkers—stuck in the office—can’t visit. Ngrok creates a magical tunnel that links your “secret base” to the web so they can connect from anywhere.</p>
-<p>In plain terms: it turns your localhost into a public URL.</p>
-<p>Official site: <a href="https://ngrok.com/">https://ngrok.com/</a></p>
-<p>Sign up, and you’ll see several installation methods:</p>
-<figure><img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/fmj4dadmt0i8oiy6vmyd.png"
-    alt="Ngrok installation options"><figcaption>
-      <h4>Ngrok installation options</h4>
-    </figcaption>
-</figure>
-
-<p>This guide shows the MacOS method. After choosing MacOS, the site will show you the install commands:</p>
-<figure><img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/mput4w4l61qlvkk9ini8.png"
-    alt="Ngrok install for MacOS"><figcaption>
-      <h4>Ngrok install for MacOS</h4>
-    </figcaption>
-</figure>
-
+<h2 id="what-you-need-install-nodejs">What You Need: Install Node.js</h2>
+<p>You probably already have Node.js installed—most frontend devs do. But if not, you can grab it from the official site:</p>
+<p><a href="https://nodejs.org/en">https://nodejs.org/en</a></p>
+<p>After installing, run the following in your terminal to check if it worked:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>node -v
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>npm -v</span></span></code></pre></div>
+<hr>
+<h2 id="install-required-packages">Install Required Packages</h2>
+<p>To call the OpenAI API, you’ll need two packages: <code>axios</code> and <code>dotenv</code>.</p>
 <ul>
-<li>First command: install Ngrok</li>
-<li>Second command: set your auth token (needed to use Ngrok services)</li>
+<li><code>axios</code>: Handles HTTP requests and supports promises and interceptors.</li>
+<li><code>dotenv</code>: Loads environment variables from a <code>.env</code> file, which keeps your secrets safe.</li>
 </ul>
-<p>Then run this command to tunnel Ollama&rsquo;s local API (port 11434):</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>ngrok http <span style="color:#ae81ff">11434</span> --host-header<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;localhost:11434&#34;</span></span></span></code></pre></div>
-<p>This command works perfectly in my testing.</p>
-<p>Your terminal should show something like this:</p>
-<figure><img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/vbtichghaarpbyd7b11b.png"
-    alt="Ngrok running"><figcaption>
-      <h4>Ngrok running</h4>
+<p>Install them using npm:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>npm install -D axios dotenv</span></span></code></pre></div>
+<hr>
+<h2 id="create-a-env-file">Create a <code>.env</code> File</h2>
+<p>The <code>.env</code> file is where you’ll store your OpenAI API key. Since the key grants access to your account, keeping it private is important.</p>
+<p>Your <code>.env</code> should look like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>OPEN_API_KEY_COMMIT=your-openai-api-key</span></span></code></pre></div>
+<p>Make sure you don’t commit this file to your repo unless it’s a private project or hosted on a private Git server.</p>
+<hr>
+<h2 id="add-commitcjs-script">Add <code>commit.cjs</code> Script</h2>
+<p>This is the script that uses the OpenAI API to generate commit messages.</p>
+<p>August tested a few prompts and landed on one that works well, but feel free to tweak it. If you come up with a better one, share it!</p>
+<p>Here&rsquo;s the script link:</p>
+<script src="https://gist.github.com/letswritetw/c6485bc3ada935b1170b53d283c9e218.js"></script>
+
+<p>The script skips over files with <code>.min.</code> in the name. If you want to skip additional files or folders, you can modify the filter, like so:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>.<span style="color:#a6e22e">filter</span>(<span style="color:#a6e22e">file</span> =&gt; <span style="color:#a6e22e">file</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">!</span><span style="color:#a6e22e">file</span>.<span style="color:#a6e22e">includes</span>(<span style="color:#e6db74">&#39;.min.&#39;</span>) <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">!</span><span style="color:#a6e22e">file</span>.<span style="color:#a6e22e">startsWith</span>(<span style="color:#e6db74">&#39;docs/&#39;</span>) <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">file</span>.<span style="color:#a6e22e">trim</span>() <span style="color:#f92672">!==</span> <span style="color:#e6db74">&#39;&#39;</span>);</span></span></code></pre></div>
+<hr>
+<h2 id="how-to-use-it">How to Use It</h2>
+<p>Once your code changes are staged with <code>git add</code>, just open a terminal in your project folder and run:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>node commit.cjs</span></span></code></pre></div>
+<p>After a few seconds (depending on how many files changed), you’ll get a commit message back from OpenAI.</p>
+<p>Here’s an example of what it looks like:</p>
+<figure><img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/d8z5duw4g8dvzanawhaj.png"
+    alt="Example of an AI-generated Git commit message with a Summary and Description."><figcaption>
+      <h4>Example of an AI-generated Git commit message with a Summary and Description.</h4>
     </figcaption>
 </figure>
 
-<p>The key line is the one labeled <strong>Forwarding</strong>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>https://fb55-118-233-2-60.ngrok-free.app -&gt; http://localhost:11434</span></span></code></pre></div>
-<p>This means your local <code>localhost:11434</code> is now publicly accessible via <code>https://fb55-118-233-2-60.ngrok-free.app</code>.</p>
-<p>Now just update your Postman test with this new URL:</p>
-<figure><img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/h2p33d7wc020cuz6sin8.png"
-    alt="Postman with Ngrok URL"><figcaption>
-      <h4>Postman with Ngrok URL</h4>
-    </figcaption>
-</figure>
-
-<p>Success! You can now access your LLM API from your office.</p>
-<p>One heads-up: Ngrok&rsquo;s free plan gives you a different public URL each time. For a consistent URL, you’ll need a paid plan.</p>
-<p>Personally, I&rsquo;m fine with the free version—works great for me!</p>
+<p>It gives you two parts: a short summary and a more detailed, bullet-style description.</p>
+<p>Since different Git tools display commit messages differently—some only show the summary while others like Fork allow both—you can pick whichever works best for you.</p>
 <hr>
 <p>Translated by ChatGPT.</p>
 
@@ -357,11 +293,9 @@
 		
 			<a class="tag" href="/tags/api/">API</a>
 		
-			<a class="tag" href="/tags/ngrok/">Ngrok</a>
+			<a class="tag" href="/tags/node.js/">Node.js</a>
 		
-			<a class="tag" href="/tags/ollama/">Ollama</a>
-		
-			<a class="tag" href="/tags/llm/">LLM</a>
+			<a class="tag" href="/tags/openai/">OpenAI</a>
 		
 
 		
@@ -369,14 +303,9 @@
 			
 				<div class="sm:flex-1 pr-2 w-full sm:w-1/2">
 					<h4 class="!mb-0">Prev</h4>
-					<a href="/localstorage-event/">Detecting localStorage Changes on the Same Page</a>
+					<a href="/ollama-ngrok/">How to Set Up a Local LLM with Ollama &#43; Ngrok for Remote Access</a>
 				</div>
 			
-			
-				<div class="sm:flex-1 pl-2 w-full sm:w-1/2 text-right">
-					<h4 class="!mb-0">Next</h4>
-					<a href="/ai-git-commit/">Automate Your Git Commit Messages with AI</a>
-				</div>
 			
 		</div>
 
@@ -384,6 +313,15 @@
 
 		
 		
+		
+			<div class="mb-8">
+				<h4 class="!mb-0">Related</h4>
+				<ul>
+					
+						<li><a href="/ollama-ngrok/">How to Set Up a Local LLM with Ollama &#43; Ngrok for Remote Access</a></li>
+					
+				</ul>
+			</div>
 		
 
 	</article>

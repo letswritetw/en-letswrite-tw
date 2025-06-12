@@ -7,13 +7,27 @@
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>Let&#39;s Write. All Rights Reserved.</copyright>
-    <lastBuildDate>Fri, 30 May 2025 08:18:00 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 12 Jun 2025 08:18:00 +0800</lastBuildDate>
     <atom:link href="https://en.letswrite.tw/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>API</title>
       <link>https://en.letswrite.tw/tags/api/</link>
-      <pubDate>Fri, 30 May 2025 08:18:00 +0800</pubDate>
+      <pubDate>Thu, 12 Jun 2025 08:18:00 +0800</pubDate>
       <guid>https://en.letswrite.tw/tags/api/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Node.js</title>
+      <link>https://en.letswrite.tw/tags/node.js/</link>
+      <pubDate>Thu, 12 Jun 2025 08:18:00 +0800</pubDate>
+      <guid>https://en.letswrite.tw/tags/node.js/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>OpenAI</title>
+      <link>https://en.letswrite.tw/tags/openai/</link>
+      <pubDate>Thu, 12 Jun 2025 08:18:00 +0800</pubDate>
+      <guid>https://en.letswrite.tw/tags/openai/</guid>
       <description></description>
     </item>
     <item>

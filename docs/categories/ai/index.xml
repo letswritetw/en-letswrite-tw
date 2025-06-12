@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>Let&#39;s Write. All Rights Reserved.</copyright>
-    <lastBuildDate>Fri, 30 May 2025 08:18:00 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 12 Jun 2025 08:18:00 +0800</lastBuildDate>
     <atom:link href="https://en.letswrite.tw/categories/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Automate Your Git Commit Messages with AI</title>
+      <link>https://en.letswrite.tw/ai-git-commit/</link>
+      <pubDate>Thu, 12 Jun 2025 08:18:00 +0800</pubDate>
+      <guid>https://en.letswrite.tw/ai-git-commit/</guid>
+      <description>Tired of writing Git commit messages? This guide shows how to use the OpenAI API with a simple Node.js script to generate clear, useful commit messages instantly—with minimal setup and very low cost.</description>
+    </item>
     <item>
       <title>How to Set Up a Local LLM with Ollama &#43; Ngrok for Remote Access</title>
       <link>https://en.letswrite.tw/ollama-ngrok/</link>

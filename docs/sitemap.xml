@@ -3,17 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://en.letswrite.tw/categories/ai/</loc>
-    <lastmod>2025-05-30T08:18:00+08:00</lastmod>
+    <lastmod>2025-06-12T08:18:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url><url>
     <loc>https://en.letswrite.tw/tags/api/</loc>
-    <lastmod>2025-05-30T08:18:00+08:00</lastmod>
+    <lastmod>2025-06-12T08:18:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url><url>
+    <loc>https://en.letswrite.tw/ai-git-commit/</loc>
+    <lastmod>2025-06-12T08:18:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url><url>
     <loc>https://en.letswrite.tw/categories/</loc>
-    <lastmod>2025-05-30T08:18:00+08:00</lastmod>
+    <lastmod>2025-06-12T08:18:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url><url>
+    <loc>https://en.letswrite.tw/tags/node.js/</loc>
+    <lastmod>2025-06-12T08:18:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url><url>
+    <loc>https://en.letswrite.tw/tags/openai/</loc>
+    <lastmod>2025-06-12T08:18:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url><url>
+    <loc>https://en.letswrite.tw/tags/</loc>
+    <lastmod>2025-06-12T08:18:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url><url>
@@ -33,11 +53,6 @@
     <priority>1</priority>
   </url><url>
     <loc>https://en.letswrite.tw/tags/ollama/</loc>
-    <lastmod>2025-05-30T08:18:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1</priority>
-  </url><url>
-    <loc>https://en.letswrite.tw/tags/</loc>
     <lastmod>2025-05-30T08:18:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
