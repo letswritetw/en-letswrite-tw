@@ -226,6 +226,7 @@ The complete code, including HTML, JavaScript, and CDN links, is available in th
 Try the image compression tool here:
 
 **🔗 Demo:** [Live Demo](https://letswritetw.github.io/letswrite-compressjs/)
+
 **💻 GitHub:** [GitHub Repository](https://github.com/letswritetw/letswrite-compressjs)
 
 If you find it helpful, feel free to give it a ⭐ on GitHub!
