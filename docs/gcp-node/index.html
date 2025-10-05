@@ -24,7 +24,7 @@
 
 
 
-<link rel="stylesheet" href="https://en.letswrite.tw/css/tailwind.min.9c582a4476ef5570a3ca8dae3dfe6ee76674de6b6aa24e1bdd27c67e58101fc9.css">
+<link rel="stylesheet" href="https://en.letswrite.tw/css/tailwind.min.12bf2e2909c9a52116a7028a27627380423ba6f224c8970c47c0bd1fc7db9f6d.css">
 
 
 <meta property="og:url" content="https://en.letswrite.tw/gcp-node/">
@@ -267,8 +267,15 @@
 <p>It’s the document for how to install gcloud SDK: <a href="https://cloud.google.com/sdk/install">Installing Google Cloud SDK</a></p>
 <p>I choose <strong>Interactive installation</strong>, because it’s simple.</p>
 <p>Open the terminal and type:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>$ curl https://sdk.cloud.google.com | bash</span></span></code></pre></div>
-<p>and answer a few questions, the system will automatically install the SDK.</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1"><a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1</a>
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ curl https://sdk.cloud.google.com | bash
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>and answer a few questions, the system will automatically install the SDK.</p>
 <p>In this step, I made a stupid Error. After installing the SDK, if you type <strong>gcloud -v</strong>, you can see the SDK version message. However, when I type it, I can’t see the message. I almost thought: “What am I doing wrong? Am I stupid?”</p>
 <p>Finally, I found that I should restart the terminal when I installed the SDK…</p>
 <p>When I restart the terminal and type <strong>gcloud -v</strong>, I can get the message! I almost cry…</p>

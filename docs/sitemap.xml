@@ -2,6 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://en.letswrite.tw/compressjs/</loc>
+    <lastmod>2025-10-05T08:18:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url><url>
+    <loc>https://en.letswrite.tw/categories/</loc>
+    <lastmod>2025-10-05T08:18:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url><url>
+    <loc>https://en.letswrite.tw/tags/compress/</loc>
+    <lastmod>2025-10-05T08:18:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url><url>
+    <loc>https://en.letswrite.tw/categories/front-end/</loc>
+    <lastmod>2025-10-05T08:18:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url><url>
+    <loc>https://en.letswrite.tw/tags/image/</loc>
+    <lastmod>2025-10-05T08:18:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url><url>
+    <loc>https://en.letswrite.tw/tags/performance/</loc>
+    <lastmod>2025-10-05T08:18:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url><url>
+    <loc>https://en.letswrite.tw/tags/</loc>
+    <lastmod>2025-10-05T08:18:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url><url>
     <loc>https://en.letswrite.tw/categories/ai/</loc>
     <lastmod>2025-06-12T08:18:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -17,22 +52,12 @@
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url><url>
-    <loc>https://en.letswrite.tw/categories/</loc>
-    <lastmod>2025-06-12T08:18:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1</priority>
-  </url><url>
     <loc>https://en.letswrite.tw/tags/node.js/</loc>
     <lastmod>2025-06-12T08:18:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url><url>
     <loc>https://en.letswrite.tw/tags/openai/</loc>
-    <lastmod>2025-06-12T08:18:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1</priority>
-  </url><url>
-    <loc>https://en.letswrite.tw/tags/</loc>
     <lastmod>2025-06-12T08:18:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
@@ -68,11 +93,6 @@
     <priority>1</priority>
   </url><url>
     <loc>https://en.letswrite.tw/tags/event/</loc>
-    <lastmod>2025-05-20T08:18:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1</priority>
-  </url><url>
-    <loc>https://en.letswrite.tw/categories/front-end/</loc>
     <lastmod>2025-05-20T08:18:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
@@ -169,11 +189,6 @@
   </url><url>
     <loc>https://en.letswrite.tw/tags/node/</loc>
     <lastmod>2019-10-23T08:18:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1</priority>
-  </url><url>
-    <loc>https://en.letswrite.tw/tags/image/</loc>
-    <lastmod>2019-10-07T08:18:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url><url>

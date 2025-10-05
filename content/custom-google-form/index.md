@@ -103,11 +103,9 @@ From the code starting with **&lt;form** , you can see the **action** tag, which
 
 The POST url like this:
 
-<!-- prettier-ignore-start -->
-{{< highlight plaintext "linenos=inline" >}}
+```text {linenos=table,anchorlinenos=true}
 https://docs.google.com/forms/d/e/1FAIpQLScxpBiexGfPha5_vq1fos2r_9dl1QfkCJBvHWHRIbgwudOHaQ/formResponse
-{{< /highlight >}}
-<!-- prettier-ignore-end -->
+```
 
 ### find fields name
 
@@ -121,19 +119,29 @@ After left-click, you will see the part of the code on the element panel, and th
 
 The input code is：
 
-<!-- prettier-ignore-start -->
-{{< highlight html "linenos=inline" >}}
-<input type="text" class="quantumWizTextinputPaperinputInput exportInput" jsname="YPqjbf" autocomplete="off" tabindex="0" aria-label="name" aria-describedby="i.desc.2087285872 i.err.2087285872" name="entry.2065974955" value="" dir="auto" data-initial-dir="auto" data-initial-value="" aria-invalid="false">
-{{< /highlight >}}
-<!-- prettier-ignore-end -->
+```html {linenos=table,anchorlinenos=true}
+<input
+  type="text"
+  class="quantumWizTextinputPaperinputInput exportInput"
+  jsname="YPqjbf"
+  autocomplete="off"
+  tabindex="0"
+  aria-label="name"
+  aria-describedby="i.desc.2087285872 i.err.2087285872"
+  name="entry.2065974955"
+  value=""
+  dir="auto"
+  data-initial-dir="auto"
+  data-initial-value=""
+  aria-invalid="false"
+/>
+```
 
 The **name** is our need tag:
 
-<!-- prettier-ignore-start -->
-{{< highlight html "linenos=inline" >}}
+```html {linenos=table,anchorlinenos=true}
 name="entry.2065974955"
-{{< /highlight >}}
-<!-- prettier-ignore-end -->
+```
 
 The other three items are handled in the same way, all we need **name** are as follow：
 

@@ -56,12 +56,10 @@ You probably already have Node.js installed—most frontend devs do. But if not,
 
 After installing, run the following in your terminal to check if it worked:
 
-<!-- prettier-ignore-start -->
-{{< highlight bash "linenos=inline" >}}
+```bash {linenos=table,anchorlinenos=true}
 node -v
 npm -v
-{{< /highlight >}}
-<!-- prettier-ignore-end -->
+```
 
 ---
 
@@ -74,11 +72,9 @@ To call the OpenAI API, you’ll need two packages: `axios` and `dotenv`.
 
 Install them using npm:
 
-<!-- prettier-ignore-start -->
-{{< highlight bash "linenos=inline" >}}
+```bash {linenos=table,anchorlinenos=true}
 npm install -D axios dotenv
-{{< /highlight >}}
-<!-- prettier-ignore-end -->
+```
 
 ---
 
@@ -88,11 +84,9 @@ The `.env` file is where you’ll store your OpenAI API key. Since the key grant
 
 Your `.env` should look like this:
 
-<!-- prettier-ignore-start -->
-{{< highlight text "linenos=inline" >}}
+```text {linenos=table,anchorlinenos=true}
 OPEN_API_KEY_COMMIT=your-openai-api-key
-{{< /highlight >}}
-<!-- prettier-ignore-end -->
+```
 
 Make sure you don’t commit this file to your repo unless it’s a private project or hosted on a private Git server.
 
@@ -110,11 +104,9 @@ Here's the script link:
 
 The script skips over files with `.min.` in the name. If you want to skip additional files or folders, you can modify the filter, like so:
 
-<!-- prettier-ignore-start -->
-{{< highlight js "linenos=inline" >}}
+```javascript {linenos=table,anchorlinenos=true}
 .filter(file => file && !file.includes('.min.') && !file.startsWith('docs/') && file.trim() !== '');
-{{< /highlight >}}
-<!-- prettier-ignore-end -->
+```
 
 ---
 
@@ -122,11 +114,9 @@ The script skips over files with `.min.` in the name. If you want to skip additi
 
 Once your code changes are staged with `git add`, just open a terminal in your project folder and run:
 
-<!-- prettier-ignore-start -->
-{{< highlight bash "linenos=inline" >}}
+```bash {linenos=table,anchorlinenos=true}
 node commit.cjs
-{{< /highlight >}}
-<!-- prettier-ignore-end -->
+```
 
 After a few seconds (depending on how many files changed), you’ll get a commit message back from OpenAI.
 

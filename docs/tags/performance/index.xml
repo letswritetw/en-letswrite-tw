@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Performance on Let&#39;s Write, EN</title>
+    <link>https://en.letswrite.tw/tags/performance/</link>
+    <description>Recent content in Performance on Let&#39;s Write, EN</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>Let&#39;s Write. All Rights Reserved.</copyright>
+    <lastBuildDate>Sun, 05 Oct 2025 08:18:00 +0800</lastBuildDate>
+    <atom:link href="https://en.letswrite.tw/tags/performance/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Automatically Compress Images to a Target Size Using Compressor.js</title>
+      <link>https://en.letswrite.tw/compressjs/</link>
+      <pubDate>Sun, 05 Oct 2025 08:18:00 +0800</pubDate>
+      <guid>https://en.letswrite.tw/compressjs/</guid>
+      <description>This tutorial demonstrates how to use the JavaScript library Compressor.js to automatically compress images to a specific file size (e.g., under 600KB), convert them to the modern WebP format, and enforce maximum width/height constraints. The approach uses recursive quality reduction to maintain the best image quality while ensuring the file size meets the requirement.</description>
+    </item>
+  </channel>
+</rss>

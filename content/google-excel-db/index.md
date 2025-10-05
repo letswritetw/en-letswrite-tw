@@ -86,11 +86,9 @@ In fact, when we publish the google sheet, it’s easy to AJAX the data. All we 
 
 The structure of the request google sheet url is like this:
 
-<!-- prettier-ignore-start -->
-{{< highlight plaintext "linenos=inline" >}}
+```text {linenos=table,anchorlinenos=true}
 https://spreadsheets.google.com/feeds/list/{excel_id}/{sheet}/public/values?alt=json
-{{< /highlight >}}
-<!-- prettier-ignore-end -->
+```
 
 There are two elements that should be replaced here: **excel_id**, **sheet**.
 
@@ -98,39 +96,33 @@ The **sheet** is … yeah, the sheet like excel sheet. We can only GET one at a 
 
 The **excel_id** is depending on the url, the google sheet url looks like this:
 
-<!-- prettier-ignore-start -->
-{{< highlight plaintext "linenos=inline" >}}
+```text {linenos=table,anchorlinenos=true}
 https://docs.google.com/spreadsheets/d/{excel_id}/edit#gid=0
-{{< /highlight >}}
-<!-- prettier-ignore-end -->
+```
 
 So, the URL for my demo google sheet like this is:
 
-<!-- prettier-ignore-start -->
-{{< highlight plaintext "linenos=inline" >}}
+```text {linenos=table,anchorlinenos=true}
 https://docs.google.com/spreadsheets/d/1IrmKHvX6tQ8zgzPC3ggD3UPu1-hQrE29nfHRs40wUJQ/edit#gid=0
-{{< /highlight >}}
-<!-- prettier-ignore-end -->
+```
 
 The **excel_id** is: 1IrmKHvX6tQ8zgzPC3ggD3UPu1-hQrE29nfHRs40wUJQ\*\*
 
 After we put the excel id, sheet into the URL, we can get this:
 
-<!-- prettier-ignore-start -->
-{{< highlight plaintext "linenos=inline" >}}
+```text {linenos=table,anchorlinenos=true}
 https://spreadsheets.google.com/feeds/list/1IrmKHvX6tQ8zgzPC3ggD3UPu1-hQrE29nfHRs40wUJQ/1/public/values?alt=json
-{{< /highlight >}}
-<!-- prettier-ignore-end -->
+```
 
 Finaly, we use the url to AJAX. I am using jQuery to handle GET method:
 
-<!-- prettier-ignore-start -->
-{{< highlight js "linenos=inline" >}}
-fetch('https://spreadsheets.google.com/feeds/list/1IrmKHvX6tQ8zgzPC3ggD3UPu1-hQrE29nfHRs40wUJQ/1/public/values?alt=json')
-  .then(res => res.json)
-  .then(res => console.log(res))
-{{< /highlight >}}
-<!-- prettier-ignore-end -->
+```javascript {linenos=table,anchorlinenos=true}
+fetch(
+  "https://spreadsheets.google.com/feeds/list/1IrmKHvX6tQ8zgzPC3ggD3UPu1-hQrE29nfHRs40wUJQ/1/public/values?alt=json"
+)
+  .then((res) => res.json)
+  .then((res) => console.log(res));
+```
 
 The result of console.log:
 

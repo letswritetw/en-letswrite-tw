@@ -24,7 +24,7 @@
 
 
 
-<link rel="stylesheet" href="https://en.letswrite.tw/css/tailwind.min.9c582a4476ef5570a3ca8dae3dfe6ee76674de6b6aa24e1bdd27c67e58101fc9.css">
+<link rel="stylesheet" href="https://en.letswrite.tw/css/tailwind.min.12bf2e2909c9a52116a7028a27627380423ba6f224c8970c47c0bd1fc7db9f6d.css">
 
 
 <meta property="og:url" content="https://en.letswrite.tw/ai-git-commit/">
@@ -235,9 +235,17 @@
 <p>You probably already have Node.js installed—most frontend devs do. But if not, you can grab it from the official site:</p>
 <p><a href="https://nodejs.org/en">https://nodejs.org/en</a></p>
 <p>After installing, run the following in your terminal to check if it worked:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>node -v
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>npm -v</span></span></code></pre></div>
-<hr>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1"><a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1</a>
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-2"><a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-2">2</a>
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>node -v
+</span></span><span style="display:flex;"><span>npm -v
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
 <h2 id="install-required-packages">Install Required Packages</h2>
 <p>To call the OpenAI API, you’ll need two packages: <code>axios</code> and <code>dotenv</code>.</p>
 <ul>
@@ -245,13 +253,27 @@
 <li><code>dotenv</code>: Loads environment variables from a <code>.env</code> file, which keeps your secrets safe.</li>
 </ul>
 <p>Install them using npm:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>npm install -D axios dotenv</span></span></code></pre></div>
-<hr>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1"><a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1</a>
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npm install -D axios dotenv
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
 <h2 id="create-a-env-file">Create a <code>.env</code> File</h2>
 <p>The <code>.env</code> file is where you’ll store your OpenAI API key. Since the key grants access to your account, keeping it private is important.</p>
 <p>Your <code>.env</code> should look like this:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>OPEN_API_KEY_COMMIT=your-openai-api-key</span></span></code></pre></div>
-<p>Make sure you don’t commit this file to your repo unless it’s a private project or hosted on a private Git server.</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1"><a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1">1</a>
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>OPEN_API_KEY_COMMIT=your-openai-api-key
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Make sure you don’t commit this file to your repo unless it’s a private project or hosted on a private Git server.</p>
 <hr>
 <h2 id="add-commitcjs-script">Add <code>commit.cjs</code> Script</h2>
 <p>This is the script that uses the OpenAI API to generate commit messages.</p>
@@ -260,12 +282,26 @@
 <script src="https://gist.github.com/letswritetw/c6485bc3ada935b1170b53d283c9e218.js"></script>
 
 <p>The script skips over files with <code>.min.</code> in the name. If you want to skip additional files or folders, you can modify the filter, like so:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>.<span style="color:#a6e22e">filter</span>(<span style="color:#a6e22e">file</span> =&gt; <span style="color:#a6e22e">file</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">!</span><span style="color:#a6e22e">file</span>.<span style="color:#a6e22e">includes</span>(<span style="color:#e6db74">&#39;.min.&#39;</span>) <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">!</span><span style="color:#a6e22e">file</span>.<span style="color:#a6e22e">startsWith</span>(<span style="color:#e6db74">&#39;docs/&#39;</span>) <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">file</span>.<span style="color:#a6e22e">trim</span>() <span style="color:#f92672">!==</span> <span style="color:#e6db74">&#39;&#39;</span>);</span></span></code></pre></div>
-<hr>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1"><a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1">1</a>
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>.<span style="color:#a6e22e">filter</span>(<span style="color:#a6e22e">file</span> =&gt; <span style="color:#a6e22e">file</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">!</span><span style="color:#a6e22e">file</span>.<span style="color:#a6e22e">includes</span>(<span style="color:#e6db74">&#39;.min.&#39;</span>) <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">!</span><span style="color:#a6e22e">file</span>.<span style="color:#a6e22e">startsWith</span>(<span style="color:#e6db74">&#39;docs/&#39;</span>) <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">file</span>.<span style="color:#a6e22e">trim</span>() <span style="color:#f92672">!==</span> <span style="color:#e6db74">&#39;&#39;</span>);
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
 <h2 id="how-to-use-it">How to Use It</h2>
 <p>Once your code changes are staged with <code>git add</code>, just open a terminal in your project folder and run:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>node commit.cjs</span></span></code></pre></div>
-<p>After a few seconds (depending on how many files changed), you’ll get a commit message back from OpenAI.</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-1"><a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-1">1</a>
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>node commit.cjs
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>After a few seconds (depending on how many files changed), you’ll get a commit message back from OpenAI.</p>
 <p>Here’s an example of what it looks like:</p>
 <figure><img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/d8z5duw4g8dvzanawhaj.png"
     alt="Example of an AI-generated Git commit message with a Summary and Description."><figcaption>
@@ -306,6 +342,11 @@
 					<a href="/ollama-ngrok/">How to Set Up a Local LLM with Ollama &#43; Ngrok for Remote Access</a>
 				</div>
 			
+			
+				<div class="sm:flex-1 pl-2 w-full sm:w-1/2 text-right">
+					<h4 class="!mb-0">Next</h4>
+					<a href="/compressjs/">Automatically Compress Images to a Target Size Using Compressor.js</a>
+				</div>
 			
 		</div>
 

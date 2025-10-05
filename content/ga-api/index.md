@@ -78,31 +78,31 @@ Paste in the following code to get started.
 
 ### Example 1: Total Page Views & Active Users
 
-<!-- prettier-ignore-start -->
-{{< highlight js "linenos=inline" >}}
+```javascript {linenos=table,anchorlinenos=true}
 function getGA4Data() {
-
   var apiUrl = `https://analyticsdata.googleapis.com/v1beta/properties/${propertyId}:runReport`;
 
   var payload = {
-    "dateRanges": [{
-      "startDate": startDate,
-      "endDate": "today"
-    }],
-    "metrics": [
-      { "name": "screenPageViews" }, // 瀏覽數
-      { "name": "activeUsers" } // 活躍用戶數
-    ]
+    dateRanges: [
+      {
+        startDate: startDate,
+        endDate: "today",
+      },
+    ],
+    metrics: [
+      { name: "screenPageViews" }, // 瀏覽數
+      { name: "activeUsers" }, // 活躍用戶數
+    ],
   };
 
   var options = {
-    "method": "post",
-    "contentType": "application/json",
-    "headers": {
-      "Authorization": "Bearer " + ScriptApp.getOAuthToken()
+    method: "post",
+    contentType: "application/json",
+    headers: {
+      Authorization: "Bearer " + ScriptApp.getOAuthToken(),
     },
-    "muteHttpExceptions": true,
-    "payload": JSON.stringify(payload)
+    muteHttpExceptions: true,
+    payload: JSON.stringify(payload),
   };
 
   var response = UrlFetchApp.fetch(apiUrl, options);
@@ -110,34 +110,30 @@ function getGA4Data() {
 
   // 檢查回應中是否有 rows 資料
   if (data.rows && data.rows.length > 0) {
-
     // 取得瀏覽數和活躍用戶數
     var screenPageViews = data.rows[0].metricValues[0].value;
     var activeUsers = data.rows[0].metricValues[1].value;
 
     // 回傳資料
     return {
-      "totalPageViews": screenPageViews,
-      "activeUsers": activeUsers
+      totalPageViews: screenPageViews,
+      activeUsers: activeUsers,
     };
-
   } else {
     // 若無符合資料，則回傳 0 作為預設值
     return {
-      "totalPageViews": 0,
-      "activeUsers": 0
+      totalPageViews: 0,
+      activeUsers: 0,
     };
   }
 }
-{{< /highlight >}}
-<!-- prettier-ignore-end -->
+```
 
 ### Example 2: Page Views for Specific Page Titles
 
 Filter by titles that end with, say, "Member Center":
 
-<!-- prettier-ignore-start -->
-{{< highlight js "linenos=inline" >}}
+```javascript {linenos=table,anchorlinenos=true}
 var propertyId = "xxxxxx";  // 替換成 GA 的資源編號
 var startDate = "2025-01-01", // 替換成想要從哪一天開始抓的日期
 var pageTitle = "會員中心"; // 替換成想要篩選的頁面標題文字
@@ -193,33 +189,31 @@ function getGA4DataPage() {
     };
   }
 }
-{{< /highlight >}}
-<!-- prettier-ignore-end -->
+```
 
 ### Example 3: Realtime Active Users
 
-<!-- prettier-ignore-start -->
-{{< highlight js "linenos=inline" >}}
-var propertyId = "xxxxxx";  // 替換成 GA 的資源編號
-
+```javascript {linenos=table,anchorlinenos=true}
+var propertyId = "xxxxxx"; // 替換成 GA 的資源編號
 function getGA4RealtimeData() {
-
   var apiUrl = `https://analyticsdata.googleapis.com/v1beta/properties/${propertyId}:runRealtimeReport`;
 
   var payload = {
-    "metrics": [{
-      "name": "activeUsers"
-    }]
+    metrics: [
+      {
+        name: "activeUsers",
+      },
+    ],
   };
 
   var options = {
-    "method": "post",
-    "contentType": "application/json",
-    "headers": {
-      "Authorization": "Bearer " + ScriptApp.getOAuthToken()
+    method: "post",
+    contentType: "application/json",
+    headers: {
+      Authorization: "Bearer " + ScriptApp.getOAuthToken(),
     },
-    "muteHttpExceptions": true,
-    "payload": JSON.stringify(payload)
+    muteHttpExceptions: true,
+    payload: JSON.stringify(payload),
   };
 
   var response = UrlFetchApp.fetch(apiUrl, options);
@@ -228,14 +222,12 @@ function getGA4RealtimeData() {
   // 取得即時人數
   return data.rows[0].metricValues[0].value;
 }
-{{< /highlight >}}
-<!-- prettier-ignore-end -->
+```
 
 ### Example 4: Realtime Users on a Specific Page
 
-<!-- prettier-ignore-start -->
-{{< highlight js "linenos=inline" >}}
-var propertyId = "xxxxxx";  // 替換成 GA 的資源編號
+```javascript {linenos=table,anchorlinenos=true}
+var propertyId = "xxxxxx"; // 替換成 GA 的資源編號
 var pageTitle = "會員中心"; // 替換成想要篩選的頁面標題文字
 
 function getGA4RealtimeDataPage() {
@@ -243,31 +235,35 @@ function getGA4RealtimeDataPage() {
 
   // 在 payload 中新增 dimensions 和 dimensionFilter
   var payload = {
-    "metrics": [{
-      "name": "activeUsers"
-    }],
-    "dimensions": [{
-      "name": "unifiedScreenName"
-    }],
-    "dimensionFilter": {
-      "filter": {
-        "fieldName": "unifiedScreenName",
-        "stringFilter": {
-          "value": pageTitle,
-          "matchType": "ENDS_WITH"
-        }
-      }
-    }
+    metrics: [
+      {
+        name: "activeUsers",
+      },
+    ],
+    dimensions: [
+      {
+        name: "unifiedScreenName",
+      },
+    ],
+    dimensionFilter: {
+      filter: {
+        fieldName: "unifiedScreenName",
+        stringFilter: {
+          value: pageTitle,
+          matchType: "ENDS_WITH",
+        },
+      },
+    },
   };
 
   var options = {
-    "method": "post",
-    "contentType": "application/json",
-    "headers": {
-      "Authorization": "Bearer " + ScriptApp.getOAuthToken()
+    method: "post",
+    contentType: "application/json",
+    headers: {
+      Authorization: "Bearer " + ScriptApp.getOAuthToken(),
     },
-    "muteHttpExceptions": true,
-    "payload": JSON.stringify(payload)
+    muteHttpExceptions: true,
+    payload: JSON.stringify(payload),
   };
 
   var response = UrlFetchApp.fetch(apiUrl, options);
@@ -284,8 +280,7 @@ function getGA4RealtimeDataPage() {
 
   return totalActiveUsers.toString(); // 返回所有匹配頁面的總人數
 }
-{{< /highlight >}}
-<!-- prettier-ignore-end -->
+```
 
 ---
 
@@ -293,17 +288,18 @@ function getGA4RealtimeDataPage() {
 
 Add logic to respond to different requests based on a `type` parameter:
 
-<!-- prettier-ignore-start -->
-{{< highlight js "linenos=inline" >}}
+```javascript {linenos=table,anchorlinenos=true}
 // 回應錯誤訊息
 function createErrorResponse(message, code) {
   var errorResponse = {
     success: false,
     error: message,
     code: code || 400,
-    timestamp: new Date().toISOString()
+    timestamp: new Date().toISOString(),
   };
-  var jsonOutput = ContentService.createTextOutput(JSON.stringify(errorResponse));
+  var jsonOutput = ContentService.createTextOutput(
+    JSON.stringify(errorResponse)
+  );
   jsonOutput.setMimeType(ContentService.MimeType.JSON);
   return jsonOutput;
 }
@@ -336,30 +332,30 @@ function doPost(e) {
     case "data":
       var reportData = getGA4Data();
       output = {
-        "totalPageViews": reportData.totalPageViews,
-        "activeUsers": reportData.activeUsers
+        totalPageViews: reportData.totalPageViews,
+        activeUsers: reportData.activeUsers,
       };
       break;
     // 瀏覽量、活躍人數：指定頁面標題
     case "dataPage":
       var reportData = getGA4DataPage();
       output = {
-        "totalPageViews": reportData.totalPageViews,
-        "activeUsers": reportData.activeUsers
+        totalPageViews: reportData.totalPageViews,
+        activeUsers: reportData.activeUsers,
       };
       break;
     // 即時人數
     case "realtimeData":
       var reportData = getGA4RealtimeData();
       output = {
-        "activeUsers": reportData
+        activeUsers: reportData,
       };
       break;
     // 即時人數：指定頁面標題
     case "realtimeDataPage":
       var reportData = getGA4RealtimeDataPage();
       output = {
-        "activeUsers": reportData
+        activeUsers: reportData,
       };
       break;
     default:
@@ -371,8 +367,7 @@ function doPost(e) {
   jsonOutput.setMimeType(ContentService.MimeType.JSON);
   return jsonOutput;
 }
-{{< /highlight >}}
-<!-- prettier-ignore-end -->
+```
 
 ---
 
@@ -403,14 +398,12 @@ If your response always returns `0`, it’s likely a permissions issue.
 1. Go to **Project Settings** and check the box to show `appsscript.json`.
 2. Add these scopes:
 
-<!-- prettier-ignore-start -->
-{{< highlight json "linenos=inline" >}}
+```json {linenos=table,anchorlinenos=true}
 "oauthScopes": [
 "https://www.googleapis.com/auth/script.external_request",
 "https://www.googleapis.com/auth/analytics.readonly"
 ]
-{{< /highlight >}}
-<!-- prettier-ignore-end -->
+```
 
 Redeploy and approve all permission prompts. You’re good to go!
 

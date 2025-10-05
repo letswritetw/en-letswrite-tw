@@ -88,11 +88,9 @@ I choose **Interactive installation**, because it’s simple.
 
 Open the terminal and type:
 
-<!-- prettier-ignore-start -->
-{{< highlight bash "linenos=inline" >}}
+```bash {linenos=table,anchorlinenos=true}
 $ curl https://sdk.cloud.google.com | bash
-{{< /highlight >}}
-<!-- prettier-ignore-end -->
+```
 
 and answer a few questions, the system will automatically install the SDK.
 

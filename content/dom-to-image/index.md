@@ -51,29 +51,25 @@ The installation process is the same as for any JavaScript package. You can eith
 
 **CDN**
 
-<!-- prettier-ignore-start -->
-{{< highlight html "linenos=table,anchorlinenos=true" >}}
+```html {linenos=table,anchorlinenos=true}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
-{{< / highlight >}}
-<!-- prettier-ignore-end -->
+```
 
 **npm package**
 
 Install package first:
 
-<!-- prettier-ignore-start -->
-{{< highlight bash "linenos=inline" >}}
+```bash {linenos=table,anchorlinenos=true}
 $ npm install dom-to-image
 # 或
 $ yarn add dom-to-image
-{{< / highlight >}}
-<!-- prettier-ignore-end -->
+```
 
 JS import：
 
-{{< highlight js "linenos=inline" >}}
-import domtoimage from 'dom-to-image';
-{{< / highlight >}}
+```javascript {linenos=table,anchorlinenos=true}
+import domtoimage from "dom-to-image";
+```
 
 ---
 
@@ -85,27 +81,29 @@ Since I did not actually use SVG, we will not be using it here.
 
 The following demonstrates how to save an image as a PNG file.
 
-<!-- prettier-ignore-start -->
-{{< highlight js "linenos=inline" >}}
+```javascript {linenos=table,anchorlinenos=true}
 // Fetch a specified div and generate a base64 format image.
 // The reason for repeating twice will be explained in the following paragraph of notes.
-const el = document.getElementById('xxx');
+const el = document.getElementById("xxx");
 const config = {
   quality: 1,
-  style: { "filter": "grayscale(100%)" }
+  style: { filter: "grayscale(100%)" },
 };
 
-const dataUriTemp = await domtoimage.toPng(el, captureConfig).then(dataUrl => dataUrl);
-const dataUri = await domtoimage.toPng(el, captureConfig).then(dataUrl => dataUrl);
+const dataUriTemp = await domtoimage
+  .toPng(el, captureConfig)
+  .then((dataUrl) => dataUrl);
+const dataUri = await domtoimage
+  .toPng(el, captureConfig)
+  .then((dataUrl) => dataUrl);
 
 // download image
-const link = document.createElement('a');
-const filename = 'Demo.png';
+const link = document.createElement("a");
+const filename = "Demo.png";
 link.download = filename;
 link.href = dataUri;
 link.click();
-{{< / highlight >}}
-<!-- prettier-ignore-end -->
+```
 
 If you want to save it as JPEG, change `toPng` to `toJpeg` in the code, and also remember to change the file extension to `*.jpeg`.
 
@@ -176,11 +174,9 @@ This note provides a simple tutorial on how to use DOM to Image to create a basi
 
 The first step is to reference the DOM to Image JS in the HTML page. This can be easily accomplished by referencing the CDN in the HTML:
 
-<!-- prettier-ignore-start -->
-{{< highlight html "linenos=inline" >}}
+```html {linenos=table,anchorlinenos=true}
 <script src="https://unpkg.com/dom-to-image@2.6.0/dist/dom-to-image.min.js"></script>
-{{< / highlight >}}
-<!-- prettier-ignore-end -->
+```
 
 After referencing a CDN, we still need to create a function that allows us to capture a screenshot.
 
@@ -188,28 +184,26 @@ This function takes an HTML element as a parameter and returns a Promise that re
 
 Here's an example of how to use `domtoimage.toPng()` to accomplish this:
 
-<!-- prettier-ignore-start -->
-{{< highlight js "linenos=inline" >}}
+```javascript {linenos=table,anchorlinenos=true}
 function captureScreenshot(element) {
   return new Promise((resolve, reject) => {
-    domtoimage.toPng(element)
-    .then((dataUrl) => {
-      resolve(dataUrl);
-    }).catch((error) => {
-      reject(error);
-    });
+    domtoimage
+      .toPng(element)
+      .then((dataUrl) => {
+        resolve(dataUrl);
+      })
+      .catch((error) => {
+        reject(error);
+      });
   });
 }
-{{< / highlight >}}
-<!-- prettier-ignore-end -->
+```
 
 After creating a function, executing the function allows easy retrieval of a screen capture from HTML:
 
-<!-- prettier-ignore-start -->
-{{< highlight js "linenos=inline" >}}
-captureScreenshot(document.getElementById('element-id'));
-{{< / highlight >}}
-<!-- prettier-ignore-end -->
+```javascript {linenos=table,anchorlinenos=true}
+captureScreenshot(document.getElementById("element-id"));
+```
 
 Here's how! With just a few lines of code, you can now use the powerful DOM to Image to create a simple web page screenshot feature.
 

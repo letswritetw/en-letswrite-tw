@@ -75,15 +75,11 @@ That’s for sure, it’s a problem with the front-end page, not a GA setting or
 
 Html line by line, delete this line:
 
-<!-- prettier-ignore-start -->
-
-{{< highlight html "linenos=inline" >}}
-
+```html {linenos=table,anchorlinenos=true}
 <h3>
   <span class="ez-toc-section" id="ga" tabindex="-1">ga</span>
 </h3>
-{{< /highlight >}}
-<!-- prettier-ignore-end -->
+```
 
 GA can receive traffic and finally find the problem. This line of questions will be related to GA is `id="ga"`.
 

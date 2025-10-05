@@ -21,11 +21,9 @@ Sometimes, we store information in the browser using mechanisms like [Cookies](h
 
 By default, the native `storage` event for Local Storage is designed to work across tabs or windows:
 
-<!-- prettier-ignore-start -->
-{{< highlight js "linenos=inline" >}}
+```javascript {linenos=table,anchorlinenos=true}
 window.addEventListener("storage", () => {});
-{{< /highlight >}}
-<!-- prettier-ignore-end -->
+```
 
 But what if we want to detect changes **within the same page**? In that case, we need to manually override the `localStorage` methods.
 
@@ -41,8 +39,7 @@ But what if we want to detect changes **within the same page**? In that case, we
 
 We can override methods like `setItem` on `Storage.prototype`, and use [CustomEvent](https://www.letswrite.tw/custom-event/) to trigger our own change events.
 
-<!-- prettier-ignore-start -->
-{{< highlight js "linenos=inline" >}}
+```javascript {linenos=table,anchorlinenos=true}
 // Save original methods
 Storage.prototype._setItem = Storage.prototype.setItem;
 Storage.prototype._getItem = Storage.prototype.getItem;
@@ -112,8 +109,7 @@ Storage.prototype.clear = function () {
 window.addEventListener("storagechange", (e) => {
   console.log("LocalStorage changed:", e.detail);
 });
-{{< /highlight >}}
-<!-- prettier-ignore-end -->
+```
 
 ---
 

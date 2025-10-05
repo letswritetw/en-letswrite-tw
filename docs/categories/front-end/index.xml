@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>Let&#39;s Write. All Rights Reserved.</copyright>
-    <lastBuildDate>Tue, 20 May 2025 08:18:00 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 05 Oct 2025 08:18:00 +0800</lastBuildDate>
     <atom:link href="https://en.letswrite.tw/categories/front-end/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Automatically Compress Images to a Target Size Using Compressor.js</title>
+      <link>https://en.letswrite.tw/compressjs/</link>
+      <pubDate>Sun, 05 Oct 2025 08:18:00 +0800</pubDate>
+      <guid>https://en.letswrite.tw/compressjs/</guid>
+      <description>This tutorial demonstrates how to use the JavaScript library Compressor.js to automatically compress images to a specific file size (e.g., under 600KB), convert them to the modern WebP format, and enforce maximum width/height constraints. The approach uses recursive quality reduction to maintain the best image quality while ensuring the file size meets the requirement.</description>
+    </item>
     <item>
       <title>Detecting localStorage Changes on the Same Page</title>
       <link>https://en.letswrite.tw/localstorage-event/</link>

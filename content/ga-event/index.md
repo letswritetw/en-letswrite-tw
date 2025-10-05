@@ -192,34 +192,43 @@ Now the tracking code provided by GA is all gtag. Here both ga and gtag will be 
 
 The code for the ga usage event is as follows:
 
-<!-- prettier-ignore-start -->
-{{< highlight js "linenos=inline" >}}
-ga('send', 'event', {
-  eventCategory: 'event category',
-  eventAction: 'event action',
-  eventLabel: 'event label',
-  eventValue: 'event value'
+```javascript {linenos=table,anchorlinenos=true}
+ga("send", "event", {
+  eventCategory: "event category",
+  eventAction: "event action",
+  eventLabel: "event label",
+  eventValue: "event value",
 });
-{{< /highlight >}}
-<!-- prettier-ignore-end -->
+```
 
 Can also be abbreviated as:
 
-<!-- prettier-ignore-start -->
-{{< highlight js "linenos=inline" >}}
-ga('send', 'event', 'event category', 'event action', 'event label', 'event value');
-{{< /highlight >}}
-<!-- prettier-ignore-end -->
+```javascript {linenos=table,anchorlinenos=true}
+ga(
+  "send",
+  "event",
+  "event category",
+  "event action",
+  "event label",
+  "event value"
+);
+```
 
 If you want to set a non-interactive event, this is the case:
 
-<!-- prettier-ignore-start -->
-{{< highlight js "linenos=inline" >}}
-ga('send', 'event', 'event category', 'event action', 'event label', 'event value', {
-  nonInteraction: true
-});
-{{< /highlight >}}
-<!-- prettier-ignore-end -->
+```javascript {linenos=table,anchorlinenos=true}
+ga(
+  "send",
+  "event",
+  "event category",
+  "event action",
+  "event label",
+  "event value",
+  {
+    nonInteraction: true,
+  }
+);
+```
 
 \* Event Value is not required and may not be written.
 
@@ -227,27 +236,23 @@ ga('send', 'event', 'event category', 'event action', 'event label', 'event valu
 
 The code for the gtag usage event is as follows:
 
-<!-- prettier-ignore-start -->
-{{< highlight js "linenos=inline" >}}
-gtag('event', 'event action', {
-  'event_category': 'event category',
-  'event_label': 'event label',
-  'value': 'event value'
+```javascript {linenos=table,anchorlinenos=true}
+gtag("event", "event action", {
+  event_category: "event category",
+  event_label: "event label",
+  value: "event value",
 });
-{{< /highlight >}}
-<!-- prettier-ignore-end -->
+```
 
 If you want to set a non-interactive event, this is the case:
 
-<!-- prettier-ignore-start -->
-{{< highlight js "linenos=inline" >}}
-gtag('event', 'event action', {
-  'event_category': 'event category',
-  'event_label': 'event label',
-  'non_interaction': true
+```javascript {linenos=table,anchorlinenos=true}
+gtag("event", "event action", {
+  event_category: "event category",
+  event_label: "event label",
+  non_interaction: true,
 });
-{{< /highlight >}}
-<!-- prettier-ignore-end -->
+```
 
 In addition, gtag provides Default Google Analytics Events. Default events table can be seen from the following link:
 
@@ -261,17 +266,19 @@ In addition, gtag provides Default Google Analytics Events. Default events table
 
 Here is a case. Suppose there is a page that provides file download. The id of the download button is “btn-download”. To find out how many people clicked the download button, you can write:
 
-<!-- prettier-ignore-start -->
-{{< highlight js "linenos=inline" >}}
-var btnDownload = document.getElementById('btn-download');
-btnDownload.addEventListener('click', function() {
-  gtag('event', 'download_click', {
-    'event_category': 'download',
-    'event_label': 'file name'
-  });
-}, false);
-{{< /highlight >}}
-<!-- prettier-ignore-end -->
+```javascript {linenos=table,anchorlinenos=true}
+var btnDownload = document.getElementById("btn-download");
+btnDownload.addEventListener(
+  "click",
+  function () {
+    gtag("event", "download_click", {
+      event_category: "download",
+      event_label: "file name",
+    });
+  },
+  false
+);
+```
 
 This is the basic way to use GA Event.
 

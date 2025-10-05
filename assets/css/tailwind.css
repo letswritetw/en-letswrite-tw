@@ -56,12 +56,20 @@ img {
   @apply mt-2 mb-4 font-normal text-center text-sm;
 }
 .single-article p,
-.single-article figure,
-.single-article .highlight {
+.single-article figure {
   @apply mb-4 leading-relaxed break-all;
 }
+.single-article .highlight {
+  @apply mb-4 leading-relaxed overflow-x-auto;
+}
 .single-article .highlight pre {
-  @apply overflow-x-auto p-2;
+  @apply p-2;
+}
+.single-article .highlight pre code {
+  @apply p-0;
+}
+.single-article .highlight pre code > span {
+  @apply flex;
 }
 
 .single-article a {
@@ -94,10 +102,10 @@ hr {
 }
 
 .single-article .highlight table {
-  @apply p-2 max-w-full rounded-lg;
+  @apply p-2 max-w-full rounded-lg overflow-x-auto;
 }
 .single-article .highlight table pre {
-  @apply p-2 max-w-full whitespace-normal;
+  @apply p-2 whitespace-pre;
 }
 
 .single-article .tag {

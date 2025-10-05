@@ -129,11 +129,9 @@ This guide shows the MacOS method. After choosing MacOS, the site will show you 
 
 Then run this command to tunnel Ollama's local API (port 11434):
 
-<!-- prettier-ignore-start -->
-{{< highlight shell "linenos=inline" >}}
+```bash {linenos=table,anchorlinenos=true}
 ngrok http 11434 --host-header="localhost:11434"
-{{< /highlight >}}
-<!-- prettier-ignore-end -->
+```
 
 This command works perfectly in my testing.
 
@@ -143,11 +141,9 @@ Your terminal should show something like this:
 
 The key line is the one labeled **Forwarding**:
 
-<!-- prettier-ignore-start -->
-{{< highlight shell "linenos=inline" >}}
+```bash {linenos=table,anchorlinenos=true}
 https://fb55-118-233-2-60.ngrok-free.app -> http://localhost:11434
-{{< /highlight >}}
-<!-- prettier-ignore-end -->
+```
 
 This means your local `localhost:11434` is now publicly accessible via `https://fb55-118-233-2-60.ngrok-free.app`.
 

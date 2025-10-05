@@ -86,8 +86,7 @@ Then, choose a folder to give MCP access to (don’t pick your entire root direc
 
 Assuming Filesystem is already installed, you’ll see an `mcp` section. Add this block at the same level:
 
-<!-- prettier-ignore-start -->
-{{< highlight json "linenos=inline" >}}
+```json {linenos=table,anchorlinenos=true}
 "Framelink Figma MCP": {
   "command": "npx",
   "args": [
@@ -97,8 +96,7 @@ Assuming Filesystem is already installed, you’ll see an `mcp` section. Add thi
     "--stdio"
   ]
 }
-{{< /highlight >}}
-<!-- prettier-ignore-end -->
+```
 
 Replace `Figma_access_token` with the token you generated earlier.
 

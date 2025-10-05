@@ -24,7 +24,7 @@
 
 
 
-<link rel="stylesheet" href="https://en.letswrite.tw/css/tailwind.min.9c582a4476ef5570a3ca8dae3dfe6ee76674de6b6aa24e1bdd27c67e58101fc9.css">
+<link rel="stylesheet" href="https://en.letswrite.tw/css/tailwind.min.12bf2e2909c9a52116a7028a27627380423ba6f224c8970c47c0bd1fc7db9f6d.css">
 
 
 <meta property="og:url" content="https://en.letswrite.tw/ollama-ngrok/">
@@ -317,8 +317,15 @@
 <li>Second command: set your auth token (needed to use Ngrok services)</li>
 </ul>
 <p>Then run this command to tunnel Ollama&rsquo;s local API (port 11434):</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>ngrok http <span style="color:#ae81ff">11434</span> --host-header<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;localhost:11434&#34;</span></span></span></code></pre></div>
-<p>This command works perfectly in my testing.</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1"><a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1</a>
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ngrok http <span style="color:#ae81ff">11434</span> --host-header<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;localhost:11434&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>This command works perfectly in my testing.</p>
 <p>Your terminal should show something like this:</p>
 <figure><img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/vbtichghaarpbyd7b11b.png"
     alt="Ngrok running"><figcaption>
@@ -327,8 +334,15 @@
 </figure>
 
 <p>The key line is the one labeled <strong>Forwarding</strong>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>https://fb55-118-233-2-60.ngrok-free.app -&gt; http://localhost:11434</span></span></code></pre></div>
-<p>This means your local <code>localhost:11434</code> is now publicly accessible via <code>https://fb55-118-233-2-60.ngrok-free.app</code>.</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1"><a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1</a>
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>https://fb55-118-233-2-60.ngrok-free.app -&gt; http://localhost:11434
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>This means your local <code>localhost:11434</code> is now publicly accessible via <code>https://fb55-118-233-2-60.ngrok-free.app</code>.</p>
 <p>Now just update your Postman test with this new URL:</p>
 <figure><img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/h2p33d7wc020cuz6sin8.png"
     alt="Postman with Ngrok URL"><figcaption>
